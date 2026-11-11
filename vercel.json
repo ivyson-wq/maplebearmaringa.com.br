@@ -31,37 +31,37 @@
     },
     {
       "source": "/blog/escola-bilingue-maringa-matricula-2026",
-      "destination": "/blog/matricula-escola-bilingue-maringa/",
+      "destination": "/matriculas/",
       "permanent": true
     },
     {
       "source": "/blog/matricula-escola-bilingue-documentacao",
-      "destination": "/blog/matricula-escola-bilingue-maringa/",
+      "destination": "/matriculas/",
       "permanent": true
     },
     {
       "source": "/blog/escola-infantil-montessori-maringa",
-      "destination": "/blog/montessori-reggio-waldorf-maringa/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/escola-reggio-emilia-maringa",
-      "destination": "/blog/montessori-reggio-waldorf-maringa/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/escola-waldorf-maringa",
-      "destination": "/blog/montessori-reggio-waldorf-maringa/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/escola-respeita-ritmo-crianca-maringa",
-      "destination": "/blog/escola-infantil-acolhedora-maringa/",
+      "destination": "/blog/melhor-escola-educacao-infantil-maringa/",
       "permanent": true
     },
     {
       "source": "/blog/tecnologia-na-educacao-infantil",
-      "destination": "/blog/escola-infantil-sem-telas-maringa/",
+      "destination": "/blog/telas-criancas-escola-e-casa/",
       "permanent": true
     },
     {
@@ -81,12 +81,12 @@
     },
     {
       "source": "/blog/como-apoiar-filho-bilingue-em-casa",
-      "destination": "/blog/ingles-em-casa-rotina-familia/",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
       "permanent": true
     },
     {
       "source": "/blog/atividades-bilingues-fim-de-semana-criancas",
-      "destination": "/blog/ingles-em-casa-rotina-familia/",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
       "permanent": true
     },
     {
@@ -96,42 +96,42 @@
     },
     {
       "source": "/blog/cambridge-young-learners-exam",
-      "destination": "/blog/cambridge-para-criancas/",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/preparacao-cambridge-criancas",
-      "destination": "/blog/cambridge-para-criancas/",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/escola-bilingue-educacao-infantil-necessaria",
-      "destination": "/blog/idade-certa-escola-bilingue/",
+      "destination": "/blog/escola-bilingue-confunde-crianca/",
       "permanent": true
     },
     {
       "source": "/blog/neurociencia-bilinguismo-cerebro",
-      "destination": "/blog/segundo-idioma-antes-dos-5-anos/",
+      "destination": "/blog/escola-bilingue-confunde-crianca/",
       "permanent": true
     },
     {
       "source": "/blog/educacao-bilingue-beneficios-criancas",
-      "destination": "/blog/segundo-idioma-antes-dos-5-anos/",
+      "destination": "/blog/escola-bilingue-confunde-crianca/",
       "permanent": true
     },
     {
       "source": "/blog/vocabulario-ingles-por-idade",
-      "destination": "/blog/como-saber-se-meu-filho-esta-aprendendo-ingles-de-verdade/",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/ingles-fluente-quanto-tempo",
-      "destination": "/blog/como-saber-se-meu-filho-esta-aprendendo-ingles-de-verdade/",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/metodo-canadense-vs-programa-bilingue",
-      "destination": "/blog/curriculo-canadense-escola-bilingue/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
@@ -161,42 +161,242 @@
     },
     {
       "source": "/blog/protagonismo-infantil-como-desenvolver",
-      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/pensamento-critico-criancas-como-desenvolver",
-      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/criatividade-e-inovacao-escola-bilingue",
-      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/competencias-globais-criancas",
-      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
       "permanent": true
     },
     {
       "source": "/blog/disciplina-positiva-criancas-pais",
-      "destination": "/blog/birras-e-limites-primeira-infancia/",
+      "destination": "/blog/inteligencia-emocional-criancas/",
       "permanent": true
     },
     {
       "source": "/blog/habitos-estudo-criancas-escola-bilingue",
-      "destination": "/blog/licao-de-casa-escola-bilingue/",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
       "permanent": true
     },
     {
       "source": "/blog/primeiro-dia-escola-bilingue-pais",
-      "destination": "/blog/adaptacao-escola-bilingue-dicas-pais/",
+      "destination": "/blog/crianca-chora-na-escola-adaptacao/",
       "permanent": true
     },
     {
       "source": "/blog/ed-infantil-bilingue-1-5-a-5-anos",
-      "destination": "/blog/educacao-infantil-bilingue-fases/",
+      "destination": "/educacao-infantil-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-infantil-acolhedora-maringa",
+      "destination": "/blog/melhor-escola-educacao-infantil-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-infantil-turmas-pequenas-maringa",
+      "destination": "/blog/melhor-escola-educacao-infantil-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/melhores-escolas-bilingues-maringa",
+      "destination": "/blog/escola-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/professor-bilingue-o-que-avaliar",
+      "destination": "/blog/escola-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-internacional-maringa",
+      "destination": "/blog/escola-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escolha-escola-particular-checklist",
+      "destination": "/blog/escola-particular-ou-publica-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-inclusiva-educacao-infantil-maringa",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/matricula-escola-bilingue-maringa",
+      "destination": "/matriculas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/montessori-reggio-waldorf-maringa",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/maple-bear-maringa-infraestrutura",
+      "destination": "/estrutura/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/segundo-idioma-antes-dos-5-anos",
+      "destination": "/blog/escola-bilingue-confunde-crianca/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/idade-certa-escola-bilingue",
+      "destination": "/blog/escola-bilingue-confunde-crianca/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-saber-se-meu-filho-esta-aprendendo-ingles-de-verdade",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cambridge-para-criancas",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingles-em-casa-rotina-familia",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-motivar-filho-estudar-ingles",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingles-para-criancas-timidas-introvertidas",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/licao-de-casa-escola-bilingue",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/parceria-escola-familia-aprendizado",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/musica-e-bilinguismo",
+      "destination": "/blog/pais-que-nao-falam-ingles-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/leitura-infantil-bilingue-livros",
+      "destination": "/blog/alfabetizacao-bilingue-fases/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/book-signing-night-criancas-autoras",
+      "destination": "/blog/alfabetizacao-bilingue-fases/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/formatura-senior-kindergarten-year-1",
+      "destination": "/blog/transicao-educacao-infantil-ensino-fundamental/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/curriculo-canadense-escola-bilingue",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aprendizado-steam-escola-bilingue",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/brincar-e-aprender",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/habilidades-do-seculo-21-escola-bilingue",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/festa-junina-escola-bilingue-maringa",
+      "destination": "/eventos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/dia-a-dia-no-bear-care",
+      "destination": "/blog/adaptacao-bear-care-1-ano/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/rotina-escola-bilingue-dia-a-dia",
+      "destination": "/blog/adaptacao-bear-care-1-ano/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/adaptacao-escola-bilingue-dicas-pais",
+      "destination": "/blog/crianca-chora-na-escola-adaptacao/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ansiedade-infantil-escola-sinais",
+      "destination": "/blog/crianca-chora-na-escola-adaptacao/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/irmaos-em-etapas-diferentes-mesma-escola",
+      "destination": "/blog/escola-infantil-periodo-integral-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/screen-time-bilingue-criancas",
+      "destination": "/blog/telas-criancas-escola-e-casa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-infantil-sem-telas-maringa",
+      "destination": "/blog/telas-criancas-escola-e-casa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/birras-e-limites-primeira-infancia",
+      "destination": "/blog/inteligencia-emocional-criancas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bercario-bilingue-maringa",
+      "destination": "/blog/creche-maringa-idade-de-entrada/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bullying-escola-bilingue-prevencao",
+      "destination": "/blog/quando-trocar-de-escola/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/educacao-infantil-bilingue-fases",
+      "destination": "/educacao-infantil-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fundamental-1-escola-bilingue",
+      "destination": "/niveis/fundamental-1/",
       "permanent": true
     },
     {

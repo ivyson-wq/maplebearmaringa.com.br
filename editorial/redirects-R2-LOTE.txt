@@ -1,0 +1,4 @@
+bercario-bilingue-maringa -> creche-maringa-idade-de-entrada
+bullying-escola-bilingue-prevencao -> quando-trocar-de-escola
+educacao-infantil-bilingue-fases -> /educacao-infantil-bilingue-maringa/
+fundamental-1-escola-bilingue -> /niveis/fundamental-1/
