@@ -46,6 +46,8 @@ function formatBrDate(iso) {
 
 const ALLOWED_ORIGINS_LEAD = new Set([
   'site-visite',
+  'lp-escola-bilingue',
+  'lp-ensino-fundamental',
   'lead-magnet-22-perguntas',
   'lead-magnet-ingles-em-casa',
   'lead-magnet-checklist',
