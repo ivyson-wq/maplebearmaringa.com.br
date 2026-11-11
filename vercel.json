@@ -400,6 +400,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/autonomia-criancas-escola-bilingue",
+      "destination": "/blog/inteligencia-emocional-criancas/",
+      "permanent": true
+    },
+    {
       "source": "/blog/ingles-para-adolescentes-escola-bilingue",
       "destination": "/blog/",
       "permanent": true
