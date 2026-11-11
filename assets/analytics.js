@@ -27,7 +27,7 @@
   var AW_FORMULARIO = ''; // send_to da conversão do formulário de visita
   var CONSENT_KEY = 'mb_cookie_consent_v1';
   var CFG_KEY = 'mb_rastreamento_v1';
-  var WA_NUMERO = '5544991362021'; // número da escola (≠ botões de compartilhar)
+  var WA_NUMERO = '5544991783232'; // número da escola (≠ botões de compartilhar)
 
   // ── Consent Mode v2 ───────────────────────────────────────────────
   // Roda ANTES de qualquer tag. Sem isto, quem não clica "Aceitar" não

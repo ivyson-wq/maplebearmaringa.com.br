@@ -45,4 +45,4 @@ Sem ID cadastrado, a tag não carrega. `blog/analytics.js` fica desligado de pro
 
 ## WhatsApp
 
-`wa.me/5544991362021` — (44) 99136-2021.
+`wa.me/5544991783232` — (44) 99178-3232.

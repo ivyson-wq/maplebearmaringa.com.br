@@ -10,7 +10,7 @@
 // ════════════════════════════════════════════════════════════════════
 (function () {
   'use strict';
-  var WA = 'https://wa.me/5544991362021?text=' + encodeURIComponent('Olá! Vim do site da Maple Bear Maringá e gostaria de agendar uma visita.');
+  var WA = 'https://wa.me/5544991783232?text=' + encodeURIComponent('Olá! Vim do site da Maple Bear Maringá e gostaria de agendar uma visita.');
 
   function mostrar(fb, erro, titulo, texto, comLinkWa) {
     fb.textContent = '';

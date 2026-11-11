@@ -7,7 +7,7 @@ Quem escreve um artigo só pode afirmar sobre a escola o que está aqui ou no si
 - Nome: Maple Bear Maringá — escola bilíngue canadense (rede Maple Bear, maior rede de escolas canadenses do mundo).
 - Razão social: GM International Education Ltda — CNPJ 30.751.203/0001-80.
 - Endereço: Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Jardim Higienópolis, Maringá, PR, CEP 87060-390.
-- WhatsApp: +55 44 99136-2021 (wa.me/5544991362021). Telefone fixo: (44) 3801-7676.
+- WhatsApp: +55 44 99178-3232 (wa.me/5544991783232). Telefone fixo: (44) 3200-0327.
 - E-mail: secretaria@maplebearmaringa.com.br
 - Instagram: @maplebearmaringa
 - Site: https://maplebearmaringa.com.br

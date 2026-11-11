@@ -23,7 +23,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 1.
 **Pergunta:** A partir de qual idade a Maple Bear Maringá atende?
 
-**Resposta:** Atendemos a partir de 1 ano, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 abre em 2027. Agende uma visita pelo WhatsApp 44 99136-2021.
+**Resposta:** Atendemos a partir de 1 ano, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 abre em 2027. Agende uma visita pelo WhatsApp 44 99178-3232.
 
 ### 2.
 **Pergunta:** A escola é bilíngue em qual modelo?
@@ -33,7 +33,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 3.
 **Pergunta:** Quais são os turnos da escola?
 
-**Resposta:** Temos turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30). Como funciona o turno de cada idade é explicado na conversa ou na visita. Agende pelo WhatsApp 44 99136-2021.
+**Resposta:** Temos turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30). Como funciona o turno de cada idade é explicado na conversa ou na visita. Agende pelo WhatsApp 44 99178-3232.
 
 ### 4.
 **Pergunta:** Onde fica a escola?
@@ -63,7 +63,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 9.
 **Pergunta:** A escola atende crianças atípicas (autismo, TDAH)?
 
-**Resposta:** A matrícula de crianças com deficiência é direito garantido pela Lei Brasileira de Inclusão. O desenho do acompanhamento é construído em conversa individualizada entre família e coordenação, a partir da visita. WhatsApp 44 99136-2021.
+**Resposta:** A matrícula de crianças com deficiência é direito garantido pela Lei Brasileira de Inclusão. O desenho do acompanhamento é construído em conversa individualizada entre família e coordenação, a partir da visita. WhatsApp 44 99178-3232.
 
 ### 10.
 **Pergunta:** Até que série a escola atende? Meu filho pode continuar depois da Educação Infantil?

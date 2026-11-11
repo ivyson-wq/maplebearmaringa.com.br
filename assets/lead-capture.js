@@ -7,7 +7,7 @@
 (function () {
   'use strict';
   var API_ENDPOINT = '/api/visit-lead';
-  var WA_URL = 'https://wa.me/5544991362021?text=' + encodeURIComponent('Olá! Vim do site da Maple Bear Maringá e gostaria de agendar uma visita.');
+  var WA_URL = 'https://wa.me/5544991783232?text=' + encodeURIComponent('Olá! Vim do site da Maple Bear Maringá e gostaria de agendar uma visita.');
 
   function el(tag, attrs, children) {
     var node = document.createElement(tag);
