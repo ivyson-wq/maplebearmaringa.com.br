@@ -23,7 +23,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 1.
 **Pergunta:** A partir de qual idade a Maple Bear Maringá atende?
 
-**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 está previsto para 2027. Agende uma visita pelo WhatsApp 44 99136-2021.
+**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 abre em 2027. Agende uma visita pelo WhatsApp 44 99136-2021.
 
 ### 2.
 **Pergunta:** A escola é bilíngue em qual modelo?
@@ -33,7 +33,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 3.
 **Pergunta:** Quais são os turnos da escola?
 
-**Resposta:** Temos turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30). Como funciona o turno de cada idade é explicado na conversa ou na visita. Agende pelo WhatsApp 44 99136-2021. <!-- PENDENTE: confirmar período integral antes de responder sobre ele -->
+**Resposta:** Temos turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30). Como funciona o turno de cada idade é explicado na conversa ou na visita. Agende pelo WhatsApp 44 99136-2021.
 
 ### 4.
 **Pergunta:** Onde fica a escola?
@@ -68,7 +68,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 10.
 **Pergunta:** Até que série a escola atende? Meu filho pode continuar depois da Educação Infantil?
 
-**Resposta:** Sim — temos continuidade até o Ensino Fundamental I na mesma escola (Year 1 ao Year 5; Year 6 previsto para 2027). A criança não troca de escola na alfabetização.
+**Resposta:** Sim — temos continuidade até o Ensino Fundamental I na mesma escola (Year 1 ao Year 5; Year 6 a partir de 2027). A criança não troca de escola na alfabetização.
 
 ---
 

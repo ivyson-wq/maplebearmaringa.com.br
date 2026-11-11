@@ -38,4 +38,4 @@ Country: Brasil
 Address: Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Maringá, PR, 87060-390
 Shifts: Mon-Fri, morning 07:30–12:30 and afternoon 13:30–18:30
 Programs: Bear Care, Toddler, Nursery, Junior Kindergarten, Senior Kindergarten, Year 1 to Year 5 (Fundamental I)
-Roadmap: Year 6 (Fundamental II) previsto para 2027, a confirmar
+Roadmap: Year 6 (Fundamental II) a partir de 2027, a confirmar

@@ -12,6 +12,6 @@ Regras: um tema por artigo; antes de escrever, conferir em /blog/ que não exist
 3. Educação infantil perto de mim: como pesar distância, trânsito e rotina na escolha (busca: "escola infantil perto de mim")
 4. Escola infantil em Maringá para quem mora em Sarandi, Paiçandu ou Marialva: a rotina de quem se desloca (busca: "escola infantil sarandi")
 5. Escola bilíngue: o que é, como funciona no dia a dia e o que muda para a criança — para quem está começando a pesquisar (busca: "escola bilingue maringá")
-6. Do Year 5 ao Year 6: o que muda na passagem para o Fundamental II numa escola bilíngue (busca: "6º ano escola bilíngue") — só depois de confirmado o Year 6 em 2027 no fatos.md
+6. Do Year 5 ao Year 6: o que muda na passagem para o Fundamental II numa escola bilíngue (busca: "6º ano escola bilíngue")
 
 ## Feitos

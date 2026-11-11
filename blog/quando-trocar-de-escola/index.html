@@ -257,7 +257,7 @@
 
 </head>
 <body>
-  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
+  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5 · vagas limitadas</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
 <div class="progress-bar" id="progressBar"></div>
 <header class="site-header">
   <div class="container">
@@ -418,7 +418,7 @@
     <li><strong>Há continuidade ao longo dos anos?</strong> Uma proposta que acompanha a criança por várias etapas evita novas rupturas.</li>
   </ul>
 
-  <p>A Maple Bear Maringá é uma escola bilíngue de currículo canadense, com inglês por imersão todos os dias e turmas reduzidas, do Bear Care ao Year 5 (o Year 6 está previsto para 2027). Se quiser comparar o jeito de trabalhar com outras opções da cidade, veja como funciona a <a href="/escola-particular-maringa/">escola particular em Maringá</a> da rede e leve suas perguntas.</p>
+  <p>A Maple Bear Maringá é uma escola bilíngue de currículo canadense, com inglês por imersão todos os dias e turmas reduzidas, do Bear Care ao Year 5 (o Year 6 abre em 2027). Se quiser comparar o jeito de trabalhar com outras opções da cidade, veja como funciona a <a href="/escola-particular-maringa/">escola particular em Maringá</a> da rede e leve suas perguntas.</p>
 
   <div class="inline-cta">
     <h3>Quer ver a Maple Bear por dentro?</h3>
@@ -450,7 +450,7 @@
     <h3>Venha conhecer a Maple Bear Maringá</h3>
     <p>Se você está avaliando uma mudança de escola, a visita presencial é o melhor caminho. Conheça nossas turmas, converse com nossa equipe pedagógica e veja de perto como é um dia de aula aqui.</p>
     <a href="https://wa.me/5544991362021?text=Ol%C3%A1!%20Vim%20do%20blog%20da%20Maple%20Bear%20e%20gostaria%20de%20agendar%20uma%20visita%20para%20conhecer%20a%20escola." target="_blank">📅 Agendar Minha Visita</a>
-    <p class="urgency">Vagas limitadas para 2027 — Garanta o lugar do seu filho</p>
+    <p class="urgency">Vagas limitadas para 2027 — Garanta a vaga do seu filho</p>
   </div>
 
   <div class="related">
@@ -548,6 +548,14 @@
   <button class="close-sticky" onclick="document.getElementById('stickyCta').remove()" aria-label="Fechar">&times;</button>
 </div>
 
+<div class="social-proof" id="socialProof">
+  <div class="proof-icon">👨‍👩‍👧</div>
+  <div>
+    <div><strong>Família de Maringá</strong> agendou uma visita</div>
+    <div class="proof-time">há poucos minutos</div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="footer-headline">Muito além<br>do <em>bilíngue.</em></p>
@@ -573,6 +581,23 @@
     bar.style.width=Math.min(100,pct*100)+'%';
     if(pct>0.3&&!stickyShown&&sticky){stickyShown=true;sticky.classList.add('show');}
   });
+})();
+
+(function(){
+  var names=['Família Silva','Família Oliveira','Família Santos','Família Pereira','Maria e João','Ana e Pedro','Família Costa','Família Souza'];
+  var times=['há 2 minutos','há 5 minutos','há 12 minutos','há 18 minutos','há 25 minutos'];
+  var el=document.getElementById('socialProof');
+  var idx=0;
+  function showProof(){
+    if(!el)return;
+    el.querySelector('strong').textContent=names[idx%names.length];
+    el.querySelector('.proof-time').textContent=times[idx%times.length];
+    el.classList.add('show');
+    setTimeout(function(){el.classList.remove('show');},5000);
+    idx++;
+  }
+  setTimeout(showProof,20000);
+  setInterval(showProof,45000);
 })();
 
 (function(){

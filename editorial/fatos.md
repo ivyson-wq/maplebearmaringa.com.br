@@ -15,12 +15,14 @@ Quem escreve um artigo só pode afirmar sobre a escola o que está aqui ou no si
 ## O que a escola oferece
 - Educação infantil a partir do Bear Care (Infantil 1), Toddler (Infantil 2), Nursery (Infantil 3), Junior Kindergarten (Infantil 4) e Senior Kindergarten (Infantil 5).
 - Ensino Fundamental I completo: Year 1 ao Year 5 (1º ao 5º ano).
-- Year 6 (6º ano, início do Fundamental II) a partir de 2027. [A CONFIRMAR COM A ESCOLA antes de publicar como certo; até lá, escrever "previsto para 2027".]
+- Year 6 (6º ano, início do Fundamental II) abre em 2027.
 - Turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30).
-- Período integral: [A CONFIRMAR]. Não afirmar que existe nem que não existe.
+- NÃO oferece período integral: a criança estuda de manhã ou de tarde.
 - Inglês por imersão todos os dias (não é aula extra), currículo canadense alinhado à BNCC, certificação Cambridge ao longo do percurso.
 - Turmas reduzidas com acompanhamento próximo.
-- Visitas num dia comum de aula, agendadas pelo WhatsApp. [Horários de visita A CONFIRMAR; escrever só "agende pelo WhatsApp".]
+- Visitas num dia comum de aula, ao longo de todo o dia (manhã e tarde), agendadas pelo WhatsApp.
+- Duplo Diploma Maple Bear (Brasil e Canadá).
+- Valores: sob consulta, só pelo WhatsApp (nunca publicar).
 
 ## Tempos de carro até a escola
 - Ver /em-maringa/ — os tempos lá foram calculados por rota (OSRM) e arredondados para cima, com margem para o horário escolar.
@@ -35,4 +37,4 @@ Quem escreve um artigo só pode afirmar sobre a escola o que está aqui ou no si
 - Citar outras escolas de Maringá pelo nome.
 - Dados de saúde, laudos ou nomes de alunos/famílias.
 - Inventar história da unidade (ano de fundação, número de alunos, prêmios), nomes da equipe ou depoimentos.
-- Falar de período integral, cardápio, transporte ou estrutura física específica (piscina, quadra etc.) enquanto não estiver confirmado aqui.
+- Falar de cardápio, transporte ou estrutura física específica (piscina, quadra etc.) enquanto não estiver confirmado aqui.

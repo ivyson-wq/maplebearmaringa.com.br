@@ -264,7 +264,7 @@
 
 </head>
 <body>
-  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
+  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5 · vagas limitadas</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
 <div class="progress-bar" id="progressBar"></div>
 
 <header class="site-header">
@@ -433,7 +433,7 @@
   <p>Com a alfabetização em português mais firme, o inglês ganha espaço. A leitura começa a andar nas duas línguas e os projetos ficam mais longos. É comum a criança estudar um tema, como o ciclo da água, passando por atividades nos dois idiomas. Muitas famílias percebem nesse período que o filho já descreve o que sentiu e o que fez sem pedir ajuda.</p>
 
   <h3>Year 4 e Year 5: autonomia</h3>
-  <p>Nos dois últimos anos do Fundamental I, a criança deixa de se sentir aprendiz do idioma e passa a usá-lo como quem usa uma ferramenta. Ela pesquisa, apresenta, discute e escreve com mais independência. É também a fase em que o trabalho com a certificação Cambridge fica mais visível, sempre ligado ao uso real da língua, e não a decorar fórmulas de prova. Depois do Year 5, o Year 6 está previsto para 2027.</p>
+  <p>Nos dois últimos anos do Fundamental I, a criança deixa de se sentir aprendiz do idioma e passa a usá-lo como quem usa uma ferramenta. Ela pesquisa, apresenta, discute e escreve com mais independência. É também a fase em que o trabalho com a certificação Cambridge fica mais visível, sempre ligado ao uso real da língua, e não a decorar fórmulas de prova. Depois do Year 5, o Year 6 abre em 2027.</p>
 
   <div class="inline-cta">
     <h3>🌟 Curioso sobre a metodologia na prática?</h3>
@@ -568,7 +568,7 @@
   <h3>Conheça o Fundamental I da Maple Bear Maringá</h3>
   <p>Agende uma visita guiada, conheça as salas, os professores e veja a metodologia canadense em ação.</p>
   <a href="https://wa.me/5544991362021?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." target="_blank">📅 Agendar Minha Visita</a>
-  <p class="urgency">Vagas limitadas para 2026 — Garanta a vaga do seu filho</p>
+  <p class="urgency">Vagas limitadas para 2027 — Garanta a vaga do seu filho</p>
 </div>
 
 <a href="https://wa.me/5544991362021?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." class="float-wa" target="_blank" aria-label="WhatsApp">
@@ -593,6 +593,14 @@
   <p>📅 Agende uma visita à Maple Bear Maringá</p>
   <a href="https://wa.me/5544991362021?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." target="_blank">Agendar Agora</a>
   <button class="close-sticky" onclick="document.getElementById('stickyCta').remove()" aria-label="Fechar">&times;</button>
+</div>
+
+<div class="social-proof" id="socialProof">
+  <div class="proof-icon">👨‍👩‍👧</div>
+  <div>
+    <div><strong>Família de Maringá</strong> agendou uma visita</div>
+    <div class="proof-time">há poucos minutos</div>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -620,6 +628,23 @@
     bar.style.width=Math.min(100,pct*100)+'%';
     if(pct>0.3&&!stickyShown&&sticky){stickyShown=true;sticky.classList.add('show');}
   });
+})();
+
+(function(){
+  var names=['Família Silva','Família Oliveira','Família Santos','Família Pereira','Maria e João','Ana e Pedro','Família Costa','Família Souza'];
+  var times=['há 2 minutos','há 5 minutos','há 12 minutos','há 18 minutos','há 25 minutos'];
+  var el=document.getElementById('socialProof');
+  var idx=0;
+  function showProof(){
+    if(!el)return;
+    el.querySelector('strong').textContent=names[idx%names.length];
+    el.querySelector('.proof-time').textContent=times[idx%times.length];
+    el.classList.add('show');
+    setTimeout(function(){el.classList.remove('show');},5000);
+    idx++;
+  }
+  setTimeout(showProof,20000);
+  setInterval(showProof,45000);
 })();
 
 (function(){

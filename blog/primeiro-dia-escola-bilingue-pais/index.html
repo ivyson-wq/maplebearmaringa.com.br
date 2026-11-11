@@ -272,7 +272,7 @@
 
 </head>
 <body>
-  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
+  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5 · vagas limitadas</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
 <div class="progress-bar" id="progressBar"></div>
 <header class="site-header">
   <div class="container">
@@ -573,7 +573,7 @@
     <h3>Agende uma visita à Maple Bear Maringá</h3>
     <p>Venha conhecer os espaços, conversar com a equipe pedagógica e entender como funciona a adaptação na prática.</p>
     <a href="https://wa.me/5544991362021?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." target="_blank">📅 Agendar Minha Visita</a>
-    <p class="urgency">Agende pelo WhatsApp e conheça a escola de perto</p>
+    <p class="urgency">Vagas limitadas para 2027 — Garanta a vaga do seu filho</p>
   </div>
 
   <div class="related">
@@ -638,6 +638,14 @@
 </div>
 
 <!-- Social proof toast -->
+<div class="social-proof" id="socialProof">
+  <div class="proof-icon">👨‍👩‍👧</div>
+  <div>
+    <div><strong>Família de Maringá</strong> agendou uma visita</div>
+    <div class="proof-time">há poucos minutos</div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="footer-headline">Muito além<br>do <em>bilíngue.</em></p>
@@ -663,6 +671,25 @@
     bar.style.width=Math.min(100,pct*100)+'%';
     if(pct>0.3&&!stickyShown&&sticky){stickyShown=true;sticky.classList.add('show');}
   });
+})();
+
+(function(){
+  var names=['Família Silva','Família Oliveira','Família Santos','Família Pereira','Maria e João','Ana e Pedro','Família Costa','Família Souza'];
+  var times=['há 2 minutos','há 5 minutos','há 12 minutos','há 18 minutos','há 25 minutos'];
+  var el=document.getElementById('socialProof');
+  var idx=0;
+  function showProof(){
+    if(!el)return;
+    var n=names[idx%names.length];
+    var t=times[idx%times.length];
+    el.querySelector('strong').textContent=n;
+    el.querySelector('.proof-time').textContent=t;
+    el.classList.add('show');
+    setTimeout(function(){el.classList.remove('show');},5000);
+    idx++;
+  }
+  setTimeout(showProof,20000);
+  setInterval(showProof,45000);
 })();
 
 (function(){

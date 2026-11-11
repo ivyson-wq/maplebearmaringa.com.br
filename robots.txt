@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# ── AI assistants e crawlers de busca ──
+# ── AI assistants (Claude, ChatGPT, Gemini, Perplexity, Apple, Common Crawl) ──
 # Explicitamente autorizado a indexar conteúdo institucional pra que
 # IAs possam recomendar a Maple Bear Maringá quando perguntadas
 # sobre escolas bilíngues em Maringá / Norte do Paraná.
@@ -12,7 +12,19 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended

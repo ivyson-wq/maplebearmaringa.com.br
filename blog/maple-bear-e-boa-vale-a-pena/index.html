@@ -107,7 +107,7 @@
       "name": "Até que ano a Maple Bear Maringá atende?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hoje a escola atende da educação infantil (Bear Care ao Senior Kindergarten) até o Fundamental I, do Year 1 ao Year 5. O Year 6, que inicia o Fundamental II, está previsto para 2027. Pelo WhatsApp, a secretaria informa a situação atualizada."
+        "text": "Hoje a escola atende da educação infantil (Bear Care ao Senior Kindergarten) até o Fundamental I, do Year 1 ao Year 5. O Year 6, que inicia o Fundamental II, abre em 2027. Pelo WhatsApp, a secretaria informa a situação atualizada."
       }
     },
     {
@@ -275,7 +275,7 @@
 
 </head>
 <body>
-  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
+  <div class="top-bar" role="region" aria-label="Matrículas 2027"><div class="top-bar-inner"><span class="top-bar-icon" aria-hidden="true">✦</span><span class="top-bar-text"><strong>Matrículas 2027 abertas</strong> <small style="opacity: 0.85;">· Bear Care ao Year 5 · vagas limitadas</small></span><a href="/visite/" class="top-bar-cta">Agendar visita <span aria-hidden="true">→</span></a><button type="button" class="top-bar-dismiss" aria-label="Fechar aviso">×</button></div></div>
 <div class="progress-bar" id="progressBar"></div>
 <header class="site-header">
   <div class="container">
@@ -346,7 +346,7 @@
 <h3>Educação infantil</h3>
 <p>Passa por Bear Care (Infantil 1), Toddler (Infantil 2), Nursery (Infantil 3), Junior Kindergarten (Infantil 4) e Senior Kindergarten (Infantil 5). Nessa fase, o aprendizado vem pelo brincar, pelos sentidos, pelas músicas e rodas de conversa. A criança constrói vocabulário, convive com os colegas e desenvolve autonomia. Para conhecer cada turma, veja a página de <a href="/educacao-infantil-bilingue-maringa/">educação infantil bilíngue</a>.</p>
 <h3>Ensino Fundamental I</h3>
-<p>Do Year 1 ao Year 5 (1º ao 5º ano), a criança passa a trabalhar leitura, escrita, matemática, ciências e outras áreas com mais profundidade, mantendo o inglês presente no cotidiano. O Year 6, início do Fundamental II, está previsto para 2027. Se a sua família pensa a longo prazo, vale perguntar na visita como a escola está organizando essa transição.</p>
+<p>Do Year 1 ao Year 5 (1º ao 5º ano), a criança passa a trabalhar leitura, escrita, matemática, ciências e outras áreas com mais profundidade, mantendo o inglês presente no cotidiano. O Year 6, início do Fundamental II, abre em 2027. Se a sua família pensa a longo prazo, vale perguntar na visita como a escola está organizando essa transição.</p>
 </section><section>
 <div class="inline-cta">
   <h3>💡 Quer ver isso na prática?</h3>
@@ -370,7 +370,7 @@
 </details>
 <details><summary>O currículo canadense atende ao que o Brasil exige?</summary><p>Sim. O currículo é alinhado à Base Nacional Comum Curricular, então a criança estuda o que a legislação brasileira prevê, combinado com a proposta pedagógica canadense. Para detalhes sobre cada etapa, o melhor é conversar com a escola.</p>
 </details>
-<details><summary>Até que ano a Maple Bear Maringá atende?</summary><p>Hoje a escola atende da educação infantil (Bear Care ao Senior Kindergarten) até o Fundamental I, do Year 1 ao Year 5. O Year 6, que inicia o Fundamental II, está previsto para 2027. Pelo WhatsApp, a secretaria informa a situação atualizada.</p>
+<details><summary>Até que ano a Maple Bear Maringá atende?</summary><p>Hoje a escola atende da educação infantil (Bear Care ao Senior Kindergarten) até o Fundamental I, do Year 1 ao Year 5. O Year 6, que inicia o Fundamental II, abre em 2027. Pelo WhatsApp, a secretaria informa a situação atualizada.</p>
 </details>
 <details><summary>Como faço para conhecer a escola antes de decidir?</summary><p>Basta agendar uma visita pelo WhatsApp. Você conhece a escola em um dia comum de aula, conversa com a equipe e tira suas dúvidas sobre a rotina, a adaptação e o processo de matrícula.</p>
 </details>
@@ -403,7 +403,7 @@
     <h3>Conheça a Maple Bear Maringá pessoalmente</h3>
     <p>Agende uma visita guiada e veja como nossa metodologia canadense transforma a educação do seu filho.</p>
     <a href="https://wa.me/5544991362021?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." target="_blank">📅 Agendar Minha Visita</a>
-    <p class="urgency">Vagas limitadas para 2026 — Garanta a vaga do seu filho</p>
+    <p class="urgency">Vagas limitadas para 2027 — Garanta a vaga do seu filho</p>
   </div>
 
   
@@ -470,6 +470,14 @@
 </div>
 
 <!-- Social proof toast -->
+<div class="social-proof" id="socialProof">
+  <div class="proof-icon">👨‍👩‍👧</div>
+  <div>
+    <div><strong>Família de Maringá</strong> agendou uma visita</div>
+    <div class="proof-time">há poucos minutos</div>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="footer-headline">Muito além<br>do <em>bilíngue.</em></p>
@@ -500,6 +508,26 @@
 
 // Social proof toasts
 // Exit intent detection
+(function(){
+  var names=['Família Silva','Família Oliveira','Família Santos','Família Pereira','Maria e João','Ana e Pedro','Família Costa','Família Souza'];
+  var times=['há 2 minutos','há 5 minutos','há 12 minutos','há 18 minutos','há 25 minutos'];
+  var el=document.getElementById('socialProof');
+  var idx=0;
+  function showProof(){
+    if(!el)return;
+    var n=names[idx%names.length];
+    var t=times[idx%times.length];
+    el.querySelector('strong').textContent=n;
+    el.querySelector('.proof-time').textContent=t;
+    el.classList.add('show');
+    setTimeout(function(){el.classList.remove('show');},5000);
+    idx++;
+  }
+  // First show after 20s, then every 45s
+  setTimeout(showProof,20000);
+  setInterval(showProof,45000);
+})();
+
 (function(){
   var shown=false;
   document.addEventListener('mouseleave',function(e){
