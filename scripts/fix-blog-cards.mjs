@@ -37,7 +37,7 @@ const BUCKET = {
   'fundamental-1-escola-bilingue': 'educacao-bilingue',
   'habilidades-socioemocionais-bncc': 'desenvolvimento',
   'idade-certa-escola-bilingue': 'educacao-bilingue',
-  'imersao-ingles-vs-aulas-ingles': 'metodologia',
+  'escola-bilingue-ou-curso-de-ingles': 'metodologia',
   'ingles-em-casa-rotina-familia': 'familia',
   'leitura-infantil-bilingue-livros': 'familia',
   'maple-bear-maringa-infraestrutura': 'educacao-bilingue',

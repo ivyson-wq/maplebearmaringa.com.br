@@ -66,17 +66,17 @@
     },
     {
       "source": "/blog/imersao-vs-ingles-contraturno",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/escola-bilingue-ou-curso-de-ingles-qual-escolher",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/escola-bilingue-maringa-imersao-de-verdade",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
@@ -96,12 +96,12 @@
     },
     {
       "source": "/blog/cambridge-young-learners-exam",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/preparacao-cambridge-criancas",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
@@ -121,12 +121,12 @@
     },
     {
       "source": "/blog/vocabulario-ingles-por-idade",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/ingles-fluente-quanto-tempo",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
@@ -146,17 +146,17 @@
     },
     {
       "source": "/blog/habilidades-socioemocionais-bncc",
-      "destination": "/blog/inteligencia-emocional-criancas/",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
       "permanent": true
     },
     {
       "source": "/blog/desenvolvimento-socioemocional-bilingue",
-      "destination": "/blog/inteligencia-emocional-criancas/",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
       "permanent": true
     },
     {
       "source": "/blog/inteligencia-emocional-criancas-escola",
-      "destination": "/blog/inteligencia-emocional-criancas/",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
       "permanent": true
     },
     {
@@ -181,7 +181,7 @@
     },
     {
       "source": "/blog/disciplina-positiva-criancas-pais",
-      "destination": "/blog/inteligencia-emocional-criancas/",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
       "permanent": true
     },
     {
@@ -261,12 +261,12 @@
     },
     {
       "source": "/blog/como-saber-se-meu-filho-esta-aprendendo-ingles-de-verdade",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
       "source": "/blog/cambridge-para-criancas",
-      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {
@@ -376,7 +376,7 @@
     },
     {
       "source": "/blog/birras-e-limites-primeira-infancia",
-      "destination": "/blog/inteligencia-emocional-criancas/",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
       "permanent": true
     },
     {
@@ -401,7 +401,17 @@
     },
     {
       "source": "/blog/autonomia-criancas-escola-bilingue",
-      "destination": "/blog/inteligencia-emocional-criancas/",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/inteligencia-emocional-criancas",
+      "destination": "/blog/autonomia-e-birras-primeira-infancia/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/imersao-ingles-vs-aulas-ingles",
+      "destination": "/blog/escola-bilingue-ou-curso-de-ingles/",
       "permanent": true
     },
     {

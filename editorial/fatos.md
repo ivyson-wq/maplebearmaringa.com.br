@@ -130,3 +130,9 @@ Fonte: 100 últimas publicações de @maplebearmaringa (2025-12-15 a 2026-11-09)
 - Matrículas 2027 abertas (2026-10-01 Dd1vE4gIGoG; 2026-11-09 DfhmqDZu6Wh).
 - Recesso: escola fechada em 20 e 21/04/2026, retorno na quarta 22/04 (2026-04-17 DXPMV8xjr9s).
 - Férias de fim de ano: post de 29/12/2025 (2025-12-29 DS2gMb4jryW).
+
+## Idades por turma (fonte: página oficial da unidade, maringa.maplebear.com.br/pt/, consultada em 11/11/2026)
+- A página da rede lista: Bear Care 1 ano e meio; Nursery 3 anos; Junior Kindergarten 4 anos; Senior Kindergarten 5 anos; Year 1 6 anos.
+- O Instagram da escola (2026) divulga o Bear Care "desde 1 ano de idade" — usar "a partir de 1 ano" (dado mais recente da própria escola).
+- Toddler: idade não publicada (fica entre o Bear Care e o Nursery). Year 2 a Year 5: seguir a sequência (7 a 10 anos) só como referência aproximada, dizendo que é aproximado.
+- Número de alunos por turma: não publicado — dizer só "turmas reduzidas".
