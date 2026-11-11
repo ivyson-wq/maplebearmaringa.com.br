@@ -48,7 +48,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 6.
 **Pergunta:** A Maple Bear é uma escola Montessori?
 
-**Resposta:** Não — seguimos a metodologia canadense Maple Bear. Compartilhamos princípios (criança no centro, autonomia, ambiente preparado) e somamos a imersão em inglês desde 1 ano de idade. Comparativo honesto: maplebearmaringa.com.br/blog/escola-infantil-montessori-maringa/
+**Resposta:** Não — seguimos a metodologia canadense Maple Bear. Compartilhamos princípios (criança no centro, autonomia, ambiente preparado) e somamos a imersão em inglês desde 1 ano de idade. Comparativo honesto: maplebearmaringa.com.br/blog/montessori-reggio-waldorf-maringa/
 
 ### 7.
 **Pergunta:** A escola é acolhedora? Como funciona a adaptação?

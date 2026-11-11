@@ -6,46 +6,313 @@
     {
       "source": "/:path*",
       "has": [
-        { "type": "host", "value": "www.maplebearmaringa.com.br" }
+        {
+          "type": "host",
+          "value": "www.maplebearmaringa.com.br"
+        }
       ],
       "destination": "https://maplebearmaringa.com.br/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-escolher-escola-bilingue",
+      "destination": "/blog/escola-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escolinha-infantil-maringa-como-escolher",
+      "destination": "/blog/melhor-escola-educacao-infantil-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quanto-custa-escola-bilingue-2026",
+      "destination": "/blog/mensalidade-maple-bear-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-bilingue-maringa-matricula-2026",
+      "destination": "/blog/matricula-escola-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/matricula-escola-bilingue-documentacao",
+      "destination": "/blog/matricula-escola-bilingue-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-infantil-montessori-maringa",
+      "destination": "/blog/montessori-reggio-waldorf-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-reggio-emilia-maringa",
+      "destination": "/blog/montessori-reggio-waldorf-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-waldorf-maringa",
+      "destination": "/blog/montessori-reggio-waldorf-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-respeita-ritmo-crianca-maringa",
+      "destination": "/blog/escola-infantil-acolhedora-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tecnologia-na-educacao-infantil",
+      "destination": "/blog/escola-infantil-sem-telas-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/imersao-vs-ingles-contraturno",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-bilingue-ou-curso-de-ingles-qual-escolher",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-bilingue-maringa-imersao-de-verdade",
+      "destination": "/blog/imersao-ingles-vs-aulas-ingles/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-apoiar-filho-bilingue-em-casa",
+      "destination": "/blog/ingles-em-casa-rotina-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/atividades-bilingues-fim-de-semana-criancas",
+      "destination": "/blog/ingles-em-casa-rotina-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-fortalecer-ingles-nas-ferias",
+      "destination": "/blog/ferias-escolares-ingles-atividades/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cambridge-young-learners-exam",
+      "destination": "/blog/cambridge-para-criancas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/preparacao-cambridge-criancas",
+      "destination": "/blog/cambridge-para-criancas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-bilingue-educacao-infantil-necessaria",
+      "destination": "/blog/idade-certa-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/neurociencia-bilinguismo-cerebro",
+      "destination": "/blog/segundo-idioma-antes-dos-5-anos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/educacao-bilingue-beneficios-criancas",
+      "destination": "/blog/segundo-idioma-antes-dos-5-anos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vocabulario-ingles-por-idade",
+      "destination": "/blog/como-saber-se-meu-filho-esta-aprendendo-ingles-de-verdade/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingles-fluente-quanto-tempo",
+      "destination": "/blog/como-saber-se-meu-filho-esta-aprendendo-ingles-de-verdade/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/metodo-canadense-vs-programa-bilingue",
+      "destination": "/blog/curriculo-canadense-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/metodologias-ativas-canadense",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/aprendizado-por-projetos-escola-bilingue",
+      "destination": "/blog/metodologia-canadense-maple-bear/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/habilidades-socioemocionais-bncc",
+      "destination": "/blog/inteligencia-emocional-criancas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/desenvolvimento-socioemocional-bilingue",
+      "destination": "/blog/inteligencia-emocional-criancas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/inteligencia-emocional-criancas-escola",
+      "destination": "/blog/inteligencia-emocional-criancas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/protagonismo-infantil-como-desenvolver",
+      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pensamento-critico-criancas-como-desenvolver",
+      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/criatividade-e-inovacao-escola-bilingue",
+      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/competencias-globais-criancas",
+      "destination": "/blog/habilidades-do-seculo-21-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/disciplina-positiva-criancas-pais",
+      "destination": "/blog/birras-e-limites-primeira-infancia/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/habitos-estudo-criancas-escola-bilingue",
+      "destination": "/blog/licao-de-casa-escola-bilingue/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/primeiro-dia-escola-bilingue-pais",
+      "destination": "/blog/adaptacao-escola-bilingue-dicas-pais/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ed-infantil-bilingue-1-5-a-5-anos",
+      "destination": "/blog/educacao-infantil-bilingue-fases/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingles-para-adolescentes-escola-bilingue",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bilinguismo-e-carreira-futuro-filhos",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/intercambio-e-bilinguismo-preparando-filhos",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/resultado-enem-escola-bilingue",
+      "destination": "/fundamental-2-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/alimentacao-saudavel-criancas-escola",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sono-criancas-aprendizado",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/como-escolher-extracurricular-filho",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/escola-bilingue",
+      "destination": "/blog/escola-bilingue-maringa/",
       "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/blog/", "destination": "/blog/index.html" },
-    { "source": "/blog/:slug", "destination": "/blog/:slug/index.html" },
-    { "source": "/blog/:slug/", "destination": "/blog/:slug/index.html" }
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug/index.html"
+    },
+    {
+      "source": "/blog/:slug/",
+      "destination": "/blog/:slug/index.html"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
-        { "key": "X-DNS-Prefetch-Control", "value": "on" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        }
       ]
     },
     {
       "source": "/assets/(.*)\\.(woff2|woff|ttf|eot|otf)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/assets/(.*)\\.(png|jpg|jpeg|gif|svg|webp|avif|ico)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/assets/(.*)\\.(css|js)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, must-revalidate"
+        }
       ]
     }
   ]
