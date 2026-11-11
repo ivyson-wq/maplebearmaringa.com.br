@@ -1,13 +1,14 @@
 // ═══════════════════════════════════════════════════════
 //  Maple Bear Maringá — Google Analytics 4 + LGPD
 //  Incluir: <script src="/blog/analytics.js" defer></script>
-//  GA4 Measurement ID: PENDENTE-GA4-MARINGA
+//  DESLIGADO de propósito: o GA4 do site inteiro sai de /assets/analytics.js,
+//  com os IDs que a escola cadastra no Lumied. Ligar aqui mediria em dobro.
 // ═══════════════════════════════════════════════════════
 (function() {
   var GA_ID = '';
   var CONSENT_KEY = 'maplebear_analytics_consent';
 
-  if (!GA_ID) return; // PENDENTE: GA4 de Maringá
+  if (!GA_ID) return; // desligado (ver topo)
   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
 
   window.dataLayer = window.dataLayer || [];

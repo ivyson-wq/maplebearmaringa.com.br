@@ -31,8 +31,10 @@ Variáveis: ver `.env.example`.
 
 ## Rastreamento
 
-`assets/analytics.js` e `blog/analytics.js`: `GA_ID`, `PIXEL_ID`, `AW_*` estão vazios até a escola ter
-GA4, Meta Pixel e Google Ads próprios (vazio = a tag não carrega).
+A escola cadastra os próprios IDs (GA4, Meta Pixel, Google Ads e as conversões) no Lumied, em
+Marketing › Rastreamento do site. O site lê de `/api/rastreamento` (repasse com cache da rota pública
+`/api/site/rastreamento?escola=mbmaringa` do Lumied) e `assets/analytics.js` inicia as tags com o que vier.
+Sem ID cadastrado, a tag não carrega. `blog/analytics.js` fica desligado de propósito (mediria em dobro).
 
 ## SEO
 

@@ -16,23 +16,17 @@
 (function () {
   'use strict';
 
-  var GA_ID = ''; // PENDENTE: GA4 próprio de Maringá
-  var PIXEL_ID = ''; // PENDENTE: Meta Pixel de Maringá
+  // IDs de rastreamento: a PRÓPRIA ESCOLA cadastra no Lumied (Marketing ›
+  // Rastreamento do site). O site lê de /api/rastreamento (cache de CDN) e
+  // guarda a última resposta no navegador para iniciar na hora nas próximas
+  // páginas. Sem ID cadastrado = a tag não carrega (nada quebra).
+  var GA_ID = '';
+  var PIXEL_ID = '';
+  var AW_ID = '';
+  var AW_WHATSAPP = '';   // send_to da conversão de clique no WhatsApp
+  var AW_FORMULARIO = ''; // send_to da conversão do formulário de visita
   var CONSENT_KEY = 'mb_cookie_consent_v1';
-  // Google Ads: conversão NATIVA do clique de WhatsApp. Antes o sinal só
-  // chegava ao Ads pela importação do GA4 (generate_lead) — que atrasa e
-  // modela. Com a tag própria o lance recebe o evento direto, e o
-  // mbSetUserData() habilita Enhanced Conversions no mesmo clique.
-  var AW_ID = ''; // PENDENTE: conta Google Ads de Maringá
-  var AW_WHATSAPP = '';
-  // Agendamento de visita (/visite/) e lead magnets. Até 25/08/2026 o
-  // formulário — a ação de MAIOR intenção do site — disparava só um evento
-  // GA4 ('visit_request'), sem `send_to`: não existia conversão nativa do
-  // Ads nesse caminho, e o mbSetUserData() ficava pendurado em nada.
-  // PREENCHER com o rótulo de Metas › Conversões › (ação do formulário) ›
-  // "Configurar tag" → o valor de send_to, formato 'AW-11302044142/XXXX'.
-  // Vazio = comportamento antigo (só GA4), sem quebrar nada.
-  var AW_FORMULARIO = '';
+  var CFG_KEY = 'mb_rastreamento_v1';
   var WA_NUMERO = '5544991362021'; // número da escola (≠ botões de compartilhar)
 
   // ── Consent Mode v2 ───────────────────────────────────────────────
@@ -78,7 +72,9 @@
   };
 
   // ── GA4 + Google Ads: carregam SEMPRE (o consentimento já os governa) ──
-  if (GA_ID) {
+  function iniciarGoogle() {
+    if (window.__mbGoogleIniciado || !GA_ID) return;
+    window.__mbGoogleIniciado = true;
     var gs = document.createElement('script');
     gs.async = true;
     gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -95,10 +91,43 @@
     if (AW_ID) gtag('config', AW_ID);
   }
 
+  // Aplica a configuração (só na primeira vez por página: IDs novos valem a
+  // partir da próxima navegação).
+  var cfgAplicada = false;
+  var tagsPedidas = false;
+  function aplicarConfig(c) {
+    if (cfgAplicada || !c) return;
+    cfgAplicada = true;
+    GA_ID = c.ga4_id || '';
+    PIXEL_ID = c.meta_pixel_id || '';
+    AW_ID = c.google_ads_id || '';
+    AW_WHATSAPP = c.google_ads_conv_whatsapp || '';
+    AW_FORMULARIO = c.google_ads_conv_formulario || '';
+    iniciarGoogle();
+    if (tagsPedidas) loadTags();
+  }
+
+  (function carregarConfig() {
+    var guardada = null;
+    try { guardada = JSON.parse(localStorage.getItem(CFG_KEY) || 'null'); } catch (e) { /* modo privado */ }
+    if (guardada) aplicarConfig(guardada);
+    if (!window.fetch) return;
+    fetch('/api/rastreamento', { credentials: 'omit' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (c) {
+        if (!c) return;
+        try { localStorage.setItem(CFG_KEY, JSON.stringify(c)); } catch (e) { /* modo privado */ }
+        aplicarConfig(c);
+      })
+      .catch(function () { /* sem config = sem tags */ });
+  })();
+
   // ── Carrega o que NÃO tem consent mode (idempotente) ───────────────
   // Meta Pixel não respeita o Consent Mode do Google: segue atrás do
   // "Aceitar", como antes. (A sessão do Lumied saiu daqui — ver abaixo.)
   function loadTags() {
+    tagsPedidas = true;
+    if (!cfgAplicada) return; // roda de novo quando a configuração chegar
     if (window.__mbTagsLoaded) return;
     window.__mbTagsLoaded = true;
 
