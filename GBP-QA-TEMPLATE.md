@@ -23,12 +23,12 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 1.
 **Pergunta:** A partir de qual idade a Maple Bear Maringá atende?
 
-**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 abre em 2027. Agende uma visita pelo WhatsApp 44 99136-2021.
+**Resposta:** Atendemos a partir de 1 ano, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 abre em 2027. Agende uma visita pelo WhatsApp 44 99136-2021.
 
 ### 2.
 **Pergunta:** A escola é bilíngue em qual modelo?
 
-**Resposta:** Imersão real: o inglês permeia a rotina desde os 18 meses — não é matéria isolada, é língua de convivência. Metodologia canadense Maple Bear, da maior rede de escolas canadenses do mundo, alinhada à BNCC.
+**Resposta:** Imersão real: o inglês permeia a rotina desde 1 ano de idade — não é matéria isolada, é língua de convivência. Metodologia canadense Maple Bear, da maior rede de escolas canadenses do mundo, alinhada à BNCC.
 
 ### 3.
 **Pergunta:** Quais são os turnos da escola?
@@ -48,7 +48,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 6.
 **Pergunta:** A Maple Bear é uma escola Montessori?
 
-**Resposta:** Não — seguimos a metodologia canadense Maple Bear. Compartilhamos princípios (criança no centro, autonomia, ambiente preparado) e somamos a imersão em inglês desde os 18 meses. Comparativo honesto: maplebearmaringa.com.br/blog/escola-infantil-montessori-maringa/
+**Resposta:** Não — seguimos a metodologia canadense Maple Bear. Compartilhamos princípios (criança no centro, autonomia, ambiente preparado) e somamos a imersão em inglês desde 1 ano de idade. Comparativo honesto: maplebearmaringa.com.br/blog/escola-infantil-montessori-maringa/
 
 ### 7.
 **Pergunta:** A escola é acolhedora? Como funciona a adaptação?
@@ -58,7 +58,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 8.
 **Pergunta:** Como funciona a segurança da escola?
 
-**Resposta:** Segurança é prioridade na rotina da escola. Os detalhes de como funciona na prática são explicados pela coordenação na visita. <!-- PENDENTE: descrever controle de acesso e protocolos de Maringá -->
+**Resposta:** Segurança é prioridade na rotina da escola: a equipe faz treinamento de abandono de área. Os detalhes de como funciona na prática são explicados pela coordenação na visita.
 
 ### 9.
 **Pergunta:** A escola atende crianças atípicas (autismo, TDAH)?

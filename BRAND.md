@@ -134,7 +134,7 @@ Em PT-BR (não-oficial, usar com cautela):
 - Sempre `loading="lazy"` exceto hero.
 
 **Status fotos atuais:**
-- **Maringá:** as fotos em `assets/photos/` ainda são provisórias (de outra unidade) e serão trocadas por fotos de Maringá. <!-- PENDENTE: fotos da unidade de Maringá -->
+- **Maringá:** as fotos em `assets/photos/` são da unidade de Maringá.
 
 ---
 

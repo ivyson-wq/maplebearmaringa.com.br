@@ -13,7 +13,7 @@ Quem escreve um artigo só pode afirmar sobre a escola o que está aqui ou no si
 - Site: https://maplebearmaringa.com.br
 
 ## O que a escola oferece
-- Educação infantil a partir do Bear Care (Infantil 1), Toddler (Infantil 2), Nursery (Infantil 3), Junior Kindergarten (Infantil 4) e Senior Kindergarten (Infantil 5).
+- Educação infantil a partir de 1 ano de idade no Bear Care (Infantil 1), Toddler (Infantil 2), Nursery (Infantil 3), Junior Kindergarten (Infantil 4) e Senior Kindergarten (Infantil 5).
 - Ensino Fundamental I completo: Year 1 ao Year 5 (1º ao 5º ano).
 - Year 6 (6º ano, início do Fundamental II) abre em 2027.
 - Turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30).
@@ -23,6 +23,15 @@ Quem escreve um artigo só pode afirmar sobre a escola o que está aqui ou no si
 - Visitas num dia comum de aula, ao longo de todo o dia (manhã e tarde), agendadas pelo WhatsApp.
 - Duplo Diploma Maple Bear (Brasil e Canadá).
 - Valores: sob consulta, só pelo WhatsApp (nunca publicar).
+
+## Pessoas e vida da escola (fonte: Instagram oficial @maplebearmaringa)
+- Liderança: Beatriz Meneguetti (mais de 40 anos de trajetória na educação) e Giovanna Meneguetti (18 anos de experiência na educação).
+- Coordenação pedagógica própria (sem nomes publicados).
+- Estrutura: a escola ampliou em 2026, com novas salas; salas com telas interativas; Reading Corner; parquinho; área verde externa com quiosque.
+- Alunos recebem certificados Cambridge English (cerimônia em março de 2026).
+- Segurança: a equipe faz treinamento de abandono de área.
+- Eventos: Terry Fox Run (corrida solidária, em 2026 aberta à comunidade, mais de 400 inscritos), Arraiá (festa junina), Bailinho de Carnaval, Book Signing Night (alunos autores), formatura do Senior Kindergarten, apresentação de fim de ano, Experience Day (dia de vivência para quem quer conhecer), Maple Summer Camp nas férias.
+- Depoimento em vídeo de família (Thaís, mãe da Lívia e do Theo): https://www.instagram.com/reel/DYUsUDKP7wS/
 
 ## Tempos de carro até a escola
 - Ver /em-maringa/ — os tempos lá foram calculados por rota (OSRM) e arredondados para cima, com margem para o horário escolar.
