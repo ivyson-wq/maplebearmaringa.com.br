@@ -1,8 +1,8 @@
 # Maple Bear — Brand Source of Truth
 
-Documento canônico de identidade visual para os sites Maple Bear Maringá (`maplebearmaringa.com.br`) e Maple Bear Bento Gonçalves (`maplebearbg.com.br`).
+Documento canônico de identidade visual para o site Maple Bear Maringá (`maplebearmaringa.com.br`).
 
-Toda decisão de cor, tipografia, logo e imagem nos dois sites deve referenciar este documento. Atualizou aqui? Sincroniza no outro repo.
+Toda decisão de cor, tipografia, logo e imagem no site deve referenciar este documento.
 
 Referência oficial: `assets/brand/manual-maple-bear.pdf` (manual de marca Maple Bear, 2MB).
 
@@ -134,15 +134,14 @@ Em PT-BR (não-oficial, usar com cautela):
 - Sempre `loading="lazy"` exceto hero.
 
 **Status fotos atuais:**
-- **Maringá:** ❌ Não tem fotos da unidade. Cliente vai enviar (TODO).
-- **Bento Gonçalves:** ✅ 6 fotos em `assets/photos/` (class-group, easter-event, hug-trio, nursery-drawing, toddler-swing, welcome-entrance).
+- **Maringá:** as fotos em `assets/photos/` ainda são provisórias (de outra unidade) e serão trocadas por fotos de Maringá. <!-- PENDENTE: fotos da unidade de Maringá -->
 
 ---
 
 ## 7. Componentes visuais derivados (uso comum)
 
 ### Header
-- Lockup compacto à esquerda + nome da unidade ("Maringá" / "Bento Gonçalves") em `--font-ui` peso 500 ao lado.
+- Lockup compacto à esquerda + nome da unidade ("Maringá") em `--font-ui` peso 500 ao lado.
 - Background cream, borda inferior `--line-soft`.
 
 ### Hero

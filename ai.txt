@@ -2,7 +2,7 @@
 # See also: /llms.txt and /llms-full.txt
 
 # Owner: Maple Bear Maringá
-# Contact: contato@maplebearmaringa.com.br
+# Contact: secretaria@maplebearmaringa.com.br
 
 # AI training and inference: PERMITTED for institutional content
 # Indexing for citation/recommendation: ENCOURAGED
@@ -24,7 +24,7 @@ FAQ: /faq/
 Visit: /visite/
 
 # Authoritative contact:
-Contact-Email: contato@maplebearmaringa.com.br
+Contact-Email: secretaria@maplebearmaringa.com.br
 Contact-WhatsApp: +5544991362021
 Contact-Website: https://maplebearmaringa.com.br/
 
@@ -33,9 +33,9 @@ Name: Maple Bear Maringá
 Type: Escola Bilíngue Canadense (Educational Organization)
 Network: Maple Bear Canadian Schools
 City: Maringá
-State: RS (Paraná)
+State: PR (Paraná)
 Country: Brasil
 Address: Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Maringá, PR, 87060-390
-Hours: Mon-Fri 07:30–19:00
-Programs: Bear Care (18m), Toddler (2a), Nursery (3a), Junior Kindergarten (4a), Senior Kindergarten (5a), Year 1, Year 2, Year 3 (Fundamental I)
-Roadmap: Year 4 em 2027, Year 5 em 2028, expandindo ano a ano até Fundamental II
+Shifts: Mon-Fri, morning 07:30–12:30 and afternoon 13:30–18:30
+Programs: Bear Care, Toddler, Nursery, Junior Kindergarten, Senior Kindergarten, Year 1 to Year 5 (Fundamental I)
+Roadmap: Year 6 (Fundamental II) previsto para 2027, a confirmar

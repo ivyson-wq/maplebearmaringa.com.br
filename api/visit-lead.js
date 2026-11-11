@@ -7,9 +7,7 @@ export const config = { runtime: 'edge' };
 const ALLOWED_ORIGINS = [
   'https://maplebearmaringa.com.br',
   'https://www.maplebearmaringa.com.br',
-  'https://maplebearmaringa.vercel.app',
-  'https://maplebearbg.com.br',
-  'https://www.maplebearbg.com.br'
+  'https://maplebearmaringa.vercel.app'
 ];
 
 function corsHeaders(origin) {
@@ -48,15 +46,12 @@ function formatBrDate(iso) {
 
 const ALLOWED_ORIGINS_LEAD = new Set([
   'site-visite',
-  'site-visite-bg',
   'lead-magnet-22-perguntas',
   'lead-magnet-ingles-em-casa',
   'lead-magnet-checklist',
   'newsletter',
-  'newsletter-bg',
   'open-day',
   'exit-intent',
-  'exit-intent-bg',
 ]);
 
 // Calcula idade descritiva a partir de data ISO (YYYY-MM-DD).
@@ -223,10 +218,9 @@ async function createLumiedLead(lead) {
   // lead E faz o backfill de lp_evento pela sessão — o comportamento anônimo
   // do site (pixel lumied-track) passa a alimentar o score do lead.
   const url = 'https://mbmaringa.lumied.com.br/api/leads';
-  // roteia por escola do lead (default Maringá). BG posta neste endpoint via
-  // CORS; enviar escola:'maplebearbg' direciona ao tenant certo (o /api/leads
-  // resolve o tenant pelo slug do body, não pelo domínio).
-  const slug = lead.escola || 'mbmaringa';
+  // Tenant fixo: este site só capta para a Maple Bear Maringá
+  // (o /api/leads resolve o tenant pelo slug do body).
+  const slug = 'mbmaringa';
   const utm = lead.utm || {};
   const r = await fetch(url, {
     method: 'POST',
@@ -283,17 +277,9 @@ export default async function handler(req) {
   // página do site onde o formulário foi enviado (landing page do anúncio).
   // Não entra em `origem` (lista fechada do drip): vai em observacoes no Lumied.
   data.pagina = String(body.pagina || '').trim().replace(/[^\w\-./~%]/g, '').slice(0, 200);
-  // escola do lead (BG posta cross-origin; default Maringá) p/ rotear o tenant
-  data.escola = String(body.escola || '').trim().slice(0, 60);
-
-  // Notificação vai pro time da escola do lead: BG posta cross-origin neste
-  // endpoint, então leads BG (escola:'maplebearbg') avisam o time do BG.
-  const isBg = String(body.escola || '').trim() === 'maplebearbg';
-  const to = (
-    isBg
-      ? (process.env.LEAD_NOTIFY_TO_BG || 'contato@maplebearbg.com.br')
-      : (process.env.LEAD_NOTIFY_TO || 'comercial@maplebearmaringa.com.br')
-  ).split(',').map(s => s.trim()).filter(Boolean);
+  // Notificação para a equipe da escola (LEAD_NOTIFY_TO, lista com vírgula).
+  const to = (process.env.LEAD_NOTIFY_TO || 'secretaria@maplebearmaringa.com.br')
+    .split(',').map(s => s.trim()).filter(Boolean);
 
   const html = `
     <div style="font-family: Georgia, serif; max-width: 580px; margin: 0 auto; color: #1a1814;">

@@ -1,8 +1,8 @@
-// GET /api/instagram-feed?unit=caxias|bg
+// GET /api/instagram-feed?unit=maringa
 //
 // Feed do Instagram das unidades Maple Bear via **Business Discovery**.
 // A conta conectada (lumi.ed, no InstaPublisher) consulta os dados públicos
-// das contas Business @maplebearmaringa e @maplebear.bentogoncalves.
+// da conta Business @maplebearmaringa.
 // Assim não é preciso a conta da escola autorizar nada — e o token usado é
 // o da lumi.ed, renovado automaticamente pelo InstaPublisher.
 //
@@ -22,8 +22,7 @@ const GRAPH = 'https://graph.facebook.com/v21.0';
 const SELF_IG = '17841436678488566'; // lumi.ed — conta que faz a Business Discovery
 
 const UNIT_HANDLE = {
-  caxias: 'maplebearmaringa',
-  bg: 'maplebear.bentogoncalves'
+  maringa: 'maplebearmaringa'
 };
 
 const MEDIA_FIELDS = 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,like_count,comments_count';
@@ -96,7 +95,7 @@ async function getToken() {
 
 export default async function handler(req) {
   const url = new URL(req.url);
-  const unit = (url.searchParams.get('unit') || 'caxias').toLowerCase();
+  const unit = (url.searchParams.get('unit') || 'maringa').toLowerCase();
 
   const headers = {
     'Content-Type': 'application/json; charset=utf-8',

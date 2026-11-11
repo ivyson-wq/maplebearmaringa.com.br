@@ -7,7 +7,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 > "Maple Bear Maringá" → rolar até "Perguntas e respostas" → "Fazer uma pergunta".
 > Já **responder como empresa funciona pela web**: logado como proprietário, busca da escola →
 > card "Sua empresa no Google" → "Perguntas e respostas" (módulo `#trex=m_t:pqaQ`).
-> Fluxo: Ivyson planta a pergunta pelo celular → o agente (Claude) responde como empresa pela web.
+> Fluxo: Ivyson planta a pergunta pelo celular → a equipe responde como empresa pela web.
 
 ## ✅ Estratégia
 
@@ -23,22 +23,22 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 1.
 **Pergunta:** A partir de qual idade a Maple Bear Maringá atende?
 
-**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (até Year 3 em 2026; Year 4 em 2027). Agende uma visita pelo WhatsApp 44 99136-2021.
+**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (Year 1 ao Year 5); o Year 6 está previsto para 2027. Agende uma visita pelo WhatsApp 44 99136-2021.
 
 ### 2.
 **Pergunta:** A escola é bilíngue em qual modelo?
 
-**Resposta:** Imersão real: o inglês permeia a rotina desde os 18 meses — não é matéria isolada, é língua de convivência. Metodologia canadense Maple Bear, padronizada em mais de 30 países, alinhada à BNCC.
+**Resposta:** Imersão real: o inglês permeia a rotina desde os 18 meses — não é matéria isolada, é língua de convivência. Metodologia canadense Maple Bear, da maior rede de escolas canadenses do mundo, alinhada à BNCC.
 
 ### 3.
-**Pergunta:** Vocês têm horário integral?
+**Pergunta:** Quais são os turnos da escola?
 
-**Resposta:** Funcionamos de segunda a sexta, das 07:30 às 19:00, com formatos de turno apresentados na visita. Agende pelo WhatsApp 44 99136-2021.
+**Resposta:** Temos turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30). Como funciona o turno de cada idade é explicado na conversa ou na visita. Agende pelo WhatsApp 44 99136-2021. <!-- PENDENTE: confirmar período integral antes de responder sobre ele -->
 
 ### 4.
 **Pergunta:** Onde fica a escola?
 
-**Resposta:** Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — bairro Santa Catarina, Maringá, PR. Recebemos famílias de toda a cidade e região (Farroupilha, Flores da Cunha).
+**Resposta:** Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Jardim Higienópolis, Maringá, PR. Recebemos famílias de toda a cidade e região (Sarandi, Paiçandu, Marialva).
 
 ### 5.
 **Pergunta:** A escola atende crianças que ainda não falam inglês?
@@ -53,12 +53,12 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 7.
 **Pergunta:** A escola é acolhedora? Como funciona a adaptação?
 
-**Resposta:** Acolhimento aqui é prática, não slogan: adaptação gradual no ritmo de cada criança (sem prazo rígido), colo sem cota e família avisada na hora nos dias difíceis. Guia: maplebearmaringa.com.br/blog/escola-infantil-acolhedora-maringa/
+**Resposta:** Acolhimento aqui é prática, não slogan: adaptação no ritmo de cada criança e conversa próxima com a família. Guia: maplebearmaringa.com.br/blog/escola-infantil-acolhedora-maringa/
 
 ### 8.
 **Pergunta:** Como funciona a segurança da escola?
 
-**Resposta:** Segurança como sistema: controle de acesso individualizado com reconhecimento facial dos responsáveis autorizados, protocolos escritos de febre/queda/alergia e ambiente projetado para crianças pequenas. Detalhes na visita.
+**Resposta:** Segurança é prioridade na rotina da escola. Os detalhes de como funciona na prática são explicados pela coordenação na visita. <!-- PENDENTE: descrever controle de acesso e protocolos de Maringá -->
 
 ### 9.
 **Pergunta:** A escola atende crianças atípicas (autismo, TDAH)?
@@ -68,13 +68,13 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 10.
 **Pergunta:** Até que série a escola atende? Meu filho pode continuar depois da Educação Infantil?
 
-**Resposta:** Sim — temos continuidade até o Ensino Fundamental I na mesma escola (Year 3 em 2026, expandindo ano a ano até o Fundamental II). A criança não troca de escola na alfabetização.
+**Resposta:** Sim — temos continuidade até o Ensino Fundamental I na mesma escola (Year 1 ao Year 5; Year 6 previsto para 2027). A criança não troca de escola na alfabetização.
 
 ---
 
 ## 📅 Cadência sugerida
 
-- **Semana 1:** perguntas 1, 3, 7 (idade, integral, acolhedora)
+- **Semana 1:** perguntas 1, 3, 7 (idade, turnos, acolhedora)
 - **Semana 2:** perguntas 2, 4, 6 (modelo, endereço, Montessori)
 - **Semana 3:** perguntas 5, 8 (sem inglês prévio, segurança)
 - **Semana 4:** perguntas 9, 10 (inclusão, continuidade)

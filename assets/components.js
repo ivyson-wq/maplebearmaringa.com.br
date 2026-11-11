@@ -51,7 +51,7 @@
         <span class="top-bar-icon" aria-hidden="true">✦</span>
         <span class="top-bar-text">
           <strong>Matrículas 2027 abertas</strong>
-          <small style="opacity: 0.85;">· Bear Care ao Year 4 · vagas limitadas</small>
+          <small style="opacity: 0.85;">· Bear Care ao Year 5</small>
         </span>
         <a href="/visite/" class="top-bar-cta">
           Agendar visita <span aria-hidden="true">→</span>
@@ -240,7 +240,7 @@
           </label>
           <label class="vm-field">
             <span>WhatsApp</span>
-            <input type="tel" name="telefone" placeholder="(54) 99999-9999" required autocomplete="tel" inputmode="numeric">
+            <input type="tel" name="telefone" placeholder="(44) 99999-9999" required autocomplete="tel" inputmode="numeric">
           </label>
           <label class="vm-field">
             <span>Nome da criança</span>

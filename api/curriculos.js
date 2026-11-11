@@ -23,9 +23,6 @@ const ALLOWED_ORIGINS = [
   'https://maplebearmaringa.com.br',
   'https://www.maplebearmaringa.com.br',
   'https://maplebearmaringa.vercel.app',
-  'https://maplebearbg.com.br',
-  'https://www.maplebearbg.com.br',
-  'https://maplebearbg.vercel.app',
 ];
 
 const MAX_BYTES = 3 * 1024 * 1024; // 3 MB
@@ -39,22 +36,13 @@ const ALLOWED_MIME = {
 
 // Mapa unidade → escola + notificação
 const UNIDADES = {
-  caxias: {
+  maringa: {
     slug: 'mbmaringa',
     nome: 'Maple Bear Maringá',
     site: 'maplebearmaringa.com.br',
     origem: 'site-trabalhe',
     from: 'Maple Bear Maringá <site@maplebearmaringa.com.br>',
     notifyEnv: 'TALENTOS_NOTIFY_TO',
-    cor: '#b8112e',
-  },
-  bg: {
-    slug: 'maplebearbg',
-    nome: 'Maple Bear Bento Gonçalves',
-    site: 'maplebearbg.com.br',
-    origem: 'site-trabalhe-bg',
-    from: 'Maple Bear Bento Gonçalves <site@maplebearmaringa.com.br>',
-    notifyEnv: 'TALENTOS_NOTIFY_TO_BG',
     cor: '#b8112e',
   },
 };
@@ -139,7 +127,7 @@ export default async function handler(req) {
   // Honeypot anti-bot (campo invisível "company")
   if (body.company) return jsonResponse({ ok: true, id: 'noop' }, { status: 200 }, origin);
 
-  const unidade = UNIDADES[String(body.unidade || 'caxias')] || UNIDADES.caxias;
+  const unidade = UNIDADES[String(body.unidade || 'maringa')] || UNIDADES.maringa;
 
   // Validações de entrada
   const nome = String(body.nome || '').trim();

@@ -152,7 +152,7 @@ story.append(Paragraph(
 ))
 story.append(Spacer(1, 8*mm))
 story.append(Paragraph(
-    "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá · RS · 87060-390",
+    "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá · PR · 87060-390",
     styles['cta_b']
 ))
 story.append(Spacer(1, 24*mm))

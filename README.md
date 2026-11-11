@@ -1,68 +1,46 @@
 # maplebearmaringa.com.br
 
-Site institucional da **Maple Bear Maringá** — escola bilíngue canadense em Maringá, PR.
+Site institucional da **Maple Bear Maringá** — escola bilíngue canadense em Maringá, PR
+(Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Jardim Higienópolis).
+
+Nasceu como cópia adaptada de `maplebearcaxiasdosul.com.br` (mesma estrutura, mesmo editorial).
+Regras da adaptação: `editorial/ADAPTACAO-MARINGA.md`. Fatos da escola: `editorial/fatos.md`.
 
 ## Stack
 
-- HTML/CSS/JS estático puro
-- Deploy: Vercel
-- Analytics: GA4 (`G-7KN8ZP8NMF`)
-- Blog: 38 posts editoriais em `/blog/` (migrado do monorepo Lumied em 2026-05-22, URLs preservadas)
+- HTML/CSS/JS estático puro, sem build
+- Hospedagem: Vercel (`vercel.json`: cleanUrls, redirect www → apex, headers de segurança)
+- Funções edge em `api/`: `visit-lead` (formulário de visita), `curriculos` (trabalhe conosco), `instagram-feed`
+- Blog: `/blog/` (94 artigos) + editorial quinzenal automático (`editorial/`, `.github/workflows/`)
 
-## Estrutura
+## Publicação
 
-```
-.
-├── index.html             # Home
-├── sobre/                 # História da unidade
-├── metodologia/           # Método Maple Bear canadense
-├── niveis/                # Infantil, Fundamental I, Fundamental II
-├── estrutura/             # Tour fotográfico
-├── equipe/                # Coordenação pedagógica
-├── matriculas/            # Valores 2027 + processo
-├── visite/                # Agendamento de visita
-├── contato/
-├── depoimentos/
-├── faq/
-├── blog/                  # 38 posts (NÃO mexer em URLs — SEO indexado)
-└── assets/
-    ├── styles.css
-    ├── analytics.js
-    └── photos/
-```
-
-## Deploy
-
-`git push origin main` → Vercel deploy automático.
-
-## SEO
-
-- Sitemap: `/sitemap.xml`
-- Robots: `/robots.txt`
-- llms.txt + llms-full.txt (AEO)
-- JSON-LD: School + LocalBusiness + FAQPage + BreadcrumbList
+Merge na `main` → a Vercel publica. Nunca publicar por CLI.
 
 ## Captura de leads
 
-Formulário em `/visite/` → POST `/api/visit-lead` (Vercel Edge Function) → email Resend pra Denise/Simone + (opcional) lead no Lumied.
+`/visite/`, landing pages e materiais → `POST /api/visit-lead` →
+1. e-mail para a equipe (Resend, `LEAD_NOTIFY_TO`, default `secretaria@maplebearmaringa.com.br`);
+2. lead no Lumied, tenant `mbmaringa` (`https://mbmaringa.lumied.com.br/api/leads`, público, sem chave).
 
-### Env vars necessárias
+O pixel first-party do Lumied (`assets/analytics.js` → `/api/track/pageview`) liga a navegação ao lead.
 
-Plugar via `vercel env add <NOME> production` ou na UI do Vercel:
+`/trabalhe-conosco/` → `POST /api/curriculos` → `app.lumied.com.br/api/talentos` (unidade `maringa`) + e-mail (`TALENTOS_NOTIFY_TO`).
 
-| Var | Obrigatório | Descrição |
-|---|---|---|
-| `RESEND_API_KEY` | ✅ | API key do Resend (mesma usada no Lumied) |
-| `RESEND_FROM` | recomendado | Remetente (default: `Maple Bear Maringá <site@maplebearmaringa.com.br>`) |
-| `LEAD_NOTIFY_TO` | ✅ | Lista de emails (vírgula) — Denise, Simone |
-| `LUMIED_API_URL` | opcional | URL da edge function `api` do Lumied |
-| `LUMIED_API_TOKEN` | opcional | Bearer token de service ou public submission |
-| `LUMIED_ESCOLA_ID` | opcional | UUID da escola Maple Bear Maringá |
+Variáveis: ver `.env.example`.
 
-Se as três vars `LUMIED_*` estiverem ausentes, o endpoint funciona apenas com Resend (lead vai por email).
+## Rastreamento
 
-Ver `.env.example`.
+`assets/analytics.js` e `blog/analytics.js`: `GA_ID`, `PIXEL_ID`, `AW_*` estão vazios até a escola ter
+GA4, Meta Pixel e Google Ads próprios (vazio = a tag não carrega).
+
+## SEO
+
+- `node scripts/gen-sitemap.mjs` regera o `sitemap.xml` a partir das páginas
+- `robots.txt`, `llms.txt`, `llms-full.txt`
+- JSON-LD: School + LocalBusiness + FAQPage + BreadcrumbList + Article
+- Páginas por bairro: `/em-maringa/<bairro>/`
 
 ## WhatsApp
 
-Sticky mobile → `wa.me/5544991362021` (número produção Maple Bear Maringá).
+`wa.me/5544991362021` — (44) 99136-2021.

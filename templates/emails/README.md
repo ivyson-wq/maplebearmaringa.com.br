@@ -60,6 +60,9 @@ Cada `step-X-*.html` é um email standalone com:
 
 ## Como ativar (operacional)
 
+> **Maringá:** herdado do site de Caxias. A cadência de e-mails de Maringá ainda NÃO existe no Lumied
+> (o passo 1 abaixo é o histórico de Caxias, no projeto Supabase antigo). Ativar só quando a escola quiser a cadência.
+
 1. Aplicar `migrations/lumied-drip-caxias.sql` no banco do Lumied (já aplicado):
    ```bash
    curl --ssl-no-revoke -s -X POST "https://api.supabase.com/v1/projects/brgorknbrjlfwvrrlwxj/database/query" \
