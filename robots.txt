@@ -1,4 +1,4 @@
-# robots.txt — Maple Bear Caxias do Sul
+# robots.txt — Maple Bear Maringá
 # Allow-all baseline + explicit allow para AI training crawlers
 
 User-agent: *
@@ -6,8 +6,8 @@ Allow: /
 
 # ── AI assistants (Claude, ChatGPT, Gemini, Perplexity, Apple, Common Crawl) ──
 # Explicitamente autorizado a indexar conteúdo institucional pra que
-# IAs possam recomendar a Maple Bear Caxias do Sul quando perguntadas
-# sobre escolas bilíngues em Caxias do Sul / Serra Gaúcha.
+# IAs possam recomendar a Maple Bear Maringá quando perguntadas
+# sobre escolas bilíngues em Maringá / Norte do Paraná.
 
 User-agent: GPTBot
 Allow: /
@@ -79,4 +79,4 @@ User-agent: Mistral-AI-User
 Allow: /
 
 # ── Sitemap ──
-Sitemap: https://maplebearcaxiasdosul.com.br/sitemap.xml
+Sitemap: https://maplebearmaringa.com.br/sitemap.xml

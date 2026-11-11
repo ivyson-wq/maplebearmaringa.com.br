@@ -6,7 +6,7 @@ import { join } from 'path';
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([a-zA-Z]):\//, '$1:/');
 
-const OG_TAG = `\n  <meta property="og:image" content="https://maplebearcaxiasdosul.com.br/assets/og-image.png">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n  <meta name="twitter:image" content="https://maplebearcaxiasdosul.com.br/assets/og-image.png">\n  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">`;
+const OG_TAG = `\n  <meta property="og:image" content="https://maplebearmaringa.com.br/assets/og-image.png">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">\n  <meta name="twitter:image" content="https://maplebearmaringa.com.br/assets/og-image.png">\n  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">`;
 
 function walk(dir, files = []) {
   for (const e of readdirSync(dir)) {
@@ -26,7 +26,7 @@ for (const file of files) {
   const before = html;
 
   // Adicionar OG image antes do </head>, se não existir ainda
-  if (!html.includes('og:image" content="https://maplebearcaxiasdosul.com.br/assets/og-image.png"')) {
+  if (!html.includes('og:image" content="https://maplebearmaringa.com.br/assets/og-image.png"')) {
     // Remover qualquer og:image antiga
     html = html.replace(/\s*<meta property="og:image"[^>]*>/g, '');
     html = html.replace(/\s*<meta name="twitter:image"[^>]*>/g, '');

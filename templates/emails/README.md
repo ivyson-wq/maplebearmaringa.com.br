@@ -1,4 +1,4 @@
-# Drip email — Maple Bear Caxias do Sul
+# Drip email — Maple Bear Maringá
 
 Sequência automatizada de emails enviada quando um lead entra pelo site
 (formulário de visita ou lead magnet).
@@ -10,9 +10,9 @@ Sequência automatizada de emails enviada quando um lead entra pelo site
 | 1 | D+0 | Bem-vindo(a) à família Maple Bear | Imediato após captura |
 | 2 | D+1 | Como funciona uma escola bilíngue de verdade | 24h depois |
 | 3 | D+3 | 22 perguntas para fazer numa visita | 3 dias depois |
-| 4 | D+7 | O que as famílias contam sobre a Maple Bear Caxias | 1 semana |
+| 4 | D+7 | O que as famílias contam sobre a Maple Bear Maringá | 1 semana |
 | 5 | D+15 | Matrículas 2027 — vagas restantes | 2 semanas |
-| 6 | D+30 | Open Day em Caxias | 1 mês (re-engajamento) |
+| 6 | D+30 | Open Day em Maringá | 1 mês (re-engajamento) |
 
 ## Como funciona (arquitetura — Fase 7 ativa)
 
@@ -53,7 +53,7 @@ Cada `step-X-*.html` é um email standalone com:
 - `{{nome_responsavel}}` — nome do pai/mãe
 - `{{nome_crianca}}` — nome do filho (se informado)
 - `{{idade}}` — idade/série
-- `{{escola_nome}}` — "Maple Bear Caxias do Sul"
+- `{{escola_nome}}` — "Maple Bear Maringá"
 - `{{escola_endereco}}` — endereço completo
 - `{{escola_whatsapp}}` — número
 - `{{unsubscribe_url}}` — link de descadastro (LGPD)
@@ -74,10 +74,10 @@ Cada `step-X-*.html` é um email standalone com:
    -- crm-cadencias-process  | 0 11,20 * * *
    -- crm-drip-send-process  | 5 11,20 * * *
    ```
-3. Setar env vars no Vercel da Caxias (visit-lead.js já consome):
+3. Setar env vars no Vercel da Maringá (visit-lead.js já consome):
    ```
    LUMIED_ANON_KEY   = <anon key do Supabase Lumied>
-   DRIP_SEND_KEY     = drip_caxias_5a41cc471600db1901d641dd0f09dd99
+   DRIP_SEND_KEY     = <pedir ao Lumied>
    DRIP_SEND_URL     = https://brgorknbrjlfwvrrlwxj.supabase.co/functions/v1/crm-drip-send
    ```
 4. Validar end-to-end: cadastrar lead com email em `/visite/` → conferir log

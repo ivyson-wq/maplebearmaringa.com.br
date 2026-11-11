@@ -23,7 +23,7 @@ Esta pasta contém as assets da identidade visual Maple Bear usadas no site.
 - [ ] `chinook-playing.png` — brincando (Infantil)
 - [ ] `chinook-learning.png` — em situação acadêmica (Fundamental)
 
-> Estes são poses sugeridas; pode mandar tudo que tiver da unidade Caxias
+> Estes são poses sugeridas; pode mandar tudo que tiver da unidade Maringá
 
 ### Brand guidelines
 - [ ] `brand-manual.pdf` (se houver) — manual de identidade visual oficial Maple Bear
@@ -46,7 +46,7 @@ Quando chegarem os arquivos oficiais + brand guide, ajusto a paleta pra match ex
 
 ## Onde os logos são usados
 
-- **Header** (`site-header .brand`): logo horizontal pequeno + texto "Caxias do Sul"
+- **Header** (`site-header .brand`): logo horizontal pequeno + texto "Maringá"
 - **Footer** (`site-footer`): logo white (clara) em pequeno
 - **OG image** (1200×630): logo + tagline (gerado, vai pra `/assets/og-image.png`)
 - **Favicon**: `logo-symbol.svg` ou `favicon.svg` (atual é placeholder com "M")

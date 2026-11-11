@@ -16,7 +16,7 @@
 
   const DEFAULT_CONFIG = {
     endpoint: '/api/instagram-feed',
-    unit: 'caxias',
+    unit: 'maringa',
     cacheKey: 'mb_ig_feed_v1',
     cacheTtlMs: 3600 * 1000,
     galleryContainer: '#ig-gallery',

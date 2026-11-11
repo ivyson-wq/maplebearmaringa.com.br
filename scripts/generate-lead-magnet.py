@@ -2,7 +2,7 @@
 Gera o lead magnet PDF:
 "22 perguntas para fazer numa visita a uma escola bilíngue"
 
-Layout profissional, branding sutil Maple Bear Caxias.
+Layout profissional, branding sutil Maple Bear Maringá.
 Output: assets/materiais/22-perguntas-visita-escola-bilingue.pdf
 """
 from pathlib import Path
@@ -97,7 +97,7 @@ def make_header_footer(canvas, doc):
     # page number
     canvas.setFont(BODY_FONT, 8)
     canvas.setFillColor(INK_SOFT)
-    canvas.drawCentredString(pw / 2, 8 * mm, f"Maple Bear Caxias do Sul · maplebearcaxiasdosul.com.br · {doc.page}")
+    canvas.drawCentredString(pw / 2, 8 * mm, f"Maple Bear Maringá · maplebearmaringa.com.br · {doc.page}")
     canvas.restoreState()
 
 doc = SimpleDocTemplate(
@@ -105,7 +105,7 @@ doc = SimpleDocTemplate(
     leftMargin=22*mm, rightMargin=22*mm,
     topMargin=22*mm, bottomMargin=16*mm,
     title="22 perguntas para fazer numa visita a uma escola bilíngue",
-    author="Maple Bear Caxias do Sul"
+    author="Maple Bear Maringá"
 )
 
 story = []
@@ -122,7 +122,7 @@ story.append(Paragraph("que você precisa fazer<br/>numa visita a uma<br/>escola
 story.append(Spacer(1, 30*mm))
 story.append(Paragraph(
     "Um guia honesto para famílias atentas — escrito pela coordenação pedagógica<br/>"
-    "da Maple Bear Caxias do Sul.",
+    "da Maple Bear Maringá.",
     intro_style
 ))
 story.append(PageBreak())
@@ -245,19 +245,19 @@ story.append(Paragraph(
 ))
 story.append(Spacer(1, 8*mm))
 story.append(Paragraph(
-    "Maple Bear Caxias do Sul<br/>"
-    "Rua Jacob Luchesi, 2374 · Caxias do Sul, RS · CEP 95032-000<br/>"
-    "WhatsApp: (54) 9 9624-3857 · maplebearcaxiasdosul.com.br",
+    "Maple Bear Maringá<br/>"
+    "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá, PR · CEP 87060-390<br/>"
+    "WhatsApp: (44) 99136-2021 · maplebearmaringa.com.br",
     cta_body_style
 ))
 story.append(Spacer(1, 14*mm))
 story.append(Paragraph(
-    "<b>Agende sua visita guiada em maplebearcaxiasdosul.com.br/visite</b>",
+    "<b>Agende sua visita guiada em maplebearmaringa.com.br/visite</b>",
     cta_body_style
 ))
 story.append(Spacer(1, 30*mm))
 story.append(Paragraph(
-    "© Maple Bear Canadian School Caxias do Sul · Material gratuito · "
+    "© Maple Bear Canadian School Maringá · Material gratuito · "
     "Compartilhe à vontade com famílias amigas.",
     footer_style
 ))

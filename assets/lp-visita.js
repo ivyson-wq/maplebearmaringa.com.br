@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════════════════════════════
-// Maple Bear Caxias do Sul — formulário de visita embutido nas landing
+// Maple Bear Maringá — formulário de visita embutido nas landing
 // pages de anúncio (form[data-lp-visita="lp-xxx"]).
 // Mesmo mecanismo do /visite/: POST /api/visit-lead e, SÓ depois de a API
 // confirmar (r.ok && json.ok), window.mbFormLead(form, origem) — conversão
@@ -10,7 +10,7 @@
 // ════════════════════════════════════════════════════════════════════
 (function () {
   'use strict';
-  var WA = 'https://wa.me/5554996243857?text=' + encodeURIComponent('Olá! Vim do site da Maple Bear Caxias do Sul e gostaria de agendar uma visita.');
+  var WA = 'https://wa.me/5544991362021?text=' + encodeURIComponent('Olá! Vim do site da Maple Bear Maringá e gostaria de agendar uma visita.');
 
   function mostrar(fb, erro, titulo, texto, comLinkWa) {
     fb.textContent = '';

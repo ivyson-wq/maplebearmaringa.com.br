@@ -52,7 +52,7 @@ def header_footer(canvas, doc):
     canvas.setFillColor(RED); canvas.rect(pw/3, 0, pw/3, bar_h, stroke=0, fill=1)
     canvas.setFillColor(RED_DEEP); canvas.rect(2*pw/3, 0, pw/3, bar_h, stroke=0, fill=1)
     canvas.setFont(BODY, 8); canvas.setFillColor(INK_SOFT)
-    canvas.drawCentredString(pw/2, 8*mm, f"Maple Bear Caxias do Sul · maplebearcaxiasdosul.com.br · {doc.page}")
+    canvas.drawCentredString(pw/2, 8*mm, f"Maple Bear Maringá · maplebearmaringa.com.br · {doc.page}")
     canvas.restoreState()
 
 doc = SimpleDocTemplate(
@@ -60,7 +60,7 @@ doc = SimpleDocTemplate(
     leftMargin=22*mm, rightMargin=22*mm,
     topMargin=22*mm, bottomMargin=16*mm,
     title="Inglês em casa sem saber inglês",
-    author="Maple Bear Caxias do Sul",
+    author="Maple Bear Maringá",
 )
 
 story = []
@@ -146,18 +146,18 @@ story.append(Paragraph(
 ))
 story.append(Spacer(1, 14*mm))
 story.append(Paragraph(
-    "<b>Agende em maplebearcaxiasdosul.com.br/visite</b><br/>"
-    "ou no WhatsApp (54) 9 9624-3857",
+    "<b>Agende em maplebearmaringa.com.br/visite</b><br/>"
+    "ou no WhatsApp (44) 99136-2021",
     styles['cta_b']
 ))
 story.append(Spacer(1, 8*mm))
 story.append(Paragraph(
-    "Rua Jacob Luchesi, 2374 · Caxias do Sul · RS · 95032-000",
+    "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá · RS · 87060-390",
     styles['cta_b']
 ))
 story.append(Spacer(1, 24*mm))
 story.append(Paragraph(
-    "© Maple Bear Caxias do Sul · Material gratuito · Compartilhe com famílias amigas.",
+    "© Maple Bear Maringá · Material gratuito · Compartilhe com famílias amigas.",
     styles['footer']
 ))
 

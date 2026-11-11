@@ -6,9 +6,9 @@
     {
       "source": "/:path*",
       "has": [
-        { "type": "host", "value": "www.maplebearcaxiasdosul.com.br" }
+        { "type": "host", "value": "www.maplebearmaringa.com.br" }
       ],
-      "destination": "https://maplebearcaxiasdosul.com.br/:path*",
+      "destination": "https://maplebearmaringa.com.br/:path*",
       "permanent": true
     }
   ],

@@ -1,10 +1,10 @@
-# 📌 Template Q&A — pra plantar no Google Business Profile (Caxias do Sul)
+# 📌 Template Q&A — pra plantar no Google Business Profile (Maringá)
 
 Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro ranking local.
 
 > ⚠️ **Como plantar (verificado 2026-06-12):** o Google removeu a opção de fazer pergunta pela web.
 > A pergunta só pode ser plantada pelo **app nativo do Google Maps no celular**: pesquisar
-> "Maple Bear Caxias do Sul" → rolar até "Perguntas e respostas" → "Fazer uma pergunta".
+> "Maple Bear Maringá" → rolar até "Perguntas e respostas" → "Fazer uma pergunta".
 > Já **responder como empresa funciona pela web**: logado como proprietário, busca da escola →
 > card "Sua empresa no Google" → "Perguntas e respostas" (módulo `#trex=m_t:pqaQ`).
 > Fluxo: Ivyson planta a pergunta pelo celular → o agente (Claude) responde como empresa pela web.
@@ -21,9 +21,9 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ## 📋 Perguntas + respostas pra colar
 
 ### 1.
-**Pergunta:** A partir de qual idade a Maple Bear Caxias do Sul atende?
+**Pergunta:** A partir de qual idade a Maple Bear Maringá atende?
 
-**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (até Year 3 em 2026; Year 4 em 2027). Agende uma visita pelo WhatsApp 54 99624-3857.
+**Resposta:** Atendemos a partir de 18 meses, no Bear Care, com Educação Infantil completa e Fundamental I (até Year 3 em 2026; Year 4 em 2027). Agende uma visita pelo WhatsApp 44 99136-2021.
 
 ### 2.
 **Pergunta:** A escola é bilíngue em qual modelo?
@@ -33,12 +33,12 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 3.
 **Pergunta:** Vocês têm horário integral?
 
-**Resposta:** Funcionamos de segunda a sexta, das 07:30 às 19:00, com formatos de turno apresentados na visita. Agende pelo WhatsApp 54 99624-3857.
+**Resposta:** Funcionamos de segunda a sexta, das 07:30 às 19:00, com formatos de turno apresentados na visita. Agende pelo WhatsApp 44 99136-2021.
 
 ### 4.
 **Pergunta:** Onde fica a escola?
 
-**Resposta:** Rua Jacob Luchesi, 2374 — bairro Santa Catarina, Caxias do Sul/RS. Recebemos famílias de toda a cidade e região (Farroupilha, Flores da Cunha).
+**Resposta:** Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — bairro Santa Catarina, Maringá, PR. Recebemos famílias de toda a cidade e região (Farroupilha, Flores da Cunha).
 
 ### 5.
 **Pergunta:** A escola atende crianças que ainda não falam inglês?
@@ -48,12 +48,12 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 6.
 **Pergunta:** A Maple Bear é uma escola Montessori?
 
-**Resposta:** Não — seguimos a metodologia canadense Maple Bear. Compartilhamos princípios (criança no centro, autonomia, ambiente preparado) e somamos a imersão em inglês desde os 18 meses. Comparativo honesto: maplebearcaxiasdosul.com.br/blog/escola-infantil-montessori-caxias-do-sul/
+**Resposta:** Não — seguimos a metodologia canadense Maple Bear. Compartilhamos princípios (criança no centro, autonomia, ambiente preparado) e somamos a imersão em inglês desde os 18 meses. Comparativo honesto: maplebearmaringa.com.br/blog/escola-infantil-montessori-maringa/
 
 ### 7.
 **Pergunta:** A escola é acolhedora? Como funciona a adaptação?
 
-**Resposta:** Acolhimento aqui é prática, não slogan: adaptação gradual no ritmo de cada criança (sem prazo rígido), colo sem cota e família avisada na hora nos dias difíceis. Guia: maplebearcaxiasdosul.com.br/blog/escola-infantil-acolhedora-caxias-do-sul/
+**Resposta:** Acolhimento aqui é prática, não slogan: adaptação gradual no ritmo de cada criança (sem prazo rígido), colo sem cota e família avisada na hora nos dias difíceis. Guia: maplebearmaringa.com.br/blog/escola-infantil-acolhedora-maringa/
 
 ### 8.
 **Pergunta:** Como funciona a segurança da escola?
@@ -63,7 +63,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 9.
 **Pergunta:** A escola atende crianças atípicas (autismo, TDAH)?
 
-**Resposta:** A matrícula de crianças com deficiência é direito garantido pela Lei Brasileira de Inclusão. O desenho do acompanhamento é construído em conversa individualizada entre família e coordenação, a partir da visita. WhatsApp 54 99624-3857.
+**Resposta:** A matrícula de crianças com deficiência é direito garantido pela Lei Brasileira de Inclusão. O desenho do acompanhamento é construído em conversa individualizada entre família e coordenação, a partir da visita. WhatsApp 44 99136-2021.
 
 ### 10.
 **Pergunta:** Até que série a escola atende? Meu filho pode continuar depois da Educação Infantil?

@@ -12,7 +12,7 @@ import { join } from 'path';
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([a-zA-Z]):\//, '$1:/');
 const blogDir = join(root, 'blog');
-const SITE = 'https://maplebearcaxiasdosul.com.br';
+const SITE = 'https://maplebearmaringa.com.br';
 
 // ── Buckets de categoria que casam com os botões de filtro do index ──────────
 // Filtros existentes: educacao-bilingue | metodologia | familia | desenvolvimento
@@ -27,8 +27,8 @@ const BUCKET = {
   'desenvolvimento-socioemocional-bilingue': 'desenvolvimento',
   'ed-infantil-bilingue-1-5-a-5-anos': 'educacao-bilingue',
   'educacao-bilingue-beneficios-criancas': 'educacao-bilingue',
-  'escola-bilingue-caxias-do-sul': 'educacao-bilingue',
-  'escola-bilingue-caxias-matricula-2026': 'educacao-bilingue',
+  'escola-bilingue-maringa': 'educacao-bilingue',
+  'escola-bilingue-maringa-matricula-2026': 'educacao-bilingue',
   'escola-bilingue-confunde-crianca': 'desenvolvimento',
   'escola-bilingue-educacao-infantil-necessaria': 'educacao-bilingue',
   'escola-bilingue-ou-curso-de-ingles-qual-escolher': 'educacao-bilingue',
@@ -40,10 +40,10 @@ const BUCKET = {
   'imersao-ingles-vs-aulas-ingles': 'metodologia',
   'ingles-em-casa-rotina-familia': 'familia',
   'leitura-infantil-bilingue-livros': 'familia',
-  'maple-bear-caxias-infraestrutura': 'educacao-bilingue',
+  'maple-bear-maringa-infraestrutura': 'educacao-bilingue',
   'maple-bear-e-boa-vale-a-pena': 'educacao-bilingue',
   'matricula-escola-bilingue-documentacao': 'educacao-bilingue',
-  'melhores-escolas-bilingues-caxias-do-sul': 'educacao-bilingue',
+  'melhores-escolas-bilingues-maringa': 'educacao-bilingue',
   'metodologia-canadense-maple-bear': 'metodologia',
   'metodologias-ativas-canadense': 'metodologia',
   'neurociencia-bilinguismo-cerebro': 'desenvolvimento',
@@ -57,7 +57,7 @@ const BUCKET = {
   // artigos publicados pela automação diária do blog:
   'curriculo-canadense-escola-bilingue': 'metodologia',
   'licao-de-casa-escola-bilingue': 'familia',
-  'educacao-infantil-em-caxias-do-sul': 'educacao-bilingue',
+  'educacao-infantil-em-maringa': 'educacao-bilingue',
   'preparacao-cambridge-criancas': 'metodologia',
   'professor-bilingue-o-que-avaliar': 'metodologia',
   'rotina-escola-bilingue-dia-a-dia': 'familia',
@@ -74,9 +74,9 @@ const U = id => `https://images.unsplash.com/photo-${id}?w=800&auto=format&fit=c
 const IMG_FILL = {
   'maple-bear-e-boa-vale-a-pena': U('1580582932707-520aed937b7b'),
   'escola-bilingue-ou-curso-de-ingles-qual-escolher': U('1456513080510-7bf3a84b82f8'),
-  'escola-bilingue-caxias-matricula-2026': U('1587654780291-39c9404d746b'),
+  'escola-bilingue-maringa-matricula-2026': U('1587654780291-39c9404d746b'),
   'escola-bilingue-educacao-infantil-necessaria': U('1503676260728-1c00da094a0b'),
-  'maple-bear-caxias-infraestrutura': U('1588072432836-e10032774350'),
+  'maple-bear-maringa-infraestrutura': U('1588072432836-e10032774350'),
   'segundo-idioma-antes-dos-5-anos': U('1488521787991-ed7bbaae773c'),
   'quanto-custa-escola-bilingue-2026': U('1515488042361-ee00e0ddd4e4'),
   // 4 novos (faltavam no index):
@@ -89,8 +89,8 @@ const IMG_FILL = {
 // Os 4 artigos que não tinham card no index (title/excerpt do <head>).
 const NEW_CARDS = {
   'como-escolher-escola-bilingue': {
-    title: 'Como Escolher a Melhor Escola Bilíngue para Seu Filho: 10 Critérios Essenciais em Caxias do Sul',
-    excerpt: 'Guia completo com os 10 critérios essenciais para escolher a escola bilíngue certa em Caxias do Sul e garantir a melhor educação para seu filho.',
+    title: 'Como Escolher a Melhor Escola Bilíngue para Seu Filho: 10 Critérios Essenciais em Maringá',
+    excerpt: 'Guia completo com os 10 critérios essenciais para escolher a escola bilíngue certa em Maringá e garantir a melhor educação para seu filho.',
     date: '15 de abril de 2026', read: '11 min',
   },
   'escola-bilingue-confunde-crianca': {
@@ -99,8 +99,8 @@ const NEW_CARDS = {
     date: '22 de abril de 2026', read: '9 min',
   },
   'escola-bilingue': {
-    title: 'Escola Bilíngue em Caxias do Sul: Educação Infantil e Ensino Fundamental',
-    excerpt: 'Metodologia canadense e inglês por imersão desde 1,5 ano. Conheça a proposta bilíngue da Maple Bear em Caxias do Sul, da Educação Infantil ao Fundamental.',
+    title: 'Escola Bilíngue em Maringá: Educação Infantil e Ensino Fundamental',
+    excerpt: 'Metodologia canadense e inglês por imersão desde 1,5 ano. Conheça a proposta bilíngue da Maple Bear em Maringá, da Educação Infantil ao Fundamental.',
     date: '10 de abril de 2026', read: '8 min',
   },
   'resultado-enem-escola-bilingue': {
@@ -305,7 +305,7 @@ function indexCard(slug) {
       <h2 class="blog-card-title">${esc(c.title)}</h2>
       <p class="blog-card-excerpt">${esc(c.excerpt)}</p>
       <div class="blog-card-meta">
-        <span>Maple Bear Caxias do Sul</span>
+        <span>Maple Bear Maringá</span>
         <span>·</span>
         <time>${NEW_CARDS[slug].date}</time>
         <span class="reading-time">⏱ ${NEW_CARDS[slug].read}</span>

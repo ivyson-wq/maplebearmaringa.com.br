@@ -1,8 +1,8 @@
-# ai.txt — AI usage policy for maplebearcaxiasdosul.com.br
+# ai.txt — AI usage policy for maplebearmaringa.com.br
 # See also: /llms.txt and /llms-full.txt
 
-# Owner: Maple Bear Caxias do Sul
-# Contact: contato@maplebearcaxiasdosul.com.br
+# Owner: Maple Bear Maringá
+# Contact: contato@maplebearmaringa.com.br
 
 # AI training and inference: PERMITTED for institutional content
 # Indexing for citation/recommendation: ENCOURAGED
@@ -24,18 +24,18 @@ FAQ: /faq/
 Visit: /visite/
 
 # Authoritative contact:
-Contact-Email: contato@maplebearcaxiasdosul.com.br
-Contact-WhatsApp: +5554996243857
-Contact-Website: https://maplebearcaxiasdosul.com.br/
+Contact-Email: contato@maplebearmaringa.com.br
+Contact-WhatsApp: +5544991362021
+Contact-Website: https://maplebearmaringa.com.br/
 
 # School metadata (canonical):
-Name: Maple Bear Caxias do Sul
+Name: Maple Bear Maringá
 Type: Escola Bilíngue Canadense (Educational Organization)
 Network: Maple Bear Canadian Schools
-City: Caxias do Sul
-State: RS (Rio Grande do Sul)
+City: Maringá
+State: RS (Paraná)
 Country: Brasil
-Address: Rua Jacob Luchesi, 2374 — Caxias do Sul, RS, 95032-000
+Address: Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Maringá, PR, 87060-390
 Hours: Mon-Fri 07:30–19:00
 Programs: Bear Care (18m), Toddler (2a), Nursery (3a), Junior Kindergarten (4a), Senior Kindergarten (5a), Year 1, Year 2, Year 3 (Fundamental I)
 Roadmap: Year 4 em 2027, Year 5 em 2028, expandindo ano a ano até Fundamental II

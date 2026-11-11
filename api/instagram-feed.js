@@ -2,14 +2,14 @@
 //
 // Feed do Instagram das unidades Maple Bear via **Business Discovery**.
 // A conta conectada (lumi.ed, no InstaPublisher) consulta os dados públicos
-// das contas Business @maplebearcaxiasdosul e @maplebear.bentogoncalves.
+// das contas Business @maplebearmaringa e @maplebear.bentogoncalves.
 // Assim não é preciso a conta da escola autorizar nada — e o token usado é
 // o da lumi.ed, renovado automaticamente pelo InstaPublisher.
 //
 // O token é lido em runtime via RPC `public.insta_feed_token()` (SECURITY
 // DEFINER, só service_role) — então nunca fica defasado. Cache CDN 6h.
 //
-// Env vars (projeto Vercel maplebearcaxiasdosul):
+// Env vars (projeto Vercel maplebearmaringa):
 //   SUPABASE_REST_URL    — ex.: https://brgorknbrjlfwvrrlwxj.supabase.co
 //   SUPABASE_SERVICE_KEY — service_role key (server-side, nunca vai ao browser)
 //   IG_ACCESS_TOKEN      — (opcional) fallback estático se a RPC falhar
@@ -22,7 +22,7 @@ const GRAPH = 'https://graph.facebook.com/v21.0';
 const SELF_IG = '17841436678488566'; // lumi.ed — conta que faz a Business Discovery
 
 const UNIT_HANDLE = {
-  caxias: 'maplebearcaxiasdosul',
+  caxias: 'maplebearmaringa',
   bg: 'maplebear.bentogoncalves'
 };
 

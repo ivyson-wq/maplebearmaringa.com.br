@@ -1,6 +1,6 @@
-# maplebearcaxiasdosul.com.br
+# maplebearmaringa.com.br
 
-Site institucional da **Maple Bear Caxias do Sul** — escola bilíngue canadense em Caxias do Sul, RS.
+Site institucional da **Maple Bear Maringá** — escola bilíngue canadense em Maringá, PR.
 
 ## Stack
 
@@ -53,11 +53,11 @@ Plugar via `vercel env add <NOME> production` ou na UI do Vercel:
 | Var | Obrigatório | Descrição |
 |---|---|---|
 | `RESEND_API_KEY` | ✅ | API key do Resend (mesma usada no Lumied) |
-| `RESEND_FROM` | recomendado | Remetente (default: `Maple Bear Caxias <site@maplebearcaxiasdosul.com.br>`) |
+| `RESEND_FROM` | recomendado | Remetente (default: `Maple Bear Maringá <site@maplebearmaringa.com.br>`) |
 | `LEAD_NOTIFY_TO` | ✅ | Lista de emails (vírgula) — Denise, Simone |
 | `LUMIED_API_URL` | opcional | URL da edge function `api` do Lumied |
 | `LUMIED_API_TOKEN` | opcional | Bearer token de service ou public submission |
-| `LUMIED_ESCOLA_ID` | opcional | UUID da escola Maple Bear Caxias |
+| `LUMIED_ESCOLA_ID` | opcional | UUID da escola Maple Bear Maringá |
 
 Se as três vars `LUMIED_*` estiverem ausentes, o endpoint funciona apenas com Resend (lead vai por email).
 
@@ -65,4 +65,4 @@ Ver `.env.example`.
 
 ## WhatsApp
 
-Sticky mobile → `wa.me/5554996243857` (número produção Maple Bear Caxias).
+Sticky mobile → `wa.me/5544991362021` (número produção Maple Bear Maringá).

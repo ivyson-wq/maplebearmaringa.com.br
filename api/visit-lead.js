@@ -5,9 +5,9 @@
 export const config = { runtime: 'edge' };
 
 const ALLOWED_ORIGINS = [
-  'https://maplebearcaxiasdosul.com.br',
-  'https://www.maplebearcaxiasdosul.com.br',
-  'https://maplebearcaxiasdosul.vercel.app',
+  'https://maplebearmaringa.com.br',
+  'https://www.maplebearmaringa.com.br',
+  'https://maplebearmaringa.vercel.app',
   'https://maplebearbg.com.br',
   'https://www.maplebearbg.com.br'
 ];
@@ -168,7 +168,7 @@ function utmLine(utm) {
 
 async function sendEmail({ from, to, subject, html, replyTo }) {
   const key = process.env.RESEND_API_KEY;
-  const fromAddr = from || process.env.RESEND_FROM || 'Maple Bear Caxias <site@maplebearcaxiasdosul.com.br>';
+  const fromAddr = from || process.env.RESEND_FROM || 'Maple Bear Maringá <site@maplebearmaringa.com.br>';
   if (!key) return { skipped: true, reason: 'RESEND_API_KEY ausente' };
 
   const r = await fetch('https://api.resend.com/emails', {
@@ -222,11 +222,11 @@ async function createLumiedLead(lead) {
   // Este é o /api/leads público do Lumied V2 (captura dos sites MB): cria o
   // lead E faz o backfill de lp_evento pela sessão — o comportamento anônimo
   // do site (pixel lumied-track) passa a alimentar o score do lead.
-  const url = 'https://maplebearcaxias.lumied.com.br/api/leads';
-  // roteia por escola do lead (default Caxias). BG posta neste endpoint via
+  const url = 'https://mbmaringa.lumied.com.br/api/leads';
+  // roteia por escola do lead (default Maringá). BG posta neste endpoint via
   // CORS; enviar escola:'maplebearbg' direciona ao tenant certo (o /api/leads
   // resolve o tenant pelo slug do body, não pelo domínio).
-  const slug = lead.escola || 'maplebearcaxias';
+  const slug = lead.escola || 'mbmaringa';
   const utm = lead.utm || {};
   const r = await fetch(url, {
     method: 'POST',
@@ -283,7 +283,7 @@ export default async function handler(req) {
   // página do site onde o formulário foi enviado (landing page do anúncio).
   // Não entra em `origem` (lista fechada do drip): vai em observacoes no Lumied.
   data.pagina = String(body.pagina || '').trim().replace(/[^\w\-./~%]/g, '').slice(0, 200);
-  // escola do lead (BG posta cross-origin; default Caxias) p/ rotear o tenant
+  // escola do lead (BG posta cross-origin; default Maringá) p/ rotear o tenant
   data.escola = String(body.escola || '').trim().slice(0, 60);
 
   // Notificação vai pro time da escola do lead: BG posta cross-origin neste
@@ -292,13 +292,13 @@ export default async function handler(req) {
   const to = (
     isBg
       ? (process.env.LEAD_NOTIFY_TO_BG || 'contato@maplebearbg.com.br')
-      : (process.env.LEAD_NOTIFY_TO || 'comercial@maplebearcaxiasdosul.com.br')
+      : (process.env.LEAD_NOTIFY_TO || 'comercial@maplebearmaringa.com.br')
   ).split(',').map(s => s.trim()).filter(Boolean);
 
   const html = `
     <div style="font-family: Georgia, serif; max-width: 580px; margin: 0 auto; color: #1a1814;">
       <div style="background: #b8112e; color: #faf6ee; padding: 24px; border-radius: 8px 8px 0 0;">
-        <p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 8px; opacity: 0.85;">Maple Bear Caxias do Sul · Novo lead</p>
+        <p style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 8px; opacity: 0.85;">Maple Bear Maringá · Novo lead</p>
         <h1 style="margin: 0; font-size: 26px; font-weight: 400;">Pedido de visita guiada</h1>
       </div>
       <div style="background: #faf6ee; padding: 24px; border: 1px solid #d4c7ad; border-top: 0; border-radius: 0 0 8px 8px;">
@@ -319,7 +319,7 @@ export default async function handler(req) {
           <p style="margin: 0; line-height: 1.5;">${escapeHtml(data.mensagem).replace(/\n/g, '<br>')}</p>
         </div>` : ''}
         <p style="margin: 24px 0 0; padding-top: 16px; border-top: 1px solid #e4dac3; font-size: 13px; color: #7a7268;">
-          Recebido em ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })} (Brasília) via maplebearcaxiasdosul.com.br/visite/
+          Recebido em ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })} (Brasília) via maplebearmaringa.com.br/visite/
         </p>
       </div>
     </div>

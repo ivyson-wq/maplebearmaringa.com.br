@@ -1,7 +1,7 @@
 // Aplica o brand oficial Maple Bear em TODAS as páginas (51 arquivos):
 // - Substitui brand-mark SVG da folha pelo logo horizontal PNG oficial
 // - Atualiza footer-headline pro slogan oficial "Muito além do bilíngue."
-// - Atualiza brand-text: "Caxias do Sul / Canadian School"
+// - Atualiza brand-text: "Maringá / Canadian School"
 
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
@@ -9,8 +9,8 @@ import { join } from 'path';
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([a-zA-Z]):\//, '$1:/');
 
 // Header brand antigo → novo
-const OLD_BRAND_HEADER_REGEX = /<a href="\/" class="brand"[^>]*><span class="brand-mark"[^>]*><svg viewBox="0 0 64 64"><path d="M32 14[^"]*"\/><\/svg><\/span><span class="brand-text"><strong>Maple Bear<\/strong><small>Caxias do Sul<\/small><\/span><\/a>/g;
-const NEW_BRAND_HEADER = `<a href="/" class="brand" aria-label="Maple Bear Caxias do Sul — início"><img src="/assets/brand/logo-horizontal.png" alt="Maple Bear" class="brand-logo"><span class="brand-divider" aria-hidden="true"></span><span class="brand-text"><strong>Caxias do Sul</strong><small>Canadian School</small></span></a>`;
+const OLD_BRAND_HEADER_REGEX = /<a href="\/" class="brand"[^>]*><span class="brand-mark"[^>]*><svg viewBox="0 0 64 64"><path d="M32 14[^"]*"\/><\/svg><\/span><span class="brand-text"><strong>Maple Bear<\/strong><small>Maringá<\/small><\/span><\/a>/g;
+const NEW_BRAND_HEADER = `<a href="/" class="brand" aria-label="Maple Bear Maringá — início"><img src="/assets/brand/logo-horizontal.png" alt="Maple Bear" class="brand-logo"><span class="brand-divider" aria-hidden="true"></span><span class="brand-text"><strong>Maringá</strong><small>Canadian School</small></span></a>`;
 
 // Footer headline antigo → slogan oficial
 const OLD_FOOTER_HEADLINE = `<p class="footer-headline">Bilíngue desde o<br><em>primeiro sorriso.</em></p>`;

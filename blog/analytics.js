@@ -1,12 +1,13 @@
 // ═══════════════════════════════════════════════════════
-//  Maple Bear Caxias do Sul — Google Analytics 4 + LGPD
+//  Maple Bear Maringá — Google Analytics 4 + LGPD
 //  Incluir: <script src="/blog/analytics.js" defer></script>
-//  GA4 Measurement ID: G-7KN8ZP8NMF
+//  GA4 Measurement ID: PENDENTE-GA4-MARINGA
 // ═══════════════════════════════════════════════════════
 (function() {
-  var GA_ID = 'G-7KN8ZP8NMF';
+  var GA_ID = '';
   var CONSENT_KEY = 'maplebear_analytics_consent';
 
+  if (!GA_ID) return; // PENDENTE: GA4 de Maringá
   if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
 
   window.dataLayer = window.dataLayer || [];

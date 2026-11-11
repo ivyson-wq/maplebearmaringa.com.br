@@ -1,6 +1,6 @@
 // POST /api/curriculos
 // Banco de Talentos — recebe currículo do formulário /trabalhe-conosco/
-// (Caxias + BG), valida, encaminha pro Lumied v2 (POST /api/talentos, que
+// (Maringá + BG), valida, encaminha pro Lumied v2 (POST /api/talentos, que
 // sobe o CV no bucket privado + grava o candidato) e notifica o RH via Resend.
 //
 // POR QUE MUDOU (07/09/2026). Até aqui o encaminhamento ia para a edge function
@@ -20,9 +20,9 @@
 export const config = { runtime: 'edge' };
 
 const ALLOWED_ORIGINS = [
-  'https://maplebearcaxiasdosul.com.br',
-  'https://www.maplebearcaxiasdosul.com.br',
-  'https://maplebearcaxiasdosul.vercel.app',
+  'https://maplebearmaringa.com.br',
+  'https://www.maplebearmaringa.com.br',
+  'https://maplebearmaringa.vercel.app',
   'https://maplebearbg.com.br',
   'https://www.maplebearbg.com.br',
   'https://maplebearbg.vercel.app',
@@ -40,11 +40,11 @@ const ALLOWED_MIME = {
 // Mapa unidade → escola + notificação
 const UNIDADES = {
   caxias: {
-    slug: 'maplebearcaxias',
-    nome: 'Maple Bear Caxias do Sul',
-    site: 'maplebearcaxiasdosul.com.br',
+    slug: 'mbmaringa',
+    nome: 'Maple Bear Maringá',
+    site: 'maplebearmaringa.com.br',
     origem: 'site-trabalhe',
-    from: 'Maple Bear Caxias <site@maplebearcaxiasdosul.com.br>',
+    from: 'Maple Bear Maringá <site@maplebearmaringa.com.br>',
     notifyEnv: 'TALENTOS_NOTIFY_TO',
     cor: '#b8112e',
   },
@@ -53,7 +53,7 @@ const UNIDADES = {
     nome: 'Maple Bear Bento Gonçalves',
     site: 'maplebearbg.com.br',
     origem: 'site-trabalhe-bg',
-    from: 'Maple Bear Bento Gonçalves <site@maplebearcaxiasdosul.com.br>',
+    from: 'Maple Bear Bento Gonçalves <site@maplebearmaringa.com.br>',
     notifyEnv: 'TALENTOS_NOTIFY_TO_BG',
     cor: '#b8112e',
   },

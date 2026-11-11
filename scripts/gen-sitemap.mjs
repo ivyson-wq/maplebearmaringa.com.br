@@ -7,7 +7,7 @@ import { execFileSync } from 'node:child_process';
 import { join, relative, sep } from 'node:path';
 
 const ROOT = process.cwd();
-const ORIGIN = 'https://maplebearcaxiasdosul.com.br';
+const ORIGIN = 'https://maplebearmaringa.com.br';
 
 // Diretórios que NÃO são páginas públicas (sem entrar no sitemap).
 const SKIP_DIRS = new Set([
@@ -58,9 +58,9 @@ function meta(url) {
   if (p === '/') return { freq: 'weekly', pri: '1.0' };
   if (/^\/(matriculas|visite)\//.test(p)) return { freq: 'weekly', pri: '0.95' };
   if (/^\/(metodologia|niveis|estagios)\//.test(p)) return { freq: 'monthly', pri: '0.9' };
-  if (/^\/(escola-particular-caxias-do-sul)\//.test(p)) return { freq: 'monthly', pri: '0.9' };
+  if (/^\/(escola-particular-maringa)\//.test(p)) return { freq: 'monthly', pri: '0.9' };
   if (/^\/materiais\//.test(p)) return { freq: 'monthly', pri: '0.85' };
-  if (/^\/em-caxias\//.test(p)) return { freq: 'monthly', pri: '0.75' };
+  if (/^\/em-maringa\//.test(p)) return { freq: 'monthly', pri: '0.75' };
   if (/^\/blog\/.+/.test(p)) return { freq: 'monthly', pri: '0.7' };
   if (/^\/(privacidade|termos|dpa)\//.test(p)) return { freq: 'yearly', pri: '0.3' };
   if (/^\/en\//.test(p)) return { freq: 'monthly', pri: '0.8' };

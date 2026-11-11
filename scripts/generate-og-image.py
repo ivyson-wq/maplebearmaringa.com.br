@@ -1,10 +1,10 @@
 """
-Gera OG image 1200x630 oficial Maple Bear Caxias com:
+Gera OG image 1200x630 oficial Maple Bear Maringá com:
 - Cream background (#F6E9E1)
 - Logo horizontal Maple Bear no topo
 - Slogan "Muito além do bilíngue." em destaque
 - Chinook lendo no canto direito
-- "Caxias do Sul" subtitle
+- "Maringá" subtitle
 """
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
@@ -44,11 +44,11 @@ logo_h = int(logo.height * ratio)
 logo = logo.resize((logo_w, logo_h), Image.LANCZOS)
 img.paste(logo, (60, 40), logo)
 
-# Divisor + "Caxias do Sul"
+# Divisor + "Maringá"
 divider_x = 60 + logo_w + 28
 draw.rectangle([(divider_x, 40 + 25), (divider_x + 2, 40 + logo_h - 25)], fill=INK)
 caxias_font = font(28, bold=True)
-draw.text((divider_x + 22, 40 + logo_h // 2 - 30), "CAXIAS DO SUL", font=caxias_font, fill=INK)
+draw.text((divider_x + 22, 40 + logo_h // 2 - 30), "MARINGÁ", font=caxias_font, fill=INK)
 sub_font = font(18)
 draw.text((divider_x + 22, 40 + logo_h // 2 + 8), "Canadian School", font=sub_font, fill=INK_SOFT)
 
@@ -76,7 +76,7 @@ draw.text((60, y2), slogan_text, font=slogan_font, fill=CREAM)
 
 # Tagline curta
 tag_font = font(24)
-draw.text((60, y2 + text_h + pad_y + 35), "Educação canadense em Caxias do Sul, RS.", font=tag_font, fill=INK_SOFT)
+draw.text((60, y2 + text_h + pad_y + 35), "Educação canadense em Maringá, PR.", font=tag_font, fill=INK_SOFT)
 
 # Chinook lendo no canto direito
 chinook = Image.open(BRAND / "chinook-reading.png").convert("RGBA")
@@ -94,7 +94,7 @@ draw.rectangle([(2 * W // 3, H - bar_h), (W, H)], fill=RED_DEEP)
 
 # Site URL
 url_font = font(18)
-draw.text((60, H - 50), "maplebearcaxiasdosul.com.br", font=url_font, fill=INK_SOFT)
+draw.text((60, H - 50), "maplebearmaringa.com.br", font=url_font, fill=INK_SOFT)
 
 img.save(OUT, "PNG", optimize=True)
 print(f"OK OG image saved: {OUT}  ({img.size[0]}x{img.size[1]})")

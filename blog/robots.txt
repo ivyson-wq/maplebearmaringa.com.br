@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.maplebearcaxiasdosul.com.br/blog/sitemap.xml
+Sitemap: https://www.maplebearmaringa.com.br/blog/sitemap.xml

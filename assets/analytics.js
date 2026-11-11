@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════════════════════════════
-// Maple Bear Caxias do Sul — Tracking unificado (LGPD compliant)
+// Maple Bear Maringá — Tracking unificado (LGPD compliant)
 // GA4 + Meta Pixel + dataLayer helpers
 // ────────────────────────────────────────────────────────────────────
 // Duas camadas, de propósito:
@@ -16,15 +16,15 @@
 (function () {
   'use strict';
 
-  var GA_ID = 'G-7KN8ZP8NMF';
-  var PIXEL_ID = '1653706552580782'; // Meta Pixel Maple Bear Caxias do Sul
+  var GA_ID = ''; // PENDENTE: GA4 próprio de Maringá
+  var PIXEL_ID = ''; // PENDENTE: Meta Pixel de Maringá
   var CONSENT_KEY = 'mb_cookie_consent_v1';
   // Google Ads: conversão NATIVA do clique de WhatsApp. Antes o sinal só
   // chegava ao Ads pela importação do GA4 (generate_lead) — que atrasa e
   // modela. Com a tag própria o lance recebe o evento direto, e o
   // mbSetUserData() habilita Enhanced Conversions no mesmo clique.
-  var AW_ID = 'AW-11302044142';
-  var AW_WHATSAPP = 'AW-11302044142/hCf_CIyx1tocEO6Dno0q';
+  var AW_ID = ''; // PENDENTE: conta Google Ads de Maringá
+  var AW_WHATSAPP = '';
   // Agendamento de visita (/visite/) e lead magnets. Até 25/08/2026 o
   // formulário — a ação de MAIOR intenção do site — disparava só um evento
   // GA4 ('visit_request'), sem `send_to`: não existia conversão nativa do
@@ -32,8 +32,8 @@
   // PREENCHER com o rótulo de Metas › Conversões › (ação do formulário) ›
   // "Configurar tag" → o valor de send_to, formato 'AW-11302044142/XXXX'.
   // Vazio = comportamento antigo (só GA4), sem quebrar nada.
-  var AW_FORMULARIO = 'AW-11302044142/9KvdCMS2u4EdEO6Dno0q';
-  var WA_NUMERO = '5554996243857'; // número da escola (≠ botões de compartilhar)
+  var AW_FORMULARIO = '';
+  var WA_NUMERO = '5544991362021'; // número da escola (≠ botões de compartilhar)
 
   // ── Consent Mode v2 ───────────────────────────────────────────────
   // Roda ANTES de qualquer tag. Sem isto, quem não clica "Aceitar" não
@@ -92,7 +92,7 @@
     });
     // Conversões do Google Ads na MESMA carga do gtag (o script já é o do
     // googletagmanager; AW só precisa do config próprio).
-    gtag('config', AW_ID);
+    if (AW_ID) gtag('config', AW_ID);
   }
 
   // ── Carrega o que NÃO tem consent mode (idempotente) ───────────────
@@ -154,12 +154,12 @@
         if (v) lutm[p] = String(v).slice(0, 512);
       });
       var lpayload = JSON.stringify({
-        escola: 'maplebearcaxias',
+        escola: 'mbmaringa',
         path: (location.pathname || '/').slice(0, 300),
         sessao: sid,
         utm: lutm
       });
-      var lurl = 'https://maplebearcaxias.lumied.com.br/api/track/pageview';
+      var lurl = 'https://mbmaringa.lumied.com.br/api/track/pageview';
       var lblob = new Blob([lpayload], { type: 'text/plain' });
       if (navigator.sendBeacon) navigator.sendBeacon(lurl, lblob);
       else fetch(lurl, { method: 'POST', body: lpayload, keepalive: true, mode: 'no-cors' });
@@ -254,7 +254,7 @@
   // pra que os dois caminhos contem igual e carreguem a mesma atribuição.
   window.mbWhatsApp = function (url, origem) {
     window.trackLead({ canal: 'whatsapp', origem: origem || 'wa-click' });
-    if (window.gtag) gtag('event', 'conversion', { send_to: AW_WHATSAPP });
+    if (window.gtag && AW_WHATSAPP) gtag('event', 'conversion', { send_to: AW_WHATSAPP });
     return carimbar(url);
   };
 

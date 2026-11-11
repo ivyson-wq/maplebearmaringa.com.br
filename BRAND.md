@@ -1,6 +1,6 @@
 # Maple Bear — Brand Source of Truth
 
-Documento canônico de identidade visual para os sites Maple Bear Caxias do Sul (`maplebearcaxiasdosul.com.br`) e Maple Bear Bento Gonçalves (`maplebearbg.com.br`).
+Documento canônico de identidade visual para os sites Maple Bear Maringá (`maplebearmaringa.com.br`) e Maple Bear Bento Gonçalves (`maplebearbg.com.br`).
 
 Toda decisão de cor, tipografia, logo e imagem nos dois sites deve referenciar este documento. Atualizou aqui? Sincroniza no outro repo.
 
@@ -134,7 +134,7 @@ Em PT-BR (não-oficial, usar com cautela):
 - Sempre `loading="lazy"` exceto hero.
 
 **Status fotos atuais:**
-- **Caxias:** ❌ Não tem fotos da unidade. Cliente vai enviar (TODO).
+- **Maringá:** ❌ Não tem fotos da unidade. Cliente vai enviar (TODO).
 - **Bento Gonçalves:** ✅ 6 fotos em `assets/photos/` (class-group, easter-event, hug-trio, nursery-drawing, toddler-swing, welcome-entrance).
 
 ---
@@ -142,7 +142,7 @@ Em PT-BR (não-oficial, usar com cautela):
 ## 7. Componentes visuais derivados (uso comum)
 
 ### Header
-- Lockup compacto à esquerda + nome da unidade ("Caxias do Sul" / "Bento Gonçalves") em `--font-ui` peso 500 ao lado.
+- Lockup compacto à esquerda + nome da unidade ("Maringá" / "Bento Gonçalves") em `--font-ui` peso 500 ao lado.
 - Background cream, borda inferior `--line-soft`.
 
 ### Hero
@@ -171,4 +171,4 @@ Em PT-BR (não-oficial, usar com cautela):
 
 ## 9. Histórico de mudanças
 
-- **2026-05-25** — Documento criado consolidando manual oficial + decisões editoriais Caxias + sync com BG.
+- **2026-05-25** — Documento criado consolidando manual oficial + decisões editoriais Maringá + sync com BG.

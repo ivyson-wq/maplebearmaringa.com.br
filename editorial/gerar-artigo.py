@@ -12,10 +12,10 @@ import re, json, os, sys
 from urllib.parse import quote
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE = "blog/escola-infantil-segura-caxias-do-sul/index.html"
-BASE = "https://maplebearcaxiasdosul.com.br"
-ESCOLA = "Maple Bear Caxias do Sul"
-WA = "5554996243857"
+TEMPLATE = "blog/escola-infantil-segura-maringa/index.html"
+BASE = "https://maplebearmaringa.com.br"
+ESCOLA = "Maple Bear Maringá"
+WA = "5544991362021"
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 
@@ -99,7 +99,7 @@ def gerar(c):
     wa_txt = c.get("cta_wa_texto", f"Olá! Li o artigo {c['h1']} e quero agendar uma visita.")
     t = re.sub(r'(<div class="cta-box">\s*<h3>[^<]*</h3>\s*<p>)[^<]*(</p>\s*<a href=")https://wa\.me/[^"]*(")',
                lambda m: m.group(1) + c.get("cta2_p", "Conheça a escola num dia comum de aula.") + m.group(2) + f"https://wa.me/{WA}?text=" + quote(wa_txt) + m.group(3), t, count=1, flags=re.S)
-    t = re.sub(r'<div class="highlight-box" data-xref="1">.*?</div>\s*', "", t, count=1, flags=re.S)
+    t = re.sub(r'\s*', "", t, count=1, flags=re.S)
     out = os.path.join(REPO, "blog", c["slug"], "index.html")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w", encoding="utf-8", newline="\n").write(t)
