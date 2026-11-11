@@ -1,0 +1,108 @@
+# Artigo quinzenal: escreve o próximo tema da pauta e abre um PR para aprovação.
+# Nada vai ao ar sem merge. O artigo vai inteiro por e-mail (insta-publisher): Aprovar faz o merge,
+# Editar grava o JSON na branch (artigo-regerar.yml refaz o HTML) e Descartar fecha o PR.
+name: Artigo quinzenal
+
+on:
+  schedule:
+    - cron: "0 11 1,15 * *"   # dias 1 e 15, 08:00 em Brasília
+  workflow_dispatch:
+    inputs:
+      apenas_pauta:
+        description: "Só atualizar a pauta com o Search Console (não escreve artigo)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  escrever:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet anthropic pillow google-auth requests
+      - name: Pauta do Search Console (se houver acesso)
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_OAUTH_JSON: ${{ secrets.GSC_OAUTH_JSON }}
+        run: python3 editorial/search-console.py
+      - name: Só a pauta — grava na main e para
+        if: ${{ inputs.apenas_pauta }}
+        run: |
+          git config user.name "Editorial (automático)"
+          git config user.email "editorial@users.noreply.github.com"
+          git diff --quiet editorial/pauta.md && { echo "pauta sem novidade"; exit 0; }
+          git add editorial/pauta.md && git commit -m "Pauta: temas novos do Search Console" && git push
+      - name: Escrever o artigo
+        if: ${{ !inputs.apenas_pauta }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 editorial/escrever.py
+      - name: Abrir o PR
+        if: ${{ !inputs.apenas_pauta }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          test -f editorial/ultimo.json || { echo "nada escrito"; exit 0; }
+          SLUG=$(python3 -c "import json;print(json.load(open('editorial/ultimo.json'))['slug'])")
+          TITULO=$(python3 -c "import json;print(json.load(open('editorial/ultimo.json'))['titulo'])")
+          TEMA=$(python3 -c "import json;print(json.load(open('editorial/ultimo.json'))['tema'])")
+          URL=$(python3 -c "import json;print(json.load(open('editorial/ultimo.json'))['url'])")
+          rm editorial/ultimo.json
+          git config user.name "Editorial (automático)"
+          git config user.email "editorial@users.noreply.github.com"
+          git checkout -b "artigo/$SLUG"
+          git add -A
+          git commit -m "Artigo: $TITULO" -m "Tema da pauta: $TEMA" -m "Gerado automaticamente; publica no merge."
+          git push -u origin "artigo/$SLUG"
+          # A pauta vai para a main AGORA (só ela): senão, enquanto o PR espera
+          # aprovação, a main ainda lista o tema e a rodada seguinte o repete.
+          git checkout main
+          git checkout "artigo/$SLUG" -- editorial/pauta.md
+          git commit -m "Pauta: '$TEMA' em andamento (PR artigo/$SLUG)" || true
+          git push origin main
+          git checkout "artigo/$SLUG"
+          PR_URL=$(gh pr create --title "Artigo para aprovar: $TITULO" --assignee ivyson-wq --body "$(printf '**Tema da pauta:** %s\n\n**Vai ao ar em:** %s\n\nEscrito automaticamente a partir de editorial/fatos.md e editorial/pauta.md. Leia o HTML gerado (ou o JSON em editorial/rascunhos/) e, se estiver bom, faça o merge — o site publica sozinho. Se precisar mudar algo, edite o JSON e rode `python3 editorial/gerar-artigo.py editorial/rascunhos/%s.json`.\n\nRegras aplicadas: sem valores, só fatos do fatos.md, FAQ com dados estruturados, links para as páginas de matrícula.' "$TEMA" "$URL" "$SLUG")")
+          echo "PR_URL=$PR_URL" >> "$GITHUB_ENV"
+          echo "TITULO=$TITULO" >> "$GITHUB_ENV"
+          echo "TEMA=$TEMA" >> "$GITHUB_ENV"
+      - name: Mandar para aprovação por e-mail (insta-publisher)
+        if: env.PR_URL != ''
+        env:
+          APROVACAO_SITES_SECRET: ${{ secrets.APROVACAO_SITES_SECRET }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          # O e-mail leva o artigo inteiro, com Aprovar (merge), Editar (commit do JSON nesta branch) e Descartar.
+          # Se o insta-publisher não responder, cai no aviso simples com o link do PR.
+          import glob, json, os, subprocess, urllib.request
+          url_pr, titulo, tema = os.environ["PR_URL"], os.environ["TITULO"], os.environ["TEMA"]
+          site = os.path.basename(os.getcwd())
+          branch = subprocess.check_output(["git", "branch", "--show-current"], text=True).strip()
+          slug = branch.split("/", 1)[1]
+          json_path = f"editorial/rascunhos/{slug}.json"
+          cfg = json.load(open("editorial/config.json", encoding="utf-8"))
+          corpo = {"site": site, "pr": int(url_pr.rstrip("/").rsplit("/", 1)[1]), "pr_url": url_pr, "branch": branch,
+                   "json_path": json_path, "url": f"{cfg['base_url']}/{cfg['pasta']}/{slug}/",
+                   "rascunho": json.load(open(json_path, encoding="utf-8"))}
+          try:
+              req = urllib.request.Request("https://insta-publisher.vercel.app/api/aprovacao/site", data=json.dumps(corpo).encode(),
+                                           headers={"Authorization": "Bearer " + os.environ["APROVACAO_SITES_SECRET"], "Content-Type": "application/json"})
+              print(urllib.request.urlopen(req, timeout=110).read().decode())
+          except Exception as e:
+              print("aprovação por e-mail falhou, mandando o aviso simples:", e)
+              html = (f"<p>Novo artigo para o site <b>{site}</b> esperando sua aprovação.</p>"
+                      f"<p><b>{titulo}</b><br>Tema da pauta: {tema}</p>"
+                      f"<p><a href=\"{url_pr}\">Abrir o PR e aprovar (merge = publicado)</a></p>")
+              body = {"from": "Lumied Editorial <editorial@lumied.com.br>", "to": ["ivyson@gmail.com", "ivyson@construfare.com"],
+                      "subject": f"Artigo para aprovar ({site}): {titulo}", "html": html}
+              req = urllib.request.Request("https://api.resend.com/emails", data=json.dumps(body).encode(),
+                                           headers={"Authorization": "Bearer " + os.environ["RESEND_API_KEY"], "Content-Type": "application/json", "User-Agent": "lumied-editorial/1.0"})
+              print(urllib.request.urlopen(req).read().decode())
+          PY
