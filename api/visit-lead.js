@@ -217,6 +217,19 @@ async function sendEmail({ from, to, subject, html, replyTo }) {
 const LUMIED_URL = 'https://mbmaringa.lumied.com.br/api/leads';
 const LUMIED_TIMEOUT_MS = 8000;
 
+// Chave do site no Lumied (env LEADS_SITE_KEY): com ela o Lumied aplica o limite
+// por IP ao IP real da família (x-lead-ip), e não ao IP do servidor da Vercel,
+// que é o mesmo para todos os leads. Sem a env, a chamada segue como antes.
+function cabecalhosLumied(lead) {
+  const h = { 'Content-Type': 'application/json' };
+  const chave = (process.env.LEADS_SITE_KEY || '').trim();
+  if (chave) {
+    h['x-lumied-site-key'] = chave;
+    if (lead.ipFamilia) h['x-lead-ip'] = lead.ipFamilia;
+  }
+  return h;
+}
+
 async function createLumiedLead(lead) {
   // Tenant fixo: este site só capta para a Maple Bear Maringá.
   const utm = lead.utm || {};
@@ -251,7 +264,7 @@ async function createLumiedLead(lead) {
     try {
       const r = await fetch(LUMIED_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: cabecalhosLumied(lead),
         body: corpo,
         signal: ctl.signal
       });
@@ -277,6 +290,8 @@ async function createLumiedLead(lead) {
 
 export default async function handler(req) {
   const origin = req.headers.get('origin') || '';
+  // IP real da família (primeiro valor do x-forwarded-for que a Vercel entrega).
+  const ipFamilia = ((req.headers.get('x-forwarded-for') || '').split(',')[0] || req.headers.get('x-real-ip') || '').trim().slice(0, 64);
 
   if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: corsHeaders(origin) });
@@ -316,6 +331,7 @@ export default async function handler(req) {
   //    se o lead entrou ou não no CRM.
   let lumiedRes;
   try {
+    data.ipFamilia = ipFamilia;
     lumiedRes = await createLumiedLead(data);
   } catch (err) {
     lumiedRes = { ok: false, status: 0, motivo: `erro inesperado: ${String(err)}` };
