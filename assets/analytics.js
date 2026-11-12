@@ -16,24 +16,18 @@
 (function () {
   'use strict';
 
-  var GA_ID = ''; // PENDENTE: GA4 próprio de Maringá
-  var PIXEL_ID = ''; // PENDENTE: Meta Pixel de Maringá
+  // IDs de rastreamento: a PRÓPRIA ESCOLA cadastra no Lumied (Marketing ›
+  // Rastreamento do site). O site lê de /api/rastreamento (cache de CDN) e
+  // guarda a última resposta no navegador para iniciar na hora nas próximas
+  // páginas. Sem ID cadastrado = a tag não carrega (nada quebra).
+  var GA_ID = '';
+  var PIXEL_ID = '';
+  var AW_ID = '';
+  var AW_WHATSAPP = '';   // send_to da conversão de clique no WhatsApp
+  var AW_FORMULARIO = ''; // send_to da conversão do formulário de visita
   var CONSENT_KEY = 'mb_cookie_consent_v1';
-  // Google Ads: conversão NATIVA do clique de WhatsApp. Antes o sinal só
-  // chegava ao Ads pela importação do GA4 (generate_lead) — que atrasa e
-  // modela. Com a tag própria o lance recebe o evento direto, e o
-  // mbSetUserData() habilita Enhanced Conversions no mesmo clique.
-  var AW_ID = ''; // PENDENTE: conta Google Ads de Maringá
-  var AW_WHATSAPP = '';
-  // Agendamento de visita (/visite/) e lead magnets. Até 25/08/2026 o
-  // formulário — a ação de MAIOR intenção do site — disparava só um evento
-  // GA4 ('visit_request'), sem `send_to`: não existia conversão nativa do
-  // Ads nesse caminho, e o mbSetUserData() ficava pendurado em nada.
-  // PREENCHER com o rótulo de Metas › Conversões › (ação do formulário) ›
-  // "Configurar tag" → o valor de send_to, formato 'AW-11302044142/XXXX'.
-  // Vazio = comportamento antigo (só GA4), sem quebrar nada.
-  var AW_FORMULARIO = '';
-  var WA_NUMERO = '5544991362021'; // número da escola (≠ botões de compartilhar)
+  var CFG_KEY = 'mb_rastreamento_v1';
+  var WA_NUMERO = '5544991783232'; // número da escola (≠ botões de compartilhar)
 
   // ── Consent Mode v2 ───────────────────────────────────────────────
   // Roda ANTES de qualquer tag. Sem isto, quem não clica "Aceitar" não
@@ -78,7 +72,9 @@
   };
 
   // ── GA4 + Google Ads: carregam SEMPRE (o consentimento já os governa) ──
-  if (GA_ID) {
+  function iniciarGoogle() {
+    if (window.__mbGoogleIniciado || !GA_ID) return;
+    window.__mbGoogleIniciado = true;
     var gs = document.createElement('script');
     gs.async = true;
     gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -95,10 +91,43 @@
     if (AW_ID) gtag('config', AW_ID);
   }
 
+  // Aplica a configuração (só na primeira vez por página: IDs novos valem a
+  // partir da próxima navegação).
+  var cfgAplicada = false;
+  var tagsPedidas = false;
+  function aplicarConfig(c) {
+    if (cfgAplicada || !c) return;
+    cfgAplicada = true;
+    GA_ID = c.ga4_id || '';
+    PIXEL_ID = c.meta_pixel_id || '';
+    AW_ID = c.google_ads_id || '';
+    AW_WHATSAPP = c.google_ads_conv_whatsapp || '';
+    AW_FORMULARIO = c.google_ads_conv_formulario || '';
+    iniciarGoogle();
+    if (tagsPedidas) loadTags();
+  }
+
+  (function carregarConfig() {
+    var guardada = null;
+    try { guardada = JSON.parse(localStorage.getItem(CFG_KEY) || 'null'); } catch (e) { /* modo privado */ }
+    if (guardada) aplicarConfig(guardada);
+    if (!window.fetch) return;
+    fetch('/api/rastreamento', { credentials: 'omit' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (c) {
+        if (!c) return;
+        try { localStorage.setItem(CFG_KEY, JSON.stringify(c)); } catch (e) { /* modo privado */ }
+        aplicarConfig(c);
+      })
+      .catch(function () { /* sem config = sem tags */ });
+  })();
+
   // ── Carrega o que NÃO tem consent mode (idempotente) ───────────────
   // Meta Pixel não respeita o Consent Mode do Google: segue atrás do
   // "Aceitar", como antes. (A sessão do Lumied saiu daqui — ver abaixo.)
   function loadTags() {
+    tagsPedidas = true;
+    if (!cfgAplicada) return; // roda de novo quando a configuração chegar
     if (window.__mbTagsLoaded) return;
     window.__mbTagsLoaded = true;
 
@@ -173,11 +202,30 @@
   // ── Helper público pra trackear conversões ─────────────────────────
   // GA4/Ads sempre emitem (cookieless enquanto o consentimento é denied);
   // o fbq só existe depois do "Aceitar".
+  // Dois eventos distintos, de propósito (nunca misturar):
+  //   • clique no WhatsApp -> `whatsapp_click` (GA4); a conversão do Ads é a
+  //     AW_WHATSAPP, disparada por mbWhatsApp. NÃO é lead.
+  //   • envio de formulário confirmado pela API -> `generate_lead` (GA4); a
+  //     conversão do Ads é a AW_FORMULARIO, disparada por mbFormLead.
   window.trackLead = function (params) {
     var data = params || {};
+    if (data.canal === 'whatsapp') {
+      if (window.gtag) {
+        gtag('event', 'whatsapp_click', { origem: data.origem || 'wa-click' });
+      }
+      if (window.fbq) fbq('track', 'Contact', { content_name: data.origem || 'site' });
+      return;
+    }
+    if (data.material) {
+      // Material/newsletter: interesse, não pedido de visita. Evento próprio,
+      // fora do generate_lead que o Ads importa como conversão.
+      if (window.gtag) gtag('event', 'lead_material', { origem: data.origem || 'material' });
+      if (window.fbq) fbq('trackCustom', 'LeadMaterial', { content_name: data.origem || 'material' });
+      return;
+    }
     if (window.gtag) {
       gtag('event', 'generate_lead', {
-        method: data.canal || 'whatsapp',
+        method: data.canal || 'form',
         origem: data.origem || 'unknown'
       });
     }
@@ -185,6 +233,11 @@
       fbq('track', 'Lead', { content_name: data.origem || 'site' });
     }
   };
+
+  // Material (PDF), newsletter e exit-intent não são pedido de visita/contato.
+  function ehMaterial(origem) {
+    return /^(lead-magnet|newsletter|exit-intent)/.test(String(origem || ''));
+  }
 
   // ── Enhanced Conversions: anexa dados do usuário (email/telefone) ──
   // Chamado no sucesso do formulário, ANTES do evento de conversão — o
@@ -214,10 +267,13 @@
   // Conversions não anexa nada.
   window.mbFormLead = function (form, origem) {
     if (form && window.mbSetUserData) window.mbSetUserData(form);
-    if (window.gtag && AW_FORMULARIO) {
+    var material = ehMaterial(origem);
+    // AW_FORMULARIO só para pedido de visita/contato; material e newsletter
+    // não contam (senão o lance persegue download de PDF).
+    if (!material && window.gtag && AW_FORMULARIO) {
       gtag('event', 'conversion', { send_to: AW_FORMULARIO, transport_type: 'beacon' });
     }
-    window.trackLead({ canal: 'form', origem: origem || 'formulario' });
+    window.trackLead({ canal: 'form', origem: origem || 'formulario', material: material });
   };
 
   // ── Marcador que SOBREVIVE ao pulo navegador→WhatsApp ──────────────
@@ -262,7 +318,7 @@
   // (listener sempre ativo; sob Consent Mode o evento sai mesmo sem aceite)
   // SÓ o número da escola: os botões "compartilhar no WhatsApp" do blog
   // usam wa.me/?text=... e não são lead nenhum — contá-los inflava o
-  // generate_lead que o Google Ads importa e usa pra dar lance.
+  // conversões que o Google Ads usa pra dar lance.
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href*="wa.me/' + WA_NUMERO + '"]');
     if (!link) return;

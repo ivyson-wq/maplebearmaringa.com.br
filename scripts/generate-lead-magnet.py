@@ -247,7 +247,7 @@ story.append(Spacer(1, 8*mm))
 story.append(Paragraph(
     "Maple Bear Maringá<br/>"
     "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá, PR · CEP 87060-390<br/>"
-    "WhatsApp: (44) 99136-2021 · maplebearmaringa.com.br",
+    "WhatsApp: (44) 99178-3232 · maplebearmaringa.com.br",
     cta_body_style
 ))
 story.append(Spacer(1, 14*mm))

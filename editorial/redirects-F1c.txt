@@ -1,0 +1,6 @@
+escola-bilingue-maringa-matricula-2026 -> matricula-escola-bilingue-maringa
+matricula-escola-bilingue-documentacao -> matricula-escola-bilingue-maringa
+escola-infantil-montessori-maringa -> montessori-reggio-waldorf-maringa
+escola-reggio-emilia-maringa -> montessori-reggio-waldorf-maringa
+escola-waldorf-maringa -> montessori-reggio-waldorf-maringa
+escola-respeita-ritmo-crianca-maringa -> escola-infantil-acolhedora-maringa

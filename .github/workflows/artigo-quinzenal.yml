@@ -5,7 +5,8 @@ name: Artigo quinzenal
 
 on:
   schedule:
-    - cron: "0 11 1,15 * *"   # dias 1 e 15, 08:00 em Brasília
+    # PENDENTE (go-live): religar quando o site estiver no ar e os secrets existirem.
+    # - cron: "0 11 1,15 * *"   # dias 1 e 15, 08:00 em Brasília
   workflow_dispatch:
     inputs:
       apenas_pauta:

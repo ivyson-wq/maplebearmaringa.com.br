@@ -15,7 +15,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE = "blog/escola-infantil-segura-maringa/index.html"
 BASE = "https://maplebearmaringa.com.br"
 ESCOLA = "Maple Bear Maringá"
-WA = "5544991362021"
+WA = "5544991783232"
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 

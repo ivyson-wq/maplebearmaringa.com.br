@@ -65,7 +65,7 @@ PLAN = {
  "fundamental-1-escola-bilingue": [(NF, ["Ensino Fundamental I", "ensino fundamental"]), (M, ["metodologia canadense"])],
  "habilidades-socioemocionais-bncc": [(M, ["desenvolvimento socioemocional", "metodologia canadense"])],
  "idade-certa-escola-bilingue": [(NI, ["educação infantil bilíngue", "educação infantil"]), (M, ["metodologia canadense"])],
- "imersao-ingles-vs-aulas-ingles": [(M, ["metodologia canadense", "imersão"])],
+ "escola-bilingue-ou-curso-de-ingles": [(M, ["metodologia canadense", "imersão"])],
  "ingles-em-casa-rotina-familia": [(M, ["metodologia canadense"])],
  "leitura-infantil-bilingue-livros": [(NI, ["educação infantil"])],
  "licao-de-casa-escola-bilingue": [(NF, ["Ensino Fundamental I", "ensino fundamental"])],

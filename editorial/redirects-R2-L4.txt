@@ -1,0 +1,8 @@
+leitura-infantil-bilingue-livros -> alfabetizacao-bilingue-fases
+book-signing-night-criancas-autoras -> alfabetizacao-bilingue-fases
+formatura-senior-kindergarten-year-1 -> transicao-educacao-infantil-ensino-fundamental
+curriculo-canadense-escola-bilingue -> metodologia-canadense-maple-bear
+aprendizado-steam-escola-bilingue -> metodologia-canadense-maple-bear
+brincar-e-aprender -> metodologia-canadense-maple-bear
+habilidades-do-seculo-21-escola-bilingue -> metodologia-canadense-maple-bear
+festa-junina-escola-bilingue-maringa -> /eventos/

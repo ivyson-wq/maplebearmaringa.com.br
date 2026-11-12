@@ -147,12 +147,12 @@ story.append(Paragraph(
 story.append(Spacer(1, 14*mm))
 story.append(Paragraph(
     "<b>Agende em maplebearmaringa.com.br/visite</b><br/>"
-    "ou no WhatsApp (44) 99136-2021",
+    "ou no WhatsApp (44) 99178-3232",
     styles['cta_b']
 ))
 story.append(Spacer(1, 8*mm))
 story.append(Paragraph(
-    "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá · RS · 87060-390",
+    "Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá · PR · 87060-390",
     styles['cta_b']
 ))
 story.append(Spacer(1, 24*mm))

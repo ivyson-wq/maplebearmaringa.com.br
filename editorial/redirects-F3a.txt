@@ -1,0 +1,6 @@
+metodo-canadense-vs-programa-bilingue -> curriculo-canadense-escola-bilingue
+metodologias-ativas-canadense -> metodologia-canadense-maple-bear
+aprendizado-por-projetos-escola-bilingue -> metodologia-canadense-maple-bear
+habilidades-socioemocionais-bncc -> inteligencia-emocional-criancas
+desenvolvimento-socioemocional-bilingue -> inteligencia-emocional-criancas
+inteligencia-emocional-criancas-escola -> inteligencia-emocional-criancas

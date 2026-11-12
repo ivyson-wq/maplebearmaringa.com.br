@@ -37,7 +37,7 @@ const BUCKET = {
   'fundamental-1-escola-bilingue': 'educacao-bilingue',
   'habilidades-socioemocionais-bncc': 'desenvolvimento',
   'idade-certa-escola-bilingue': 'educacao-bilingue',
-  'imersao-ingles-vs-aulas-ingles': 'metodologia',
+  'escola-bilingue-ou-curso-de-ingles': 'metodologia',
   'ingles-em-casa-rotina-familia': 'familia',
   'leitura-infantil-bilingue-livros': 'familia',
   'maple-bear-maringa-infraestrutura': 'educacao-bilingue',
@@ -100,7 +100,7 @@ const NEW_CARDS = {
   },
   'escola-bilingue': {
     title: 'Escola Bilíngue em Maringá: Educação Infantil e Ensino Fundamental',
-    excerpt: 'Metodologia canadense e inglês por imersão desde 1,5 ano. Conheça a proposta bilíngue da Maple Bear em Maringá, da Educação Infantil ao Fundamental.',
+    excerpt: 'Metodologia canadense e inglês por imersão desde 1 ano. Conheça a proposta bilíngue da Maple Bear em Maringá, da Educação Infantil ao Fundamental.',
     date: '10 de abril de 2026', read: '8 min',
   },
   'resultado-enem-escola-bilingue': {

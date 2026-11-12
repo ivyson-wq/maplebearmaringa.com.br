@@ -1,0 +1,16 @@
+escola-infantil-acolhedora-maringa -> melhor-escola-educacao-infantil-maringa
+escola-infantil-turmas-pequenas-maringa -> melhor-escola-educacao-infantil-maringa
+melhores-escolas-bilingues-maringa -> escola-bilingue-maringa
+professor-bilingue-o-que-avaliar -> escola-bilingue-maringa
+escola-internacional-maringa -> escola-bilingue-maringa
+escolha-escola-particular-checklist -> escola-particular-ou-publica-maringa
+escola-inclusiva-educacao-infantil-maringa -> /faq/
+matricula-escola-bilingue-maringa -> /matriculas/
+montessori-reggio-waldorf-maringa -> metodologia-canadense-maple-bear
+maple-bear-maringa-infraestrutura -> /estrutura/
+escola-respeita-ritmo-crianca-maringa -> melhor-escola-educacao-infantil-maringa
+escola-bilingue-maringa-matricula-2026 -> /matriculas/
+matricula-escola-bilingue-documentacao -> /matriculas/
+escola-infantil-montessori-maringa -> metodologia-canadense-maple-bear
+escola-reggio-emilia-maringa -> metodologia-canadense-maple-bear
+escola-waldorf-maringa -> metodologia-canadense-maple-bear

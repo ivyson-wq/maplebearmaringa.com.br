@@ -1,0 +1,4 @@
+irmaos-em-etapas-diferentes-mesma-escola -> escola-infantil-periodo-integral-maringa
+screen-time-bilingue-criancas -> telas-criancas-escola-e-casa
+escola-infantil-sem-telas-maringa -> telas-criancas-escola-e-casa
+birras-e-limites-primeira-infancia -> inteligencia-emocional-criancas
