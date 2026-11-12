@@ -14,7 +14,7 @@
 //  3. Bump de CACHE força invalidação completa do v1.
 //  4. skipWaiting + claim → atualização imediata sem reload.
 
-const CACHE = 'mb-maringa-v2'; // v2: força recarregar os JS de captura de lead (cache-first)
+const CACHE = 'mb-maringa-v3'; // v3: CTAs novos das landing pages e grade do blog
 const PRECACHE = [
   '/',
   '/assets/styles.css',

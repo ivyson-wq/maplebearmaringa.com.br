@@ -162,6 +162,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
 .blog-card-img:has(img) { display: block; }
 .blog-card-img:has(img)::after { display: none; }
 .blog-card-link { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
+.blog-card-img picture { display:block; width:100%; height:100%; }
 .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
 .blog-card:hover .blog-card-img img { transform: scale(1.05); }
 .blog-card-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
@@ -206,11 +207,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
 
 /* ── Newsletter ── */
 .newsletter {
-  max-width: var(--max-w); margin: 64px auto 0; padding: 0 24px;
+  max-width: var(--max-w); margin: 64px auto 72px; padding: 0 24px;
 }
 .newsletter-inner {
   background: linear-gradient(135deg, #7F1D1D, #B71C1C);
-  border-radius: 16px; padding: 48px; display: flex; align-items: center; gap: 40px;
+  border-radius: 16px; padding: 48px; display: flex; flex-direction: column; align-items: stretch; gap: 24px;
   position: relative; overflow: hidden;
 }
 .newsletter-inner::before {
@@ -219,22 +220,23 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
   background: rgba(255,255,255,.05);
 }
 .newsletter-text { flex: 1; position: relative; }
-.newsletter-text h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: #fff; margin-bottom: 8px; }
+.newsletter-text h3 { font-family: 'Playfair Display', serif; font-size: 28px; color: #fff; margin-bottom: 8px; }
 .newsletter-text p { color: rgba(255,255,255,.75); font-size: 15px; }
-.newsletter-form { display: flex; gap: 8px; position: relative; }
+.newsletter-form { display: flex; flex-wrap: wrap; gap: 10px; position: relative; }
 .newsletter-form input {
   padding: 12px 18px; border: 2px solid rgba(255,255,255,.2); border-radius: 8px;
-  background: rgba(255,255,255,.1); color: #fff; font-size: 14px; width: 260px;
+  background: rgba(255,255,255,.1); color: #fff; font-size: 15px; flex: 1 1 200px; min-width: 0;
   font-family: inherit; outline: none; transition: border-color .2s;
 }
 .newsletter-form input::placeholder { color: rgba(255,255,255,.5); }
 .newsletter-form input:focus { border-color: rgba(255,255,255,.5); }
 .newsletter-form button {
-  padding: 12px 24px; border: none; border-radius: 8px;
-  background: #fff; color: var(--red); font-weight: 700; font-size: 14px;
+  padding: 14px 26px; border: none; border-radius: 8px; flex: 1 1 220px;
+  background: #fff; color: var(--red); font-weight: 700; font-size: 15px;
   cursor: pointer; font-family: inherit; transition: transform .2s;
 }
 .newsletter-form button:hover { transform: translateY(-1px); }
+@media (max-width: 600px) { .newsletter-inner { padding: 32px 20px; } .newsletter-text h3 { font-size: 24px; } }
 
 /* ── Footer ── */
 .footer { background: var(--red-dark); padding: 56px 24px 32px; margin-top: 80px; }
@@ -333,14 +335,45 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
   <button class="filter-btn" data-filter="metodologia">Metodologia</button>
   <button class="filter-btn" data-filter="familia">Família</button>
   <button class="filter-btn" data-filter="desenvolvimento">Desenvolvimento Infantil</button>
-  <button class="filter-btn" data-filter="noticias">Notícias</button>
 </div>
 
 <section class="blog-section">
   <div class="blog-grid" id="blog-grid">
+<article class="blog-card" data-category="desenvolvimento">
+  <a href="/blog/adaptacao-bear-care-1-ano/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/urso-balao.webp" type="image/webp"><img src="/assets/photos/urso-balao.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
+      <h2 class="blog-card-title">Adaptação do bebê de 1 ano na escolinha: o turno, as primeiras semanas e o que combinar</h2>
+      <p class="blog-card-excerpt">Como é a adaptação de um bebê de 1 ano na escola: o turno do Bear Care, o que combinar com a equipe e sinais de que vai bem.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-11-11">11 de novembro de 2026</time>
+        <span class="reading-time">⏱ 9 min</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="educacao-bilingue">
+  <a href="/blog/entrar-escola-bilingue-sem-ingles-year-3-4-5/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/certificacao.webp" type="image/webp"><img src="/assets/photos/certificacao.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <h2 class="blog-card-title">Meu filho tem 8 anos e não fala inglês: ele consegue entrar em escola bilíngue?</h2>
+      <p class="blog-card-excerpt">Filho de 8, 9 ou 10 anos que nunca estudou inglês pode entrar no Year 3, 4 ou 5? O que observar nos primeiros meses e o que perguntar na visita.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-11-11">11 de novembro de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
+</article>
 <article class="blog-card" data-category="familia">
   <a href="/blog/mudando-para-maringa-escola-dos-filhos/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/familias-piquenique.webp" type="image/webp"><img src="/assets/photos/familias-piquenique.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
       <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">Estou me mudando para Maringá: como escolher a escola do meu filho</h2>
@@ -348,83 +381,15 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>1 de outubro de 2026</time>
+        <time datetime="2026-11-11">11 de novembro de 2026</time>
         <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
-  <a href="/blog/adaptacao-bear-care-1-ano/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Adaptação do bebê de 1 ano na escolinha: o turno, as primeiras semanas e o que combinar</h2>
-      <p class="blog-card-excerpt">Como é a adaptação de um bebê de 1 ano na escola: o turno do Bear Care, o que combinar com a equipe e sinais de que vai bem.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>1 de outubro de 2026</time>
-        <span class="reading-time">⏱ 8 min</span>
-      </div>
-    </div>
-  </a>
-  <a href="/blog/alfabetizacao-bilingue-fases/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Alfabetização bilíngue: quando a criança aprende a ler em português e em inglês</h2>
-      <p class="blog-card-excerpt">Quando a criança aprende a ler em português e em inglês? As fases do Infantil ao Year 5, a data de corte em Maringá e o que perguntar na visita.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>1 de outubro de 2026</time>
-        <span class="reading-time">⏱ 8 min</span>
-      </div>
-    </div>
-  </a>
-  <a href="/blog/entrar-escola-bilingue-sem-ingles-year-3-4-5/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Meu filho tem 8 anos e não fala inglês: ele consegue entrar em escola bilíngue?</h2>
-      <p class="blog-card-excerpt">Filho de 8, 9 ou 10 anos que nunca estudou inglês pode entrar no Year 3, 4 ou 5? O que observar nos primeiros meses e o que perguntar na visita.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>1 de outubro de 2026</time>
-        <span class="reading-time">⏱ 8 min</span>
-      </div>
-    </div>
-  </a>
-  <a href="/blog/transicao-educacao-infantil-ensino-fundamental/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Transição da educação infantil para o 1º ano: o que muda e como preparar seu filho</h2>
-      <p class="blog-card-excerpt">O que muda do Senior Kindergarten para o 1º ano, a dúvida de Maringá (ficar na escola ou trocar) e o que fazer em casa para a criança chegar tranquila.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>1 de outubro de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
-      </div>
-    </div>
-  </a>
-  <a href="/blog/escola-infantil-periodo-integral-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Escola infantil em período integral em Maringá: tem? Como cobrir o dia de trabalho</h2>
-      <p class="blog-card-excerpt">A Maple Bear Maringá não tem integral: são cinco horas, de manhã ou à tarde. Veja como montar o dia com rede de apoio, contraturno e irmãos antes de decidir.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>1 de outubro de 2026</time>
-        <span class="reading-time">⏱ 8 min</span>
-      </div>
-    </div>
-  </a>
+</article>
+<article class="blog-card" data-category="familia">
   <a href="/blog/turno-da-tarde-escola-infantil-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/og-image.png" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/contacao-ar-livre-2.webp" type="image/webp"><img src="/assets/photos/contacao-ar-livre-2.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
       <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">Escola infantil à tarde em Maringá: como é o turno das 13h30 às 18h30</h2>
@@ -432,70 +397,31 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>1 de outubro de 2026</time>
+        <time datetime="2026-11-11">11 de novembro de 2026</time>
         <span class="reading-time">⏱ 7 min</span>
       </div>
     </div>
   </a>
-  <a href="/blog/pais-que-nao-falam-ingles-escola-bilingue/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&auto=format&fit=crop" alt="Atividades Bilíngues no Fim de Semana: 10 Ideias Para Fazer com Seu Filho" loading="lazy"></div>
+</article>
+<article class="blog-card" data-category="desenvolvimento">
+  <a href="/blog/creche-maringa-idade-de-entrada/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/materiais-pelucias.webp" type="image/webp"><img src="/assets/photos/materiais-pelucias.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Não falo inglês: como ajudar meu filho na escola bilíngue</h2>
-      <p class="blog-card-excerpt">Você não precisa falar inglês. Rotina em casa, filho que resiste ou é tímido e tarefa sem saber o idioma: o que cabe à família.</p>
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
+      <h2 class="blog-card-title">Creche em Maringá: a partir de que idade colocar o filho e como medir o trajeto</h2>
+      <p class="blog-card-excerpt">Creche em Maringá: não há idade única certa. Sinais de prontidão, a conta do trajeto de Paiçandu, Marialva e Sarandi e o que ver na visita.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>1 de outubro de 2026</time>
+        <time datetime="2026-09-15">15 de setembro de 2026</time>
         <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
 </article>
-
-<article class="blog-card" data-category="metodologia">
-  <a href="/blog/metodologia-canadense-maple-bear/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop" alt="STEAM na Escola Bilíngue: Por Que Aprender Ciência, Arte e Tecnologia em Inglês Faz a Diferença" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="metodologia">METODOLOGIA</span>
-      <h2 class="blog-card-title">Metodologia canadense Maple Bear: como ela aparece na semana do seu filho</h2>
-      <p class="blog-card-excerpt">Como a metodologia canadense da Maple Bear aparece no dia a dia da criança e o que observar e perguntar na visita para não comprar só o rótulo.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>28 de setembro de 2026</time>
-        <span class="reading-time">⏱ 6 min</span>
-      </div>
-    </div>
-  </a>
-</article>
-
-<article class="blog-card" data-category="familia">
-  <a href="/blog/autonomia-e-birras-primeira-infancia/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop" alt="Disciplina Positiva: Como Educar seus Filhos com Limites Saudáveis e Amor" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
-      <h2 class="blog-card-title">Autonomia e birras na primeira infância: o que esperar de 2 a 5 anos e o que perguntar à escola</h2>
-      <p class="blog-card-excerpt">Birra, limite e autonomia de 2 a 5 anos: o que é normal, o que fazer em casa e o que perguntar à escola sobre rotina, lanche e acolhimento.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>24 de setembro de 2026</time>
-        <span class="reading-time">⏱ 8 min</span>
-      </div>
-    </div>
-  </a>
-</article>
-
-<article class="blog-card" data-category="familia">
-</article>
-
-<article class="blog-card" data-category="metodologia">
-</article>
-
 <article class="blog-card" data-category="familia">
   <a href="/blog/quando-trocar-de-escola/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop" alt="Quando Trocar de Escola: 8 Sinais de Que Seu Filho Merece Um Ambiente Melhor" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/familias-plateia.webp" type="image/webp"><img src="/assets/photos/familias-plateia.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
       <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">Quando trocar meu filho de escola: sinais, bullying e a janela de julho</h2>
@@ -503,487 +429,300 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>14 de setembro de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
+        <time datetime="2026-09-14">14 de setembro de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
 </article>
-
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="bilingue">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="bilingue">
-  <a href="/blog/ferias-escolares-ingles-atividades/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&auto=format&fit=crop" alt="Férias Escolares: Como Fortalecer o Inglês do Seu Filho Sem Perder o que Aprendeu" loading="lazy"></div>
+<article class="blog-card" data-category="educacao-bilingue">
+  <a href="/blog/pais-que-nao-falam-ingles-escola-bilingue/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/contacao-ar-livre.webp" type="image/webp"><img src="/assets/photos/contacao-ar-livre.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="bilingue">BILÍNGUE</span>
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <h2 class="blog-card-title">Não falo inglês: como ajudar meu filho na escola bilíngue</h2>
+      <p class="blog-card-excerpt">Você não precisa falar inglês. Rotina em casa, filho que resiste ou é tímido e tarefa sem saber o idioma: o que cabe à família.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-08-24">24 de agosto de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="educacao-bilingue">
+  <a href="/blog/ferias-escolares-ingles-atividades/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/playground-cupula.webp" type="image/webp"><img src="/assets/photos/playground-cupula.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
       <h2 class="blog-card-title">Férias escolares em Maringá: como manter o inglês sem virar aula</h2>
       <p class="blog-card-excerpt">Dezembro a fevereiro em Maringá: chuva em janeiro, calor e semanas sem aula. Atividades para manter o inglês e o Maple Summer Camp.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>31 de agosto de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
-      </div>
-    </div>
-  </a>
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="bilingue">
-</article>
-<article class="blog-card" data-category="bilingue">
-</article>
-
-<article class="blog-card" data-category="bilingue">
-</article>
-
-<article class="blog-card" data-category="socioemocional">
-</article>
-
-<article class="blog-card" data-category="familia">
-</article>
-
-<article class="blog-card" data-category="metodologia">
-</article>
-
-<article class="blog-card" data-category="carreira">
-</article>
-
-<article class="blog-card" data-category="metodologia">
-</article>
-
-<article class="blog-card" data-category="desenvolvimento">
-</article>
-
-<article class="blog-card" data-category="metodologia">
-</article>
-
-<article class="blog-card" data-category="familia">
-</article>
-
-<article class="blog-card" data-category="metodologia">
-</article>
-
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="desenvolvimento">
-</article>
-
-<article class="blog-card" data-category="bilingue">
-  <a href="/blog/escola-bilingue-ou-curso-de-ingles/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&auto=format&fit=crop" alt="Quanto Tempo Leva para Meu Filho Falar Inglês Fluente na Escola Bilíngue?" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="bilingue">BILÍNGUE</span>
-      <h2 class="blog-card-title">Escola bilíngue ou curso de inglês: qual escolher e como saber se funciona</h2>
-      <p class="blog-card-excerpt">Imersão na escola ou curso de inglês no contraturno? A conta de horas, o deslocamento extra e como medir se seu filho aprende de verdade.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>6 de julho de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
-      </div>
-    </div>
-  </a>
-</article>
-
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="desenvolvimento">
-</article>
-<article class="blog-card" data-category="metodologia">
-  <a href="/blog/telas-criancas-escola-e-casa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop" alt="Tecnologia na Educação Infantil: Como Usar a Favor do Aprendizado" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="metodologia">METODOLOGIA</span>
-      <h2 class="blog-card-title">Tempo de tela para criança pequena: o que a escola faz e o que combinar em casa</h2>
-      <p class="blog-card-excerpt">Quanto tempo de tela para criança de 2 a 5 anos, segundo a SBP, o que a escola infantil faz com telas interativas e como organizar o fim de tarde em casa.</p>
-      <div class="blog-card-meta">
-        <span>Maple Bear Maringá</span>
-        <span>·</span>
-        <time>25 de junho de 2026</time>
+        <time datetime="2026-07-20">20 de julho de 2026</time>
         <span class="reading-time">⏱ 6 min</span>
       </div>
     </div>
   </a>
 </article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
 <article class="blog-card" data-category="desenvolvimento">
-  <a href="/blog/escola-bilingue-confunde-crianca/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop" alt="Neurociência do Bilinguismo: O Que Acontece no Cérebro da Criança Bilíngue" loading="lazy"></div>
+  <a href="/blog/transicao-educacao-infantil-ensino-fundamental/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/biblioteca.webp" type="image/webp"><img src="/assets/photos/biblioteca.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO INFANTIL</span>
-      <h2 class="blog-card-title">Escola bilíngue confunde a criança? E existe idade certa para começar?</h2>
-      <p class="blog-card-excerpt">Misturar português e inglês é normal? Qual a idade certa para começar? O que a pesquisa sustenta e quando procurar o pediatra.</p>
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
+      <h2 class="blog-card-title">Transição da educação infantil para o 1º ano: o que muda e como preparar seu filho</h2>
+      <p class="blog-card-excerpt">O que muda do Senior Kindergarten para o 1º ano, a dúvida de Maringá (ficar na escola ou trocar) e o que fazer em casa para a criança chegar tranquila.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>22 de maio de 2026</time>
+        <time datetime="2026-07-02">2 de julho de 2026</time>
+        <span class="reading-time">⏱ 7 min</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="desenvolvimento">
+  <a href="/blog/autonomia-e-birras-primeira-infancia/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/evento-arvores.webp" type="image/webp"><img src="/assets/photos/evento-arvores.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
+      <h2 class="blog-card-title">Autonomia e birras na primeira infância: o que esperar de 2 a 5 anos e o que perguntar à escola</h2>
+      <p class="blog-card-excerpt">Birra, limite e autonomia de 2 a 5 anos: o que é normal, o que fazer em casa e o que perguntar à escola sobre rotina, lanche e acolhimento.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-06-29">29 de junho de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="familia">
+  <a href="/blog/escola-infantil-periodo-integral-maringa/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/evento-pipoca.webp" type="image/webp"><img src="/assets/photos/evento-pipoca.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
+      <h2 class="blog-card-title">Escola infantil em período integral em Maringá: tem? Como cobrir o dia de trabalho</h2>
+      <p class="blog-card-excerpt">A Maple Bear Maringá não tem integral: são cinco horas, de manhã ou à tarde. Veja como montar o dia com rede de apoio, contraturno e irmãos antes de decidir.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-06-11">11 de junho de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="blog-card" data-category="familia">
+  <a href="/blog/escola-infantil-segura-maringa/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/playground-estrutura.webp" type="image/webp"><img src="/assets/photos/playground-estrutura.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
+      <h2 class="blog-card-title">Escola infantil segura em Maringá: o que perguntar e como interpretar as respostas</h2>
+      <p class="blog-card-excerpt">Como saber se uma escola infantil em Maringá é segura: as perguntas que revelam o dia a dia, como ler as respostas e o que a Maple Bear informou.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-06-11">11 de junho de 2026</time>
         <span class="reading-time">⏱ 7 min</span>
       </div>
     </div>
   </a>
 </article>
 <article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-  <a href="/blog/creche-maringa-idade-de-entrada/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&auto=format&fit=crop" alt="Bebê explorando brinquedos educativos em ambiente de berçário acolhedor" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="etapas-escolares">ETAPAS ESCOLARES</span>
-      <h2 class="blog-card-title">Creche em Maringá: a partir de que idade colocar o filho e como medir o trajeto</h2>
-      <p class="blog-card-excerpt">Creche em Maringá: não há idade única certa. Sinais de prontidão, a conta do trajeto de Paiçandu, Marialva e Sarandi e o que ver na visita.</p>
-      <div class="blog-card-meta"><span>Maple Bear Maringá</span><span>·</span><time>11 de junho de 2026</time><span class="reading-time">⏱ 8 min</span></div>
-    </div>
-  </a>
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
   <a href="/blog/melhor-escola-educacao-infantil-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="/assets/photos/atividade-mesa.jpg" alt="Crianças em atividade nas mesas da sala de aula" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/entrada-jardim.webp" type="image/webp"><img src="/assets/photos/entrada-jardim.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
       <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">Melhor Escola de Educação Infantil em Maringá: 7 Critérios para Decidir</h2>
       <p class="blog-card-excerpt">Qual a melhor escola infantil em Maringá? Sete critérios, cinco perguntas para a visita e o que fazer com o trajeto, sem depender de ranking.</p>
-      <div class="blog-card-meta"><span>Maple Bear Maringá</span><span>·</span><time>15 de setembro de 2026</time><span class="reading-time">⏱ 7 min</span></div>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-06-11">11 de junho de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
     </div>
   </a>
 </article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
 <article class="blog-card" data-category="familia">
-  <a href="/blog/escola-infantil-segura-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop" alt="Portão de escola com ambiente escolar organizado e seguro" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="seguranca-infantil">SEGURANÇA INFANTIL</span>
-      <h2 class="blog-card-title">Escola infantil segura em Maringá: o que perguntar e como interpretar as respostas</h2>
-      <p class="blog-card-excerpt">Como saber se uma escola infantil em Maringá é segura: as perguntas que revelam o dia a dia, como ler as respostas e o que a Maple Bear informou.</p>
-      <div class="blog-card-meta"><span>Maple Bear Maringá</span><span>·</span><time>11 de junho de 2026</time><span class="reading-time">⏱ 5 min</span></div>
-    </div>
-  </a>
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="desenvolvimento">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-  <a href="/blog/escola-bilingue-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&auto=format&fit=crop" alt="Sala de aula iluminada com materiais de aprendizagem" loading="lazy"></div>
-    <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
-      <h2 class="blog-card-title">Escola Bilíngue em Maringá: como saber se é de verdade</h2>
-      <p class="blog-card-excerpt">Bilíngue, internacional ou canadense? Veja os modelos, dez pontos para conferir na visita e como decidir entre escolas bilíngues em Maringá.</p>
-      <div class="blog-card-meta"><span>Maple Bear Maringá</span><span>·</span><time>11 de junho de 2026</time><span class="reading-time">⏱ 6 min</span></div>
-    </div>
-  </a>
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
   <a href="/blog/mensalidade-maple-bear-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop" alt="Família planejando o investimento em educação bilíngue" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/equipe-time.webp" type="image/webp"><img src="/assets/photos/equipe-time.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">Mensalidade da Maple Bear Maringá: o que perguntar e como comparar propostas</h2>
       <p class="blog-card-excerpt">A mensalidade é informada pelo WhatsApp. Veja o que perguntar, o que o turno entrega e como comparar propostas de escolas bilíngues em Maringá.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>11 de junho de 2026</time>
+        <time datetime="2026-06-11">11 de junho de 2026</time>
         <span class="reading-time">⏱ 7 min</span>
       </div>
     </div>
   </a>
 </article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="rotina-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-infantil">
+<article class="blog-card" data-category="desenvolvimento">
   <a href="/blog/educacao-infantil-em-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop" alt="Criança pequena brincando e aprendendo em escola de educação infantil" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/parquinho-infantil.webp" type="image/webp"><img src="/assets/photos/parquinho-infantil.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO INFANTIL</span>
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
       <h2 class="blog-card-title">Educação infantil em Maringá: idade, corte de 31 de março e como funciona</h2>
       <p class="blog-card-excerpt">Educação infantil em Maringá: idade de cada etapa, a data de corte de 31 de março e o que acontece com quem faz 4 anos em abril. Redes e escolas.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>4 de junho de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
+        <time datetime="2026-06-04">4 de junho de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
 </article>
 <article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-
-<article class="blog-card" data-category="desenvolvimento">
-</article>
-<article class="blog-card" data-category="desenvolvimento">
-  <a href="/blog/crianca-chora-na-escola-adaptacao/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&auto=format&fit=crop" alt="Ansiedade Infantil na Escola: 10 Sinais que Pais Não Devem Ignorar" loading="lazy"></div>
+  <a href="/blog/escola-bilingue-confunde-crianca/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/contacao-historia.webp" type="image/webp"><img src="/assets/photos/contacao-historia.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="saude-infantil">SAÚDE INFANTIL</span>
-      <h2 class="blog-card-title">Meu filho chora para ir à escola: o que fazer e quando procurar ajuda</h2>
-      <p class="blog-card-excerpt">Choro na porta, dor de barriga antes da aula, &quot;não quero ir&quot;: como separar fase de sofrimento, o que fazer na despedida e quando chamar o pediatra.</p>
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <h2 class="blog-card-title">Escola bilíngue confunde a criança? E existe idade certa para começar?</h2>
+      <p class="blog-card-excerpt">Misturar português e inglês é normal? Qual a idade certa para começar? O que a pesquisa sustenta e quando procurar o pediatra.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>21 de maio de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
+        <time datetime="2026-05-21">21 de maio de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
 </article>
-<article class="blog-card" data-category="educacao-bilingue">
+<article class="blog-card" data-category="familia">
   <a href="/blog/maple-bear-e-boa-vale-a-pena/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop" alt="Maple Bear É Boa? Uma Análise Detalhada da Metodologia e Depoimentos Reais" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/fachada-aerea.webp" type="image/webp"><img src="/assets/photos/fachada-aerea.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">A Maple Bear Maringá é boa? Vale a pena para a sua família?</h2>
       <p class="blog-card-excerpt">A Maple Bear Maringá é boa? Fatos para conferir, quem pode não ser o perfil e a conta do trajeto de Sarandi, Paiçandu e Marialva.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>21 de maio de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
+        <time datetime="2026-05-21">21 de maio de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
 </article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="metodologia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
 <article class="blog-card" data-category="familia">
   <a href="/blog/escola-particular-ou-publica-maringa/" class="blog-card-link">
-    <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop" alt="Como Escolher a Escola Particular Ideal: Checklist com 22 Critérios" loading="lazy"></div>
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/recepcao.webp" type="image/webp"><img src="/assets/photos/recepcao.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
     <div class="blog-card-body">
-      <span class="blog-card-cat" data-cat="familia">DICAS PARA PAIS</span>
+      <span class="blog-card-cat" data-cat="familia">FAMÍLIA</span>
       <h2 class="blog-card-title">Escola Particular ou Pública em Maringá: o que pesa na decisão</h2>
       <p class="blog-card-excerpt">Escola particular ou pública em Maringá? O Ideb da rede municipal, o que ele não mede e as perguntas que só aparecem ao comparar as duas redes.</p>
       <div class="blog-card-meta">
         <span>Maple Bear Maringá</span>
         <span>·</span>
-        <time>19 de maio de 2026</time>
-        <span class="reading-time">⏱ 7 min</span>
+        <time datetime="2026-05-19">19 de maio de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
       </div>
     </div>
   </a>
 </article>
 <article class="blog-card" data-category="desenvolvimento">
+  <a href="/blog/telas-criancas-escola-e-casa/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/corredor-artes.webp" type="image/webp"><img src="/assets/photos/corredor-artes.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
+      <h2 class="blog-card-title">Tempo de tela para criança pequena: o que a escola faz e o que combinar em casa</h2>
+      <p class="blog-card-excerpt">Quanto tempo de tela para criança de 2 a 5 anos, segundo a SBP, o que a escola infantil faz com telas interativas e como organizar o fim de tarde em casa.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-05-19">19 de maio de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
 </article>
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="familia">
-</article>
-<article class="blog-card" data-category="familia">
+<article class="blog-card" data-category="educacao-bilingue">
+  <a href="/blog/alfabetizacao-bilingue-fases/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/sala-alfabetizacao.webp" type="image/webp"><img src="/assets/photos/sala-alfabetizacao.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <h2 class="blog-card-title">Alfabetização bilíngue: quando a criança aprende a ler em português e em inglês</h2>
+      <p class="blog-card-excerpt">Quando a criança aprende a ler em português e em inglês? As fases do Infantil ao Year 5, a data de corte em Maringá e o que perguntar na visita.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-05-17">17 de maio de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
 </article>
 <article class="blog-card" data-category="desenvolvimento">
+  <a href="/blog/crianca-chora-na-escola-adaptacao/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/materiais-fantoches.webp" type="image/webp"><img src="/assets/photos/materiais-fantoches.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="desenvolvimento">DESENVOLVIMENTO</span>
+      <h2 class="blog-card-title">Meu filho chora para ir à escola: o que fazer e quando procurar ajuda</h2>
+      <p class="blog-card-excerpt">Choro na porta, dor de barriga antes da aula, &quot;não quero ir&quot;: como separar fase de sofrimento, o que fazer na despedida e quando chamar o pediatra.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-05-04">4 de maio de 2026</time>
+        <span class="reading-time">⏱ 9 min</span>
+      </div>
+    </div>
+  </a>
 </article>
 <article class="blog-card" data-category="educacao-bilingue">
+  <a href="/blog/escola-bilingue-maringa/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/fachada-letreiro.webp" type="image/webp"><img src="/assets/photos/fachada-letreiro.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <h2 class="blog-card-title">Como escolher escola bilíngue em Maringá: guia de visita</h2>
+      <p class="blog-card-excerpt">Bilíngue, internacional ou canadense? Veja os modelos, dez pontos para conferir na visita e como decidir entre escolas bilíngues em Maringá.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-05-04">4 de maio de 2026</time>
+        <span class="reading-time">⏱ 10 min</span>
+      </div>
+    </div>
+  </a>
 </article>
 <article class="blog-card" data-category="educacao-bilingue">
+  <a href="/blog/escola-bilingue-ou-curso-de-ingles/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/atividade-mesa.webp" type="image/webp"><img src="/assets/photos/atividade-mesa.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="educacao-bilingue">EDUCAÇÃO BILÍNGUE</span>
+      <h2 class="blog-card-title">Escola bilíngue ou curso de inglês: qual escolher e como saber se funciona</h2>
+      <p class="blog-card-excerpt">Imersão na escola ou curso de inglês no contraturno? A conta de horas, o deslocamento extra e como medir se seu filho aprende de verdade.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-05-04">4 de maio de 2026</time>
+        <span class="reading-time">⏱ 8 min</span>
+      </div>
+    </div>
+  </a>
 </article>
-<article class="blog-card" data-category="educacao-bilingue">
+<article class="blog-card" data-category="metodologia">
+  <a href="/blog/metodologia-canadense-maple-bear/" class="blog-card-link">
+    <div class="blog-card-img"><picture><source srcset="/assets/photos/atividade-piao.webp" type="image/webp"><img src="/assets/photos/atividade-piao.jpg" alt="" loading="lazy" width="800" height="500"></picture></div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat" data-cat="metodologia">METODOLOGIA</span>
+      <h2 class="blog-card-title">Metodologia canadense Maple Bear: como ela aparece na semana do seu filho</h2>
+      <p class="blog-card-excerpt">Como a metodologia canadense da Maple Bear aparece no dia a dia da criança e o que observar e perguntar na visita para não comprar só o rótulo.</p>
+      <div class="blog-card-meta">
+        <span>Maple Bear Maringá</span>
+        <span>·</span>
+        <time datetime="2026-05-04">4 de maio de 2026</time>
+        <span class="reading-time">⏱ 6 min</span>
+      </div>
+    </div>
+  </a>
 </article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="desenvolvimento">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-<article class="blog-card" data-category="educacao-bilingue">
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 
   <div class="empty-state" id="empty-state" style="display:none">
@@ -996,13 +735,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
 <section class="newsletter">
   <div class="newsletter-inner">
     <div class="newsletter-text">
-      <h3>Deixe seu nome e WhatsApp e a equipe da Maple Bear Maringá entra em contato.</h3>
-      <p>Deixe seu nome e WhatsApp e a equipe da Maple Bear Maringá entra em contato.</p>
+      <h3>Leu, gostou, quer ver de perto?</h3>
+      <p>Deixe nome e WhatsApp e a equipe da Maple Bear Maringá combina com você um horário para conhecer a escola. Visitas o dia todo, de manhã e à tarde.</p>
     </div>
     <form class="newsletter-form" data-blog-lead="blog-index">
       <input type="text" name="nome" placeholder="Seu nome" required autocomplete="name" maxlength="120" aria-label="Seu nome">
       <input type="tel" name="telefone" placeholder="WhatsApp com DDD" required autocomplete="tel" inputmode="tel" aria-label="WhatsApp com DDD">
-      <button type="submit">Quero conversar</button>
+      <button type="submit">Quero agendar minha visita</button>
     </form>
   </div>
 </section>
