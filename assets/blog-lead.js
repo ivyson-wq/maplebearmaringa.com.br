@@ -62,6 +62,8 @@
     if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
     try {
       await L.enviar(data);
+      var velho = form.parentNode.querySelector('.mb-lead-fb'); // erro de tentativa anterior
+      if (velho) velho.parentNode.removeChild(velho);
       form.style.display = 'none';
       var box = visual.sucesso(form);
       L.sucesso(box, nome, origem);
