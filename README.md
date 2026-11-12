@@ -19,9 +19,13 @@ Merge na `main` → a Vercel publica. Nunca publicar por CLI.
 
 ## Captura de leads
 
-`/visite/`, landing pages e materiais → `POST /api/visit-lead` →
-1. e-mail para a equipe (Resend, `LEAD_NOTIFY_TO`, default `secretaria@maplebearmaringa.com.br`);
-2. lead no Lumied, tenant `mbmaringa` (`https://mbmaringa.lumied.com.br/api/leads`, público, sem chave).
+`/visite/`, landing pages, materiais, blog (formulário do artigo, pop-up de saída e índice) e exit-intent → `POST /api/visit-lead`
+(núcleo no navegador: `window.mbLead` em `assets/components.js`; blog em `assets/blog-lead.js`). A API:
+1. cria o lead no Lumied, tenant `mbmaringa` (`https://mbmaringa.lumied.com.br/api/leads`, público, sem chave), com timeout de 8 s e 1 nova tentativa;
+2. manda o e-mail para a equipe (Resend, `LEAD_NOTIFY_TO`, default `secretaria@maplebearmaringa.com.br`). Se o Lumied falhar, o assunto começa com `[NÃO ENTROU NO CRM]` e o corpo traz o motivo.
+
+Origens: lista fechada (`site-visite`, `lead-magnet-*`, `newsletter`, `exit-intent`...) mais `lp-<slug>` e `blog-<slug>` / `blog-exit-<slug>` por prefixo.
+Telefone: BR, 10 ou 11 dígitos depois de tirar zeros e +55, DDD válido; nome com 3 letras ou mais (igual à triagem do Lumied).
 
 O pixel first-party do Lumied (`assets/analytics.js` → `/api/track/pageview`) liga a navegação ao lead.
 

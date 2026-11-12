@@ -19,7 +19,7 @@
   <meta name="twitter:image" content="https://maplebearmaringa.com.br/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,250..600;1,9..144,250..600&family=Spectral:ital,wght@0,300..600;1,300..600&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,250..600;1,9..144,250..600&family=Spectral:ital,wght@0,300..600;1,300..600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="/assets/styles.css?v=5">
+  <link rel="stylesheet" href="/assets/styles.css?v=cv1">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=3">
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicon.ico?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=3">
@@ -182,7 +182,9 @@
               <a href="https://wa.me/5544991783232?text=Ol%C3%A1!%20Quero%20saber%20sobre%20a%20escola%20bil%C3%ADngue%20em%20Maring%C3%A1." class="btn btn-primary" target="_blank" rel="noopener">Falar no WhatsApp</a>
               <a href="#agendar" class="btn btn-secondary">Agendar uma visita</a>
             </p>
+            <p class="lp-cta-note">Valores sob consulta pelo WhatsApp <a href="https://wa.me/5544991783232?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." target="_blank" rel="noopener">(44) 99178-3232</a>.</p>
             <p class="lede">A Maple Bear Maringá é uma escola bilíngue canadense para crianças do Bear Care, a partir de 1 ano, ao Year 5, com o Year 6 chegando em 2027. O inglês é a língua da rotina, não uma aula extra, e o currículo brasileiro (BNCC) segue em paralelo.</p>
+            <ul class="lp-incluso" aria-label="O que está incluso"><li><strong>Turno de 5 horas, manhã ou tarde:</strong> das 7h30 às 12h30 ou das 13h30 às 18h30 (a escola não tem período integral).</li><li><strong>Alimentação inclusa.</strong></li><li><strong>Inglês todos os dias</strong>, por imersão, em turmas reduzidas.</li></ul>
           </div>
           <figure class="lp-hero-media"><picture><source type="image/webp" srcset="/assets/photos/lp/contacao-ar-livre-480.webp 480w, /assets/photos/lp/contacao-ar-livre-720.webp 720w, /assets/photos/lp/contacao-ar-livre-960.webp 960w" sizes="(max-width: 760px) 270px, 44vw"><img src="/assets/photos/lp/contacao-ar-livre-720.jpg" srcset="/assets/photos/lp/contacao-ar-livre-480.jpg 480w, /assets/photos/lp/contacao-ar-livre-720.jpg 720w, /assets/photos/lp/contacao-ar-livre-960.jpg 960w" sizes="(max-width: 760px) 270px, 44vw" width="960" height="720" alt="Alunos sentados no quiosque da área externa da escola" decoding="async"></picture></figure>
         </div>
@@ -251,6 +253,27 @@
       </div>
     </section>
 
+    <section class="section section-alt" aria-labelledby="escola-bilingue-maringa-depo">
+      <div class="container">
+        <p class="eyebrow">O que as famílias dizem</p>
+        <h2 id="escola-bilingue-maringa-depo" style="font-size: var(--step-4);">Veja o que as famílias dizem</h2>
+        <div class="depo-feature mt-l">
+          <span class="depo-play" aria-hidden="true">&#9654;</span>
+          <div>
+            <h3>Depoimento em vídeo: a Thaís, mãe da Lívia e do Theo</h3>
+            <p>Ela conta como é a experiência da família na Maple Bear Maringá.</p>
+            <a href="https://www.instagram.com/reel/DYUsUDKP7wS/" class="btn btn-primary" target="_blank" rel="noopener">Assistir ao depoimento</a>
+          </div>
+        </div>
+        <!-- DEPOIMENTOS: inserir 3–5 depoimentos autorizados -->
+        <div class="depo-google">
+          <p>Quer saber o que outras famílias acham? Veja as avaliações da escola no Google.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Maple%20Bear%20Maring%C3%A1" class="btn btn-secondary" target="_blank" rel="noopener">Veja as avaliações da escola no Google</a>
+        </div>
+        <p class="mt-l"><a href="/depoimentos/">Ver a página de depoimentos →</a> · <a href="https://www.instagram.com/maplebearmaringa/" target="_blank" rel="noopener">Instagram @maplebearmaringa</a></p>
+      </div>
+    </section>
+
     <section class="section section-alt" aria-labelledby="escola-bilingue-maringa-faq">
       <div class="container">
         <p class="eyebrow">Perguntas frequentes</p>
@@ -284,46 +307,36 @@
             <h2 id="lp-escola-bilingue-form-titulo" style="font-size: var(--step-4);">Agende uma visita à escola bilíngue</h2>
             <p class="mt-l">Conte um pouco sobre sua família e escolha o melhor período. A gente confirma o horário pelo WhatsApp.</p>
             <form class="form mt-l" data-lp-visita="lp-escola-bilingue">
-              <div class="field-row">
-                <div class="field">
-                  <label for="lp-escola-bilingue-nome">Seu nome <span class="req" aria-hidden="true">*</span></label>
-                  <input type="text" name="nome" id="lp-escola-bilingue-nome" required autocomplete="name" maxlength="120">
-                </div>
-                <div class="field">
-                  <label for="lp-escola-bilingue-telefone">WhatsApp <span class="req" aria-hidden="true">*</span></label>
-                  <input type="tel" name="telefone" id="lp-escola-bilingue-telefone" required autocomplete="tel" inputmode="tel" placeholder="(44) 99999-9999">
-                </div>
+              <div class="field">
+                <label for="lp-escola-bilingue-nome">Seu nome <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" name="nome" id="lp-escola-bilingue-nome" required autocomplete="name" maxlength="120">
               </div>
               <div class="field">
-                <label for="lp-escola-bilingue-email">E-mail</label>
-                <input type="email" name="email" id="lp-escola-bilingue-email" autocomplete="email">
-              </div>
-              <div class="field-row">
-                <div class="field">
-                  <label for="lp-escola-bilingue-nascimento">Data de nascimento do(a) filho(a) <span class="req" aria-hidden="true">*</span></label>
-                  <input type="date" name="data_nascimento" id="lp-escola-bilingue-nascimento" required min="2010-01-01" max="2026-12-31" autocomplete="off" aria-describedby="lp-escola-bilingue-nascimento-dica">
-                  <span class="hint" id="lp-escola-bilingue-nascimento-dica">Mais de uma criança? Informe a do(a) mais novo(a) e conte na mensagem.</span>
-                </div>
-                <div class="field">
-                  <label for="lp-escola-bilingue-periodo">Melhor período</label>
-                  <select name="melhor_periodo" id="lp-escola-bilingue-periodo">
-                    <option value="">Sem preferência</option>
-                    <option>Manhã</option>
-                    <option>Tarde</option>
-                                      </select>
-                </div>
+                <label for="lp-escola-bilingue-telefone">WhatsApp <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" name="telefone" id="lp-escola-bilingue-telefone" required autocomplete="tel" inputmode="tel" placeholder="(44) 99999-9999">
               </div>
               <div class="field">
-                <label for="lp-escola-bilingue-mensagem">Algo que gostaria de nos contar?</label>
-                <textarea name="mensagem" id="lp-escola-bilingue-mensagem" rows="3" maxlength="2000" placeholder="O que você procura na escola, dúvidas iniciais..."></textarea>
+                <label for="lp-escola-bilingue-idade">Idade da criança <span class="req" aria-hidden="true">*</span></label>
+                <select name="crianca_idade" id="lp-escola-bilingue-idade" required>
+                  <option value="" selected disabled>Escolha a faixa</option>
+                  <option>Bear Care (a partir de 1 ano)</option>
+                  <option>Toddler</option>
+                  <option>Nursery (3 anos)</option>
+                  <option>Junior Kindergarten (4 anos)</option>
+                  <option>Senior Kindergarten (5 anos)</option>
+                  <option>Year 1 a Year 5</option>
+                  <option>Year 6 (2027)</option>
+                </select>
               </div>
               <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
                 <label>Empresa <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
               </div>
               <button type="submit" class="btn btn-primary" style="justify-self: start;"><span class="lp-btn-label">Enviar pedido de visita</span> <span class="arrow" aria-hidden="true">→</span></button>
-              <p class="lp-form-note">Respondemos pelo WhatsApp em até um dia útil para confirmar o horário. Seus dados são usados só para esse contato — veja a <a href="/privacidade/">política de privacidade</a>.</p>
+              <p class="lp-form-valores">Valores sob consulta pelo WhatsApp (44) 99178-3232.</p>
+              <p class="lp-form-note">A equipe responde pelo WhatsApp no horário comercial para confirmar o horário. Seus dados são usados só para esse contato — veja a <a href="/privacidade/">política de privacidade</a>.</p>
             </form>
             <div class="lp-feedback" role="status" aria-live="polite"></div>
+            <p class="lp-fim-wa mt-l">Prefere conversar agora? <a href="https://wa.me/5544991783232?text=Ol%C3%A1!%20Vim%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20gostaria%20de%20agendar%20uma%20visita." class="btn btn-secondary" target="_blank" rel="noopener">Falar no WhatsApp</a></p>
           </div>
           <div class="lp-prose">
             <h3 style="margin-top:0">O que acontece na visita</h3>
@@ -341,8 +354,8 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><p class="footer-headline">Muito além<br>do <em>bilíngue.</em></p><div class="footer-grid"><div><h4>Maple Bear Maringá</h4><p>Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá, PR · CEP 87060-390</p><p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Seg–Sex · turnos 7h30 às 12h30 e 13h30 às 18h30</p></div><div><h4>Navegar</h4><a href="/sobre/">Sobre</a><a href="/metodologia/">Metodologia</a><a href="/niveis/">Níveis</a><a href="/estrutura/">Estrutura</a><a href="/equipe/">Equipe</a><a href="/escola-bilingue-maringa/">Escola bilíngue</a><a href="/ensino-fundamental-maringa/">Ensino fundamental</a><a href="/escola-infantil-maringa/">Escola infantil</a><a href="/pre-escola-maringa/">Pré-escola</a><a href="/colegio-maringa/">Colégio</a><a href="/fundamental-2-maringa/">6º ano bilíngue</a><a href="/eventos/">Eventos</a><a href="/educacao-infantil-bilingue-maringa/">Educação infantil</a><a href="/creche-bilingue-maringa/">Creche bilíngue</a><a href="/escola-particular-maringa/">Escola particular</a></div><div><h4>Conversar</h4><a href="/matriculas/">Matrículas 2027</a><a href="/valores/">Investimento</a><a href="/visite/">Agendar visita</a><a href="/faq/">FAQ</a><a href="/contato/">Contato</a><a href="/blog/">Blog</a></div><div><h4>Contato</h4><a href="https://wa.me/5544991783232" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:secretaria@maplebearmaringa.com.br">E-mail</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Maple Bear Maringá</span><span>Parte da rede Maple Bear Canadian Schools</span></div></div><script>document.getElementById('year').textContent = new Date().getFullYear();</script></footer>
-  <a href="https://wa.me/5544991783232" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <footer class="site-footer"><div class="container"><p class="footer-headline">Muito além<br>do <em>bilíngue.</em></p><div class="footer-grid"><div><h4>Maple Bear Maringá</h4><p>Av. Arquiteto Nildo Ribeiro da Rocha, 1201 · Maringá, PR · CEP 87060-390</p><p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Seg–Sex · turnos 7h30 às 12h30 e 13h30 às 18h30</p></div><div><h4>Navegar</h4><a href="/sobre/">Sobre</a><a href="/metodologia/">Metodologia</a><a href="/niveis/">Níveis</a><a href="/estrutura/">Estrutura</a><a href="/equipe/">Equipe</a><a href="/escola-bilingue-maringa/">Escola bilíngue</a><a href="/ensino-fundamental-maringa/">Ensino fundamental</a><a href="/escola-infantil-maringa/">Escola infantil</a><a href="/pre-escola-maringa/">Pré-escola</a><a href="/colegio-maringa/">Colégio</a><a href="/fundamental-2-maringa/">6º ano bilíngue</a><a href="/eventos/">Eventos</a><a href="/educacao-infantil-bilingue-maringa/">Educação infantil</a><a href="/creche-bilingue-maringa/">Creche bilíngue</a><a href="/escola-particular-maringa/">Escola particular</a></div><div><h4>Conversar</h4><a href="/matriculas/">Matrículas 2027</a><a href="/valores/">Investimento</a><a href="/visite/">Agendar visita</a><a href="/faq/">FAQ</a><a href="/contato/">Contato</a><a href="/blog/">Blog</a></div><div><h4>Contato</h4><a href="https://wa.me/5544991783232?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20Escola%20Bil%C3%ADngue%20em%20Maring%C3%A1%20com%20Imers%C3%A3o%20Di%C3%A1ria%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20quero%20saber%20mais." target="_blank" rel="noopener">WhatsApp</a><a href="mailto:secretaria@maplebearmaringa.com.br">E-mail</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Maple Bear Maringá</span><span>Parte da rede Maple Bear Canadian Schools</span></div></div><script>document.getElementById('year').textContent = new Date().getFullYear();</script></footer>
+  <a href="https://wa.me/5544991783232?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20Escola%20Bil%C3%ADngue%20em%20Maring%C3%A1%20com%20Imers%C3%A3o%20Di%C3%A1ria%20do%20site%20da%20Maple%20Bear%20Maring%C3%A1%20e%20quero%20saber%20mais." class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
   <script src="/assets/lead-capture.js" defer></script>
   <script src="/assets/lp-visita.js" defer></script>
 </body>
