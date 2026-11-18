@@ -15,6 +15,36 @@
       "permanent": true
     },
     {
+      "source": "/em-maringa/sarandi",
+      "destination": "/em-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/em-maringa/sarandi/",
+      "destination": "/em-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/em-maringa/paicandu",
+      "destination": "/em-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/em-maringa/paicandu/",
+      "destination": "/em-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/em-maringa/zona-7",
+      "destination": "/em-maringa/",
+      "permanent": true
+    },
+    {
+      "source": "/em-maringa/zona-7/",
+      "destination": "/em-maringa/",
+      "permanent": true
+    },
+    {
       "source": "/blog/como-escolher-escola-bilingue",
       "destination": "/blog/escola-bilingue-maringa/",
       "permanent": true

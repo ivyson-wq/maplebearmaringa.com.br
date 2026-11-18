@@ -38,7 +38,7 @@ Q&A do GBP aparece no knowledge panel da busca + sinaliza relevância pro rankin
 ### 4.
 **Pergunta:** Onde fica a escola?
 
-**Resposta:** Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Jardim Higienópolis, Maringá, PR. Recebemos famílias de toda a cidade e região (Sarandi, Paiçandu, Marialva).
+**Resposta:** Av. Arquiteto Nildo Ribeiro da Rocha, 1201 — Jardim Higienópolis, Maringá, PR. Recebemos famílias de toda a cidade e região (Marialva).
 
 ### 5.
 **Pergunta:** A escola atende crianças que ainda não falam inglês?

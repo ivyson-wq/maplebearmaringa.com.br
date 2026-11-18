@@ -204,7 +204,7 @@
         <span class="top-bar-icon" aria-hidden="true">✦</span>
         <span class="top-bar-text">
           <strong>Matrículas 2027 abertas</strong>
-          <small style="opacity: 0.85;">· Bear Care ao Year 5</small>
+          <small style="opacity: 0.85;">· Bear Care ao Year 6</small>
         </span>
         <a href="/visite/" class="top-bar-cta">
           Agendar visita <span aria-hidden="true">→</span>

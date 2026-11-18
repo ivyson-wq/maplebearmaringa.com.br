@@ -72,7 +72,7 @@ No perfil, clique em **Posts** e depois em **Adicionar post**. Tipos: **Atualiza
 - Experience Day: abrir vagas para a família conhecer a escola. Link: `/eventos/experience-day/`.
 - Maple Summer Camp: datas e inscrição. Link: `/eventos/maple-summer-camp/`.
 - Matrículas 2027: "Agende uma visita pelo WhatsApp (44) 99178-3232". Link: `/matriculas/`.
-- Year 6 abre em 2027 (novidade importante para famílias do Year 5).
+- Escola do Bear Care ao Year 6 (Year 6 já é etapa existente; matrículas 2027 abertas).
 - Dica de uma linha tirada de um artigo do blog (sempre com o link do artigo).
 - Bastidores da semana (sem rosto de criança sem autorização).
 
@@ -86,7 +86,7 @@ No perfil, procure **Produtos** e **Serviços** (nomes e disponibilidade para es
 - Junior Kindergarten (4 anos)
 - Senior Kindergarten (5 anos)
 - Year 1 ao Year 5 (Fundamental I)
-- Year 6 (a partir de 2027)
+- Year 6 (início do Fundamental II)
 - Visita agendada / Experience Day
 
 Cuidado: a descrição das idades deve bater com o site. Confira antes de publicar.
