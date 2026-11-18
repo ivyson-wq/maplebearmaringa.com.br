@@ -27,7 +27,7 @@ O site ainda NÃO está no ar: pode trocar slug, fundir e apagar sem custo de SE
   segurança → treinamento de abandono de área; transição → formatura do Senior Kindergarten), não só no fim.
 - Nunca: valores em R$; outras escolas pelo nome; nomes de crianças/famílias; prometer vaga/data; inventar.
 - Fatos-chave: Bear Care a partir de 1 ano; Bear Care, Toddler, Nursery, Junior e Senior Kindergarten;
-  Year 1 ao Year 5; Year 6 (Fundamental II) abre em 2027; manhã 7h30–12h30 ou tarde 13h30–18h30; NÃO há
+  Year 1 ao Year 5; Year 6 (início do Fundamental II) já faz parte da escola (Bear Care ao Year 6; nunca "abre em 2027"); manhã 7h30–12h30 ou tarde 13h30–18h30; NÃO há
   integral; WhatsApp (44) 99178-3232; fixo (44) 3200-0327; Av. Arquiteto Nildo Ribeiro da Rocha, 1201,
   Jardim Higienópolis; Duplo Diploma; certificados Cambridge (cerimônia mar/2026).
 - Pode linkar as páginas do site: /escola-infantil-maringa/ /educacao-infantil-bilingue-maringa/

@@ -15,7 +15,7 @@ Quem escreve um artigo só pode afirmar sobre a escola o que está aqui ou no si
 ## O que a escola oferece
 - Educação infantil a partir de 1 ano de idade no Bear Care (Infantil 1), Toddler (Infantil 2), Nursery (Infantil 3), Junior Kindergarten (Infantil 4) e Senior Kindergarten (Infantil 5).
 - Ensino Fundamental I completo: Year 1 ao Year 5 (1º ao 5º ano).
-- Year 6 (6º ano, início do Fundamental II) abre em 2027.
+- Year 6 (6º ano, início do Fundamental II, ~11 anos) já faz parte da escola: a escola é apresentada como Bear Care ao Year 6. Nunca "previsto" nem "abre em 2027". Ensino Médio não é oferecido.
 - Turmas de manhã (7h30 às 12h30) e de tarde (13h30 às 18h30).
 - NÃO oferece período integral: a criança estuda de manhã ou de tarde.
 - Inglês por imersão todos os dias (não é aula extra), currículo canadense alinhado à BNCC, certificação Cambridge ao longo do percurso.
